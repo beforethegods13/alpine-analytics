@@ -190,7 +190,7 @@
   /* ---------- inside / departments ---------- */
   .inside-head{margin-bottom:clamp(2.4rem,5vw,3.5rem)}
   .depts{
-    display:grid;grid-template-columns:repeat(2,1fr);
+    display:grid;grid-template-columns:repeat(3,1fr);
     gap:1px;background:rgba(69,67,60,.14);
     border:1px solid rgba(69,67,60,.14);
   }
@@ -301,10 +301,14 @@
     .nav-toggle span{width:24px;height:2px;background:var(--cream);transition:background .4s ease}
     .nav.scrolled .nav-toggle span,.nav-toggle.open span{background:var(--ink)}
     .about-grid{grid-template-columns:1fr}
-    .depts{grid-template-columns:1fr}
+    .depts{grid-template-columns:repeat(2,1fr)}
     .covers{grid-template-columns:1fr;max-width:380px;margin-inline:auto}
     .articles{grid-template-columns:1fr}
     .foot-grid{grid-template-columns:1fr;gap:2rem}
+  }
+
+  @media (max-width:620px){
+    .depts{grid-template-columns:1fr}
   }
 
   @media (prefers-reduced-motion:reduce){
@@ -376,7 +380,7 @@
     <div class="wrap">
       <div class="inside-head reveal">
         <span class="eyebrow">Inside</span>
-        <h2 class="h-section">Four things we keep coming back to.</h2>
+        <h2 class="h-section">What we keep coming back to.</h2>
       </div>
       <div class="depts reveal">
         <a class="dept" href="chairlift.html">
@@ -391,16 +395,28 @@
           <p>The jackets, skis, and small objects that earn their place after a full season, not a single press trip.</p>
           <span class="go">Explore →</span>
         </a>
-        <a class="dept" href="notebook.html">
+        <a class="dept" href="dawnpatrol.html">
           <span class="kicker">recurring</span>
-          <h3>Si Si's Notebook</h3>
-          <p>Dispatches, detours, and the occasional strong opinion from our editor, filed from wherever the snow is.</p>
+          <h3>Dawn Patrol</h3>
+          <p>Doug's early skins and ski-mountaineering missions, filmed in the blue pre-dawn several mornings a week all winter.</p>
           <span class="go">Explore →</span>
         </a>
-        <a class="dept" href="summit.html">
+        <a class="dept" href="masters.html">
           <span class="kicker">recurring</span>
-          <h3>Letter from the Summit</h3>
-          <p>A note from the top of the mountain, where the air is thin and the view does most of the talking.</p>
+          <h3>Masters of the Universe</h3>
+          <p>The CEOs and founders behind the resorts and restaurants — candid interviews with the people who run the mountain.</p>
+          <span class="go">Explore →</span>
+        </a>
+        <a class="dept" href="gastronomy.html">
+          <span class="kicker">recurring</span>
+          <h3>Glacial Gastronomy</h3>
+          <p>The chefs, the tables, and the dishes worth the altitude — mountain dining reviewed, and the people behind the pass.</p>
+          <span class="go">Explore →</span>
+        </a>
+        <a class="dept" href="culture.html">
+          <span class="kicker">recurring</span>
+          <h3>Cultural Arts</h3>
+          <p>Art, film, photography, and the culture that gathers where the mountains do — in video, in writing, and in pictures.</p>
           <span class="go">Explore →</span>
         </a>
       </div>
