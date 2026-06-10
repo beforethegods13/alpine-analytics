@@ -197,10 +197,12 @@
   .dept{
     background:var(--linen);
     padding:clamp(1.8rem,3vw,2.6rem);
+    display:flex;flex-direction:column;
     transition:background .3s ease;
   }
   .section--band .dept{background:var(--sage-wash)}
   .dept:hover{background:var(--cream)}
+  .dept:focus-visible{outline:2px solid var(--clay);outline-offset:-2px}
   .dept h3{
     font-family:var(--display);font-weight:400;
     font-size:1.5rem;line-height:1.15;margin-bottom:.6rem;
@@ -209,7 +211,13 @@
     font-family:var(--display);font-style:italic;color:var(--clay);
     font-size:.85rem;margin-bottom:1rem;display:block;
   }
-  .dept p{color:var(--ink-soft);font-size:.98rem;max-width:34ch}
+  .dept p{color:var(--ink-soft);font-size:.98rem;max-width:34ch;margin-bottom:1.5rem}
+  .dept .go{
+    margin-top:auto;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;
+    font-weight:600;color:var(--clay);display:inline-flex;align-items:center;gap:.5rem;
+    transition:gap .25s ease,color .2s ease;
+  }
+  .dept:hover .go{gap:.85rem;color:var(--clay-deep)}
 
   /* ---------- issues (covers) ---------- */
   .issues-head{display:flex;justify-content:space-between;align-items:flex-end;
@@ -371,26 +379,30 @@
         <h2 class="h-section">Four things we keep coming back to.</h2>
       </div>
       <div class="depts reveal">
-        <article class="dept">
+        <a class="dept" href="chairlift.html">
           <span class="kicker">recurring</span>
           <h3>Chairlift Conversations</h3>
           <p>The people we meet between summit and base — mid-ride, unguarded, and usually more interesting than the view.</p>
-        </article>
-        <article class="dept">
+          <span class="go">Explore →</span>
+        </a>
+        <a class="dept" href="gear.html">
           <span class="kicker">recurring</span>
           <h3>Gear We Trust</h3>
           <p>The jackets, skis, and small objects that earn their place after a full season, not a single press trip.</p>
-        </article>
-        <article class="dept">
+          <span class="go">Explore →</span>
+        </a>
+        <a class="dept" href="notebook.html">
           <span class="kicker">recurring</span>
           <h3>Si Si's Notebook</h3>
           <p>Dispatches, detours, and the occasional strong opinion from our editor, filed from wherever the snow is.</p>
-        </article>
-        <article class="dept">
+          <span class="go">Explore →</span>
+        </a>
+        <a class="dept" href="summit.html">
           <span class="kicker">recurring</span>
           <h3>Letter from the Summit</h3>
           <p>A note from the top of the mountain, where the air is thin and the view does most of the talking.</p>
-        </article>
+          <span class="go">Explore →</span>
+        </a>
       </div>
     </div>
   </section>
