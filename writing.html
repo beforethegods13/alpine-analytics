@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Alpine Analytics — A magazine for the slow side of the mountains</title>
-<meta name="description" content="An online magazine on travel, alpine sport, and slow mountain living. Story-first escapism with character, from Doug Olear and Si Si Penaloza. Based near Park City, Utah." />
+<title>Writing by Si Si Penaloza — Alpine Analytics</title>
+<meta name="description" content="The collected writing of Si Si Penaloza — travel, alpine sport, and mountain living, published in Jetset, Maxim and beyond." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
@@ -253,11 +253,6 @@
   .article .read{margin-top:auto;font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;
     font-weight:600;color:var(--clay);display:inline-flex;align-items:center;gap:.45rem}
   .article .read:hover{color:var(--clay-deep)}
-  .archive-link{font-size:.82rem;letter-spacing:.13em;text-transform:uppercase;
-    font-weight:600;color:var(--clay);display:inline-flex;align-items:center;gap:.5rem;
-    border-bottom:1px solid transparent;padding-bottom:2px;
-    transition:color .2s ease,border-color .2s ease}
-  .archive-link:hover{color:var(--clay-deep);border-color:var(--clay-deep)}
 
   /* ---------- footer ---------- */
   .foot{background:var(--ink);color:var(--linen);padding-block:clamp(3.5rem,7vw,5.5rem)}
@@ -302,18 +297,65 @@
     .reveal{opacity:1;transform:none;transition:none}
     *{animation:none!important}
   }
+
+  /* ---------- inner page: writing archive ---------- */
+  .nav--inner{background:rgba(247,243,236,.92);backdrop-filter:blur(10px);
+    box-shadow:0 1px 0 rgba(69,67,60,.08)}
+  .nav--inner .brand{color:var(--ink)}
+  .nav--inner .nav-links a{color:var(--ink)}
+  .nav--inner .nav-toggle span{background:var(--ink)}
+
+  .page-head{padding:clamp(8rem,16vh,10.5rem) 0 clamp(2.5rem,5vw,3.5rem);
+    border-bottom:1px solid rgba(69,67,60,.12)}
+  .page-head .back{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-soft);display:flex;width:fit-content;align-items:center;gap:.5rem;
+    margin-bottom:1.7rem;font-weight:500;transition:color .2s ease}
+  .page-head .back:hover{color:var(--clay)}
+  .page-head h1{font-family:var(--display);font-weight:300;
+    font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.06;letter-spacing:-.015em;
+    max-width:18ch;margin-bottom:1rem}
+  .page-head .lead{max-width:58ch}
+
+  .archive{padding-block:clamp(3rem,6vw,5rem);max-width:940px}
+  .pub{margin-bottom:clamp(3rem,6vw,4.5rem)}
+  .pub:last-of-type{margin-bottom:0}
+  .pub-head{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;
+    border-bottom:1px solid rgba(69,67,60,.22);padding-bottom:.9rem;margin-bottom:.2rem}
+  .pub-head h2{font-family:var(--display);font-weight:400;font-size:clamp(1.5rem,3vw,2rem)}
+  .pub-head .count{margin-left:auto;font-size:.82rem;color:var(--ink-soft);letter-spacing:.02em}
+
+  .entry{display:grid;grid-template-columns:148px 1fr;gap:clamp(1rem,3vw,2.4rem);
+    padding:clamp(1.5rem,3vw,2.1rem) 0;border-bottom:1px solid rgba(69,67,60,.12);
+    transition:border-color .3s ease}
+  .entry:hover{border-color:var(--clay)}
+  .entry .meta{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-soft);padding-top:.5rem;line-height:1.7}
+  .entry h3{font-family:var(--display);font-weight:400;
+    font-size:clamp(1.3rem,2.5vw,1.7rem);line-height:1.15;margin-bottom:.5rem;
+    transition:color .3s ease}
+  .entry:hover h3{color:var(--clay-deep)}
+  .entry p{color:var(--ink-soft);font-size:.98rem;margin-bottom:.9rem;max-width:62ch}
+  .entry .read{font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;
+    font-weight:600;color:var(--clay);display:inline-flex;align-items:center;gap:.45rem}
+
+  .more-note{margin-top:clamp(2.6rem,5vw,3.6rem);font-family:var(--display);font-style:italic;
+    color:var(--ink-soft);font-size:1.08rem}
+
+  @media (max-width:860px){
+    .entry{grid-template-columns:1fr;gap:.45rem}
+    .entry .meta{padding-top:0}
+  }
 </style>
 </head>
 <body>
 
-<header class="nav" id="nav">
-  <a href="#top" class="brand"><span class="dot"></span>Alpine Analytics</a>
+<header class="nav nav--inner scrolled" id="nav">
+  <a href="index.html" class="brand"><span class="dot"></span>Alpine Analytics</a>
   <nav class="nav-links" id="navLinks" aria-label="Primary">
-    <a href="#about">The Magazine</a>
-    <a href="#inside">Inside</a>
-    <a href="#issues">Issues</a>
-    <a href="#writing">Writing</a>
-    <!-- TODO: confirm real Instagram handle, then update href below + footer -->
+    <a href="index.html#about">The Magazine</a>
+    <a href="index.html#inside">Inside</a>
+    <a href="index.html#issues">Issues</a>
+    <a href="writing.html">Writing</a>
     <a href="https://instagram.com/alpineanalytics" target="_blank" rel="noopener" class="follow">Follow</a>
   </nav>
   <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -323,145 +365,75 @@
 
 <main id="top">
 
-  <!-- ===================== HERO ===================== -->
-  <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline poster="alpine-hero-poster.jpg" id="heroVideo">
-      <source src="alpine-hero-web.mp4" type="video/mp4" />
-    </video>
-    <div class="hero-inner">
-      <span class="eyebrow">Travel · Alpine sport · Slow living</span>
-      <h1>Field notes from the unhurried mountains.</h1>
-      <p class="sub">A story-first magazine on travel, alpine sport, and the slow beauty of life up high — from Doug Olear and Si Si Penaloza.</p>
-      <span class="scroll-cue"><span class="line"></span>Read the magazine</span>
-    </div>
-  </section>
-
-  <!-- ===================== ABOUT ===================== -->
-  <section class="section" id="about">
-    <div class="wrap about-grid">
-      <div class="about-body reveal">
-        <span class="eyebrow">The magazine</span>
-        <h2 class="h-section">Smart escapism, with character.</h2>
-        <p class="lead">Alpine Analytics is an online magazine about travel, alpine sport, and outdoor life — told the slow way.</p>
-        <p>We'd rather follow the long lunch than the trend, the first chair than the crowd. Picture Vanity Fair's eye for character crossed with Outside's love of a cold, clear morning: escapism that still has a point of view.</p>
-        <p>No influencer playbook, no breathless listicles. Just good light, good company, and the kind of mountain stories worth slowing down for.</p>
-      </div>
-      <aside class="makers reveal">
-        <h3>Made by</h3>
-        <div class="maker">
-          <strong>Doug Olear</strong>
-          <span>Co-founder, host &amp; cinematic eye. Actor, <em>The Wire</em>.</span>
-        </div>
-        <div class="maker">
-          <strong>Si Si Penaloza</strong>
-          <span>Co-founder &amp; editorial voice. Writer for <em>Jetset</em> and <em>Maxim</em>.</span>
-        </div>
-        <p class="location">Based at Benloch Ranch — in the mountains above Heber City &amp; Park City, Utah.</p>
-      </aside>
-    </div>
-  </section>
-
-  <!-- ===================== INSIDE / DEPARTMENTS ===================== -->
-  <section class="section section--band" id="inside">
+  <header class="page-head">
     <div class="wrap">
-      <div class="inside-head reveal">
-        <span class="eyebrow">Inside</span>
-        <h2 class="h-section">Four things we keep coming back to.</h2>
-      </div>
-      <div class="depts reveal">
-        <article class="dept">
-          <span class="kicker">recurring</span>
-          <h3>Chairlift Conversations</h3>
-          <p>The people we meet between summit and base — mid-ride, unguarded, and usually more interesting than the view.</p>
-        </article>
-        <article class="dept">
-          <span class="kicker">recurring</span>
-          <h3>Gear We Trust</h3>
-          <p>The jackets, skis, and small objects that earn their place after a full season, not a single press trip.</p>
-        </article>
-        <article class="dept">
-          <span class="kicker">recurring</span>
-          <h3>Si Si's Notebook</h3>
-          <p>Dispatches, detours, and the occasional strong opinion from our editor, filed from wherever the snow is.</p>
-        </article>
-        <article class="dept">
-          <span class="kicker">recurring</span>
-          <h3>Letter from the Summit</h3>
-          <p>A note from the top of the mountain, where the air is thin and the view does most of the talking.</p>
-        </article>
-      </div>
+      <a class="back" href="index.html">← Back to the magazine</a>
+      <span class="eyebrow">Writing by Si Si Penaloza</span>
+      <h1>Dispatches and detours, in full.</h1>
+      <p class="lead">Si Si's published work across travel, alpine sport, and the good life up high — collected by publication. Tap any piece to read it.</p>
     </div>
-  </section>
+  </header>
 
-  <!-- ===================== ISSUES (covers from Instagram) ===================== -->
-  <section class="section" id="issues">
-    <div class="wrap">
-      <div class="issues-head reveal">
-        <div>
-          <span class="eyebrow">Latest issues</span>
-          <h2 class="h-section">Straight from the feed.</h2>
-        </div>
-        <!-- TODO: covers are tagged @sisitravels; confirm which account is the magazine's -->
-        <p class="note">Cover stories posted to <a href="https://instagram.com/alpineanalytics" target="_blank" rel="noopener">Instagram</a>. Tap any cover to read the issue.</p>
-      </div>
-      <div class="covers reveal">
-        <!-- Drop real cover art in with: style="background-image:url('vol3.jpg')" -->
-        <a class="cover cover--3" href="https://instagram.com/p/DXciWPaARKD/" target="_blank" rel="noopener" aria-label="Volume 3 — The Girls of Spring">
-          <div class="cover-meta">
-            <span class="vol">Vol. 3</span>
-            <span class="title">The Girls of Spring</span>
-            <span class="go">View issue →</span>
-          </div>
-        </a>
-        <a class="cover cover--2" href="https://instagram.com/p/DVjUsCRFDV6/" target="_blank" rel="noopener" aria-label="Volume 2 — More Deer Valley, Velvaere">
-          <div class="cover-meta">
-            <span class="vol">Vol. 2</span>
-            <span class="title">More Deer Valley · Velvaere</span>
-            <span class="go">View issue →</span>
-          </div>
-        </a>
-        <a class="cover cover--1" href="https://instagram.com/p/DOy-IlgEvCR/" target="_blank" rel="noopener" aria-label="Volume 1 — Zermatt's Glacier Paradise">
-          <div class="cover-meta">
-            <span class="vol">Vol. 1</span>
-            <span class="title">Zermatt's Glacier Paradise</span>
-            <span class="go">View issue →</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="wrap archive">
 
-  <!-- ===================== WRITING BY SISI ===================== -->
-  <section class="section section--band" id="writing">
-    <div class="wrap">
-      <div class="inside-head reveal">
-        <span class="eyebrow">Writing by Si Si</span>
-        <h2 class="h-section">Dispatches and detours.</h2>
+    <!-- ============ JETSET MAGAZINE ============ -->
+    <div class="pub reveal">
+      <div class="pub-head">
+        <h2>Jetset Magazine</h2>
+        <span class="count">3 pieces</span>
       </div>
-      <div class="articles reveal">
-        <article class="article">
-          <span class="date">Jetset Magazine · 2022</span>
+
+      <a class="entry" href="jetset-traveling-big-2022.pdf#page=4" target="_blank" rel="noopener">
+        <span class="meta">2022<br>Travel</span>
+        <div class="entry-body">
           <h3>Glacier rising</h3>
           <p>Inside Shangri-La Vancouver's ice-cave heli adventure on the British Columbia glaciers — with photography by Doug Olear.</p>
-          <a class="read" href="jetset-traveling-big-2022.pdf#page=4" target="_blank" rel="noopener">Read the piece →</a>
-        </article>
-        <article class="article">
-          <span class="date">Jetset Magazine · 2022</span>
+          <span class="read">Read the piece →</span>
+        </div>
+      </a>
+
+      <a class="entry" href="jetset-traveling-big-2022.pdf#page=5" target="_blank" rel="noopener">
+        <span class="meta">2022<br>Travel</span>
+        <div class="entry-body">
           <h3>Powder alchemy</h3>
           <p>Ski-in luxury, white-glove valets, and the art of après at Four Seasons Jackson Hole in Teton Village, Wyoming.</p>
-          <a class="read" href="jetset-traveling-big-2022.pdf#page=5" target="_blank" rel="noopener">Read the piece →</a>
-        </article>
-        <article class="article">
-          <span class="date">Jetset Magazine · 2022</span>
+          <span class="read">Read the piece →</span>
+        </div>
+      </a>
+
+      <a class="entry" href="jetset-traveling-big-2022.pdf#page=1" target="_blank" rel="noopener">
+        <span class="meta">2022<br>Feature</span>
+        <div class="entry-body">
           <h3>Traveling big is back</h3>
           <p>The full adventure-travel feature these run in — where to go when adventure calls, from the Okavango Delta to the Tetons.</p>
-          <a class="read" href="jetset-traveling-big-2022.pdf#page=1" target="_blank" rel="noopener">Read the piece →</a>
-        </article>
-      </div>
-      <div class="reveal" style="margin-top:clamp(2.2rem,4vw,3.2rem)">
-        <a class="archive-link" href="writing.html">View the full writing archive →</a>
-      </div>
+          <span class="read">Read the piece →</span>
+        </div>
+      </a>
     </div>
+
+    <!-- ============ HOW TO ADD A NEW PUBLICATION ============
+         Copy the block below, change the <h2> name + count, and add one
+         <a class="entry"> per story. Upload each PDF to the repo root and
+         point href at its filename (add #page=N to open a specific page).
+
+    <div class="pub reveal">
+      <div class="pub-head">
+        <h2>Maxim</h2>
+        <span class="count">1 piece</span>
+      </div>
+      <a class="entry" href="FILENAME.pdf" target="_blank" rel="noopener">
+        <span class="meta">YEAR<br>Section</span>
+        <div class="entry-body">
+          <h3>Headline goes here</h3>
+          <p>One-sentence description of the piece.</p>
+          <span class="read">Read the piece →</span>
+        </div>
+      </a>
+    </div>
+    ============================================================ -->
+
+    <p class="more-note reveal">More from Maxim, Wrangler Living, and beyond — coming soon.</p>
+
   </section>
 
 </main>
@@ -477,16 +449,15 @@
       <div>
         <h4>Read</h4>
         <ul>
-          <li><a href="#about">The Magazine</a></li>
-          <li><a href="#inside">Inside</a></li>
-          <li><a href="#issues">Latest Issues</a></li>
-          <li><a href="#writing">Writing by Si Si</a></li>
+          <li><a href="index.html#about">The Magazine</a></li>
+          <li><a href="index.html#inside">Inside</a></li>
+          <li><a href="index.html#issues">Latest Issues</a></li>
+          <li><a href="writing.html">Writing by Si Si</a></li>
         </ul>
       </div>
       <div>
         <h4>Find us</h4>
         <ul>
-          <!-- TODO: confirm real Instagram handle + contact email -->
           <li><a href="https://instagram.com/alpineanalytics" target="_blank" rel="noopener">Instagram @alpineanalytics</a></li>
           <li><a href="mailto:hello@alpineanalytics.com">hello@alpineanalytics.com</a></li>
           <li>Benloch Ranch</li>
@@ -502,7 +473,6 @@
 </footer>
 
 <script>
-  // nav background on scroll
   var nav = document.getElementById('nav');
   var onScroll = function(){
     if(window.scrollY > 40){ nav.classList.add('scrolled'); }
@@ -511,7 +481,6 @@
   window.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
 
-  // mobile menu
   var toggle = document.getElementById('navToggle');
   var links = document.getElementById('navLinks');
   toggle.addEventListener('click', function(){
@@ -524,12 +493,7 @@
     if(e.target.tagName === 'A'){ links.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); }
   });
 
-  // reduced motion: don't autoplay the hero, rest on the poster
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var video = document.getElementById('heroVideo');
-  if(reduce && video){ try{ video.removeAttribute('autoplay'); video.pause(); }catch(e){} }
-
-  // scroll reveal
   var reveals = document.querySelectorAll('.reveal');
   if(reduce || !('IntersectionObserver' in window)){
     reveals.forEach(function(el){ el.classList.add('in'); });
