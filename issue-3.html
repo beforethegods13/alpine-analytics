@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vol. 3 — The Girls of Spring · Alpine Analytics</title>
+<meta name="description" content="Volume Three of Alpine Analytics. The Girls of Spring — Alta, Tahoe, and Sundance, with the women of the mountain and a ballplayer's first turns." />
+
+<!-- ============================================================
+     ALPINE ANALYTICS — ISSUE READER · VOL. 3 (THE GIRLS OF SPRING)
+     Single self-contained file. Keep at the repo root.
+     SECTION ORDER matches the live carousel:
+       Cover · Snowpine · Corn Snow · Women of the Mountain ·
+       Guest House · Black Tie arrival · Pitcher's Plunge ·
+       Apex Club · Guest House mornings · Sundance Inn ·
+       Redford/skin · Tree Room · Contributors.
+     COPY transcribed from the carousel; a few obvious typos quietly
+     fixed (confidence, "in fact", Dalbello, Jetset).
+     PHOTOS are brand-gradient placeholders with suggested filenames —
+     upload to repo root and set style="background-image:url('FILE.jpg')".
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --linen:#f7f3ec; --cream:#fbf8f2; --ink:#45433c; --ink-soft:#777269;
+    --sky:#8fb1bc; --sage:#a4b19a; --sage-wash:#edf0e7;
+    --clay:#c98a63; --clay-deep:#b1734d;
+    --rule:rgba(69,67,60,.14); --shadow:0 18px 50px -28px rgba(69,67,60,.45);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--linen);color:var(--ink);font-family:'Mulish',system-ui,sans-serif;font-weight:300;font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  .eyebrow{font-family:'Fraunces',serif;font-style:italic;font-weight:400;color:var(--clay);font-size:1rem;letter-spacing:.02em;margin:0 0 14px;}
+
+  .progress{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--clay);z-index:120;transition:width .1s linear;}
+
+  .nav{position:sticky;top:0;z-index:100;background:rgba(247,243,236,.86);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--rule);}
+  .nav-inner{max-width:1180px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;}
+  .brand{font-family:'Fraunces',serif;font-weight:400;font-size:1.18rem;letter-spacing:.04em;text-decoration:none;color:var(--ink);white-space:nowrap;}
+  .brand b{font-weight:500;}
+  .nav-links{display:flex;align-items:center;gap:26px;}
+  .nav-links a{text-decoration:none;color:var(--ink-soft);font-size:.93rem;font-weight:400;transition:color .2s;}
+  .nav-links a:hover{color:var(--clay-deep);}
+  .nav-cta{border:1px solid var(--clay);color:var(--clay-deep)!important;padding:7px 16px;border-radius:999px;}
+  .nav-cta:hover{background:var(--clay);color:#fff!important;}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:6px;}
+  .menu-btn span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.25s;}
+
+  .cover{position:relative;min-height:90vh;display:flex;align-items:flex-end;
+    background:linear-gradient(180deg,rgba(69,67,60,.12) 0%,rgba(69,67,60,0) 34%,rgba(69,67,60,.58) 100%),linear-gradient(135deg,var(--sky) 0%,var(--sage) 52%,var(--clay) 122%);
+    background-size:cover;background-position:center;
+    /* REAL COVER: background-image:linear-gradient(180deg,rgba(69,67,60,.12),rgba(69,67,60,0) 34%,rgba(69,67,60,.58)),url('girls-of-spring-cover.jpg'); */}
+  .cover-inner{padding-bottom:7vh;}
+  .cover .kicker{color:var(--cream);font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;letter-spacing:.08em;margin:0 0 16px;text-shadow:0 1px 16px rgba(69,67,60,.5);}
+  .cover h1{font-family:'Fraunces',serif;font-weight:300;color:var(--cream);font-size:clamp(2.6rem,7.2vw,5.6rem);line-height:1.0;margin:0;letter-spacing:-.01em;max-width:14ch;text-shadow:0 2px 30px rgba(69,67,60,.4);}
+  .cover .lines{margin:22px 0 0;color:var(--cream);max-width:50ch;}
+  .cover .lines p{margin:0 0 8px;font-size:1.12rem;font-weight:300;text-shadow:0 1px 18px rgba(69,67,60,.55);}
+  .cover .toc{margin-top:18px;font-family:'Fraunces',serif;font-style:italic;font-size:.98rem;color:var(--cream);opacity:.92;text-shadow:0 1px 18px rgba(69,67,60,.55);}
+  .scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:var(--cream);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85;display:flex;flex-direction:column;align-items:center;gap:7px;}
+  .scroll-hint .dot{width:1px;height:34px;background:linear-gradient(var(--cream),transparent);animation:fall 2.2s ease-in-out infinite;}
+  @keyframes fall{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+
+  .section{padding:88px 0;}
+  .section + .section{border-top:1px solid var(--rule);}
+  .band{background:var(--sage-wash);}
+  .band-cream{background:var(--cream);}
+  .col{max-width:680px;margin:0 auto;}
+  .col p{margin:0 0 1.35em;}
+  .lead-h{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2rem,4.4vw,3.1rem);line-height:1.06;letter-spacing:-.01em;margin:0 0 .5em;color:var(--ink);}
+  .dek{font-family:'Fraunces',serif;font-style:italic;color:var(--ink-soft);font-size:1.2rem;margin:0 0 1.6em;}
+  .drop::first-letter{font-family:'Fraunces',serif;font-weight:400;float:left;font-size:4.4rem;line-height:.78;padding:8px 12px 0 0;color:var(--clay-deep);}
+  .credit{font-family:'Fraunces',serif;font-style:italic;font-size:.92rem;color:var(--ink-soft);margin-top:14px;}
+
+  .figure{margin:46px 0 0;}
+  .frame{aspect-ratio:16/9;background-size:cover;background-position:center;background-repeat:no-repeat;border-radius:6px;overflow:hidden;box-shadow:var(--shadow);}
+  .ph-1{background:linear-gradient(135deg,var(--sky),var(--sage));}
+  .ph-2{background:linear-gradient(135deg,var(--sage),var(--clay));}
+  .ph-3{background:linear-gradient(160deg,var(--clay),var(--sky));}
+  .ph-4{background:linear-gradient(135deg,#cdb89c,var(--sky));}
+  .ph-5{background:linear-gradient(150deg,var(--sage-wash),var(--sage));}
+  .ph-label{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:rgba(251,248,242,.92);font-family:'Fraunces',serif;font-style:italic;font-size:.96rem;letter-spacing:.03em;text-align:center;padding:18px;}
+  .caption{font-family:'Fraunces',serif;font-style:italic;font-size:.95rem;color:var(--ink-soft);margin-top:12px;line-height:1.5;}
+  .caption b{font-style:normal;font-weight:500;color:var(--ink);}
+
+  .pull{margin:56px auto;max-width:820px;text-align:center;}
+  .pull blockquote{margin:0;font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(1.6rem,3.4vw,2.3rem);line-height:1.3;color:var(--clay-deep);}
+  .pull cite{display:block;margin-top:18px;font-style:normal;font-family:'Mulish',sans-serif;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);}
+
+  .cast{max-width:680px;margin:34px auto 0;}
+  .cast .row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;padding:16px 0;border-top:1px solid var(--rule);}
+  .cast .row:last-child{border-bottom:1px solid var(--rule);}
+  .cast .nm{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;color:var(--ink);}
+  .cast .rl{color:var(--ink-soft);font-size:.95rem;}
+  .cast .hd{color:var(--clay-deep);font-size:.92rem;margin-left:auto;}
+
+  .three-up{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px;}
+  .three-up .frame{aspect-ratio:4/5;}
+
+  .feature-inset{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:end;margin-top:18px;}
+  .feature-inset .main{aspect-ratio:4/3;}
+  .feature-inset .inset{aspect-ratio:3/4;}
+
+  .split{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:start;}
+  .split .side{background:var(--cream);border:1px solid var(--rule);border-radius:8px;padding:24px;}
+  .split .side h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.2rem;margin:0 0 .6em;}
+  .split .side p{font-size:.95rem;line-height:1.6;}
+  .split .side .pic{aspect-ratio:1/1;border-radius:6px;margin-bottom:18px;}
+  .stat{margin-top:22px;background:var(--ink);color:var(--cream);border-radius:8px;padding:18px 20px;}
+  .stat .st-head{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;opacity:.8;margin-bottom:14px;}
+  .stat .st-grid{display:flex;gap:26px;flex-wrap:wrap;}
+  .stat .st b{display:block;font-family:'Fraunces',serif;font-weight:400;font-size:1.7rem;color:#e7b48f;line-height:1;}
+  .stat .st span{font-size:.82rem;opacity:.85;}
+  .stat .st-foot{margin-top:14px;font-size:.74rem;opacity:.7;letter-spacing:.04em;}
+
+  .people{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .person{display:flex;gap:20px;align-items:flex-start;}
+  .person .pic{flex:0 0 96px;width:96px;height:96px;border-radius:50%;background-size:cover;background-position:center;box-shadow:var(--shadow);}
+  .person h4{font-family:'Fraunces',serif;font-weight:500;font-size:1.2rem;margin:2px 0 4px;}
+  .person .role{font-family:'Fraunces',serif;font-style:italic;color:var(--clay-deep);font-size:.92rem;margin:0 0 10px;}
+  .person p{margin:0;font-size:.96rem;line-height:1.6;color:var(--ink);}
+
+  .endmark{text-align:center;margin:54px 0 0;color:var(--clay);font-family:'Fraunces',serif;font-size:1.4rem;}
+  .issue-nav{margin-top:8px;padding-top:34px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+  .issue-nav a{text-decoration:none;color:var(--ink-soft);font-size:.95rem;display:flex;flex-direction:column;gap:4px;transition:color .2s;}
+  .issue-nav a:hover{color:var(--clay-deep);}
+  .issue-nav .k{font-family:'Fraunces',serif;font-style:italic;color:var(--clay);font-size:.85rem;}
+  .issue-nav .t{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--ink);}
+  .issue-nav a:last-child{text-align:right;align-items:flex-end;}
+
+  .footer{background:var(--cream);border-top:1px solid var(--rule);padding:54px 0 40px;}
+  .footer-inner{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;}
+  .footer .brand{font-size:1.3rem;}
+  .footer p{margin:10px 0 0;color:var(--ink-soft);font-size:.92rem;max-width:34ch;}
+  .footer-links{display:flex;flex-direction:column;gap:9px;}
+  .footer-links a{color:var(--ink-soft);text-decoration:none;font-size:.92rem;}
+  .footer-links a:hover{color:var(--clay-deep);}
+  .footer-foot{max-width:1180px;margin:38px auto 0;padding:18px 28px 0;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:.82rem;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (max-width:860px){
+    .feature-inset{grid-template-columns:1fr;}
+    .split{grid-template-columns:1fr;}
+    .people{grid-template-columns:1fr;}
+    .three-up{grid-template-columns:1fr;}
+  }
+  @media (max-width:820px){
+    .nav-links{position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;align-items:flex-start;gap:0;padding:8px 28px 18px;border-bottom:1px solid var(--rule);box-shadow:var(--shadow);display:none;}
+    .nav-links.open{display:flex;}
+    .nav-links a{padding:11px 0;width:100%;border-bottom:1px solid var(--rule);}
+    .nav-links a:last-child{border-bottom:0;}
+    .menu-btn{display:block;}
+    .cover{min-height:80vh;}
+    .section{padding:64px 0;}
+  }
+  @media (max-width:520px){
+    body{font-size:17px;}
+    .wrap{padding:0 20px;}
+    .nav-inner{padding:14px 20px;}
+    .cast .hd{margin-left:0;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .scroll-hint .dot{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Alpine <b>Analytics</b></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#issues">Issues</a>
+      <a href="writing.html">Writing</a>
+      <a href="index.html#inside">Inside</a>
+      <a class="nav-cta" href="https://instagram.com/sisitravels" target="_blank" rel="noopener">Follow</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- 1 · COVER -->
+<header class="cover" id="cover">
+  <div class="wrap cover-inner">
+    <p class="kicker reveal">Micro&nbsp;Mag &nbsp;·&nbsp; Volume Three</p>
+    <h1 class="reveal">The Girls of Spring</h1>
+    <div class="lines reveal">
+      <p>Utah's mountain women, a Tahoe basecamp, and a ballplayer's first turns.</p>
+      <p class="toc">In this issue: Snowpine Lodge, Alta · Sundance Inn · The Guest House, Truckee</p>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><div class="dot"></div>Read</div>
+</header>
+
+<!-- 2 · SNOWPINE LODGE -->
+<section class="section">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">Snowpine Lodge · Alta, Utah</p>
+      <h2 class="lead-h reveal">Snowpine Lodge</h2>
+    </div>
+    <div class="feature-inset reveal">
+      <div class="frame main ph-2"><div class="ph-label">Snowpine Lodge, slopeside<br>(drop in: snowpine-lodge.jpg)</div></div>
+      <div class="frame inset ph-1"><div class="ph-label">The après igloo<br>(snowpine-igloo.jpg)</div></div>
+    </div>
+    <div class="col" style="margin-top:46px;">
+      <p class="drop reveal">Alta may have missed its usual avalanche of headlines this winter, but spring showed up with better manners — long light, forgiving, and days that stretched just enough to feel indulgent.</p>
+      <p class="reveal">Snowpine Lodge sits squarely in the mix: slopeside, low-key, and entirely in on the secret.</p>
+      <p class="reveal">Just below, the igloo reframes the day. Part design object, part après refuge, it's where boots come off, light bends through glass, and the mountain lingers a little longer. A small flex, done well.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · CORN SNOW (OPENER) -->
+<section class="section band">
+  <div class="wrap col" style="text-align:center;">
+    <p class="eyebrow reveal">Alta Ski Area, Utah · Spring 2026</p>
+    <h2 class="lead-h reveal" style="font-size:clamp(2.4rem,6vw,4rem);">Corn snow, quiet mornings.</h2>
+  </div>
+  <figure class="figure wrap reveal" style="padding:0;">
+    <div class="frame ph-1"><div class="ph-label">Skier on a bright spring morning<br>(drop in: corn-snow.jpg)</div></div>
+    <figcaption class="credit" style="text-align:center;">Shot on the Insta360 X5 — invisible ski-pole mount.</figcaption>
+  </figure>
+</section>
+
+<!-- 4 · WOMEN OF THE MOUNTAIN -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">Field notes: Alta / Spring</p>
+      <h2 class="lead-h reveal">Women of the Mountain</h2>
+      <p class="reveal">Meet Utah's formidable marketing geniuses — dominating the boardroom by day, defining mountain mastery on the weekends.</p>
+    </div>
+    <figure class="figure wrap reveal" style="padding:0;">
+      <div class="frame ph-4"><div class="ph-label">The crew at Alta — group portrait on the hill<br>(drop in: women-of-the-mountain.jpg)</div></div>
+    </figure>
+    <div class="cast reveal">
+      <div class="row"><span class="nm">Paula Coleman</span><span class="rl">Creative Collaborator, Ski Utah</span><span class="hd">@harpo_utah</span></div>
+      <div class="row"><span class="nm">Haley Klotz</span><span class="rl">Content Director, Ski Utah</span><span class="hd">@hails_k</span></div>
+      <div class="row"><span class="nm">Alison Palmintere</span><span class="rl">Director of Communications, Ski Utah</span><span class="hd">@apalm918</span></div>
+      <div class="row"><span class="nm">Lexi Dowdle</span><span class="rl">PR &amp; Communications Manager, Alta Ski Area</span><span class="hd">@kapowder</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · THE GUEST HOUSE, TRUCKEE -->
+<section class="section">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">The Guest House · Truckee, California</p>
+      <h2 class="lead-h reveal">The Guest House</h2>
+    </div>
+    <figure class="figure wrap reveal" style="padding:0;">
+      <div class="frame ph-3"><div class="ph-label">The Guest House in the pines<br>(drop in: guest-house.jpg)</div></div>
+    </figure>
+    <div class="col" style="margin-top:46px;">
+      <p class="drop reveal">Tucked into the pines in Truckee, The Guest House is less a rental and more a fully serviced private stay. A house captain runs point, a private chef keeps things dialed, and a Rivian SUV with driver stands ready for mountain laps or dinner runs.</p>
+      <p class="reveal">We came up with friends — Matt and Madie. Matt, freshly retired from Major League Baseball, clicked into skis for the first time.</p>
+      <p class="reveal">The Guest House proved the perfect basecamp: equal parts confidence and recovery lounge.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · BLACK TIE ARRIVAL -->
+<section class="section band">
+  <div class="wrap">
+    <div class="pull reveal" style="margin-top:0;">
+      <blockquote>"The adventure started before we even arrived."</blockquote>
+      <cite>Black Tie Ski Concierge</cite>
+    </div>
+    <figure class="figure wrap reveal" style="padding:0;margin-top:0;">
+      <div class="frame ph-1" style="aspect-ratio:16/8;"><div class="ph-label">Boot &amp; ski fitting at the house — Black Tie concierge<br>(drop in: black-tie-fitting.jpg)</div></div>
+    </figure>
+  </div>
+</section>
+
+<!-- 7 · THE PITCHER'S PLUNGE -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="col" style="margin-bottom:18px;">
+      <p class="eyebrow reveal">Wisler / Tahoe</p>
+      <h2 class="lead-h reveal">The Pitcher's Plunge</h2>
+      <p class="dek reveal">Former MLB pitcher Matt Wisler swaps a leather ball for the powder of Palisades Tahoe.</p>
+    </div>
+    <div class="split reveal">
+      <div>
+        <figure class="figure" style="margin:0 0 28px;">
+          <div class="frame ph-2"><div class="ph-label">Matt on the mountain<br>(drop in: wisler-moguls.jpg)</div></div>
+        </figure>
+        <p>There's a moment on day one where everything feels slightly unnatural — edges, balance, the idea of trusting gravity.</p>
+        <p>The National Ski Areas Association (NSAA) has historically reported that over 80% of first-timers do not try a snow sport again. That's why the right teacher is paramount.</p>
+        <div class="stat">
+          <div class="st-head">Alpine Analytics · Confidence Score</div>
+          <div class="st-grid">
+            <div class="st"><b>+35%</b><span>Mogul success rate</span></div>
+            <div class="st"><b>+50%</b><span>Balance consistency</span></div>
+          </div>
+          <div class="st-foot">Day 1 → Day 3</div>
+        </div>
+      </div>
+      <div class="side">
+        <div class="pic ph-4"><div class="ph-label" style="font-size:.85rem;">Wisler, Braves days<br>(wisler-braves.jpg)</div></div>
+        <h3>Mastering the moguls</h3>
+        <p>At Palisades Tahoe, Tim Reeve has built a reputation on making the moment disappear. No theatrics, no overcorrection — just clarity, patience, and timing.</p>
+        <p>Matt is forged for a new season, already geared up with Dalbello boots.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · THE APEX CLUB -->
+<section class="section">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">The Apex Club · Palisades Tahoe</p>
+      <h2 class="lead-h reveal">The Apex Club</h2>
+    </div>
+    <div class="three-up reveal">
+      <figure style="margin:0;">
+        <div class="frame ph-1"><div class="ph-label">Private lounge<br>(apex-lounge.jpg)</div></div>
+        <figcaption class="caption">Private lounges and on-mountain dining — warmth, space, and a place to land between runs.</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <div class="frame ph-3"><div class="ph-label">Members' entrance<br>(apex-entrance.jpg)</div></div>
+        <figcaption class="caption">No lift lines, no waiting — a private entrance reserved for members.</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <div class="frame ph-2"><div class="ph-label">Ski lockers<br>(apex-lockers.jpg)</div></div>
+        <figcaption class="caption">Dedicated ski lockers, steps from the snow.</figcaption>
+      </figure>
+    </div>
+    <p class="credit reveal" style="text-align:center;">The Apex Club · Palisades Tahoe</p>
+  </div>
+</section>
+
+<!-- 9 · THE GUEST HOUSE — MORNINGS -->
+<section class="section band">
+  <div class="wrap">
+    <div class="pull reveal" style="margin-top:0;">
+      <blockquote>The Guest House proved mornings can, in fact, be perfect.</blockquote>
+      <cite>Truckee, California</cite>
+    </div>
+    <div class="three-up reveal">
+      <div class="frame ph-4" style="aspect-ratio:3/4;"><div class="ph-label">Sunrise coffee<br>(guest-house-morning.jpg)</div></div>
+      <div class="frame ph-2" style="aspect-ratio:3/4;"><div class="ph-label">Breakfast<br>(guest-house-breakfast.jpg)</div></div>
+      <div class="frame ph-5" style="aspect-ratio:3/4;"><div class="ph-label">The private chef<br>(guest-house-chef.jpg)</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · SUNDANCE INN -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">Sundance Inn · Provo Canyon, Utah</p>
+      <h2 class="lead-h reveal">Sundance Inn</h2>
+    </div>
+    <div class="feature-inset reveal">
+      <div class="frame main ph-3"><div class="ph-label">Sundance Inn at dusk<br>(drop in: sundance-inn.jpg)</div></div>
+      <div class="frame inset ph-5"><div class="ph-label">"Bob's Bighorn Sheep"<br>above the hearth<br>(sundance-bighorn.jpg)</div></div>
+    </div>
+    <div class="col" style="margin-top:46px;">
+      <p class="drop reveal">Most people hear "Sundance" and think film festival. Fewer know it started here, in Provo Canyon, when Robert Redford began shaping this resort in the late 1960s — built not for spectacle, but for art, land, and a slower kind of luxury.</p>
+      <p class="reveal">The new Sundance Inn leans into that legacy. Timbered, grounded, and quietly refined, it favors atmosphere over flash — rooms that open to the mountain, design that says <em>out of the way</em>, and a rhythm that feels intentionally unhurried.</p>
+      <p class="reveal">Inside, the details land softly. In the lounge, <em>"Bob's Bighorn Sheep"</em> — by Utah artist Daniel Bailey — is mounted above the stone hearth. Fitting, given Redford's role in reintroducing bighorn sheep to the area: a nod to the West, equal parts story and signature.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 11 · REDFORD / SKIN -->
+<section class="section">
+  <div class="wrap">
+    <div class="pull reveal" style="margin-top:0;">
+      <blockquote>Robert Redford built Sundance for moments like this. The secret's still intact — let's keep it that way.</blockquote>
+      <cite>Sundance Mountain Resort, Utah</cite>
+    </div>
+    <figure class="figure wrap reveal" style="padding:0;margin-top:0;">
+      <div class="frame ph-1"><div class="ph-label">Skinning above Sundance — Doug &amp; Si Si<br>(drop in: sundance-skin.jpg)</div></div>
+    </figure>
+  </div>
+</section>
+
+<!-- 12 · THE TREE ROOM (DINING) -->
+<section class="section band">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">Glacial gastronomy</p>
+      <h2 class="lead-h reveal">The Tree Room at Sundance</h2>
+      <p class="dek reveal">The day ends where the mountain exhales.</p>
+      <p class="reveal">Warm wood, quiet light, and plates that feel earned after a long skin up. Rustic, but precise. Intimate, but never trying too hard.</p>
+    </div>
+    <div class="three-up reveal">
+      <div class="frame ph-5"><div class="ph-label">Tree Room interior<br>(tree-room.jpg)</div></div>
+      <div class="frame ph-2"><div class="ph-label">The plate<br>(tree-room-dish.jpg)</div></div>
+      <div class="frame ph-4"><div class="ph-label">Archive portrait<br>(sundance-archive.jpg)</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 13 · CONTRIBUTORS -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="col" style="margin-bottom:34px;">
+      <p class="eyebrow reveal">Contributors</p>
+      <h2 class="lead-h reveal" style="font-size:clamp(1.8rem,3.6vw,2.5rem);">The people behind the issue</h2>
+    </div>
+    <div class="people reveal">
+      <div class="person">
+        <div class="pic ph-1" title="doug-portrait.jpg"></div>
+        <div>
+          <h4>Doug Olear</h4>
+          <p class="role">Co-founder · host &amp; cinematic eye</p>
+          <p>A veteran of the Screen Actors Guild and Actors' Equity Association, Doug has built a three-decade career across <em>The Wire</em>, HBO's Emmy Award-winning <em>Something the Lord Made</em>, hundreds of Kennedy Center performances, and national campaigns for Toyota, Ford, and Walmart. He now channels that into Alpine Analytics, born of his and Si Si's shared passion: the high-alpine and travel lifestyle.</p>
+        </div>
+      </div>
+      <div class="person">
+        <div class="pic ph-3" title="sisi-portrait.jpg"></div>
+        <div>
+          <h4>Si Si Penaloza</h4>
+          <p class="role">Co-founder · editorial voice</p>
+          <p>A cultural polymath, Si Si reports on prestige travel, design, and lifestyle worldwide. Executive Travel Editor of <em>Jetset</em> since 2010 and a <em>Maxim</em> contributor since 2019, she has reported on the <em>Great Gatsby</em> cast from Cannes, played tennis with Roger Federer in Paris, and interviewed Bode Miller at the Yellowstone Club.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="endmark">✦</div>
+      <nav class="issue-nav">
+        <a href="index.html#issues"><span class="k">↩ Back to</span><span class="t">All issues</span></a>
+        <a href="issue-1.html"><span class="k">Also in print →</span><span class="t">Vol. 1 — Zermatt's Glacier Paradise</span></a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <a class="brand" href="index.html">Alpine <b>Analytics</b></a>
+      <p>Smart escapism with character. Field notes from the unhurried mountains.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html#issues">Latest issues</a>
+      <a href="writing.html">Writing by Si Si</a>
+      <a href="index.html#inside">Inside the magazine</a>
+      <a href="https://instagram.com/sisitravels" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:hello@alpineanalytics.com">hello@alpineanalytics.com</a>
+    </div>
+  </div>
+  <div class="footer-foot">
+    <span>© 2026 Alpine Analytics · Benloch Ranch, Park City, Utah</span>
+    <span>Volume Three · The Girls of Spring</span>
+  </div>
+</footer>
+
+<script>
+  var btn=document.getElementById('menuBtn');
+  var links=document.getElementById('navLinks');
+  btn.addEventListener('click',function(){var open=links.classList.toggle('open');btn.setAttribute('aria-expanded',open);});
+  links.addEventListener('click',function(e){if(e.target.tagName==='A') links.classList.remove('open');});
+  var bar=document.getElementById('progress');
+  function prog(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max*100):0)+'%';}
+  document.addEventListener('scroll',prog,{passive:true});prog();
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
+</script>
+</body>
+</html>
