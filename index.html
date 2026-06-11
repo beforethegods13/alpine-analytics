@@ -178,7 +178,9 @@
     font-family:var(--display);font-weight:400;font-style:italic;
     font-size:1.1rem;color:var(--clay);margin-bottom:.9rem;
   }
-  .maker{margin-bottom:1.2rem}
+  .maker{display:flex;align-items:flex-start;gap:14px;margin-bottom:1.4rem}
+  .maker .pic{flex:0 0 56px;width:56px;height:56px;border-radius:50%;background-size:cover;background-position:center;background-color:var(--sage-wash);box-shadow:0 10px 24px -16px rgba(69,67,60,.55);margin-top:3px}
+  .maker .who{min-width:0}
   .maker strong{font-weight:600;color:var(--ink);font-size:1.02rem}
   .maker strong a{color:inherit;text-decoration:none;border-bottom:1px solid var(--clay);transition:color .2s,border-color .2s}
   .maker strong a:hover,.maker strong a:focus-visible{color:var(--clay-deep);border-color:var(--clay-deep)}
@@ -363,12 +365,18 @@
       <aside class="makers reveal">
         <h3>Made by</h3>
         <div class="maker">
-          <strong><a href="https://www.imdb.com/name/nm0003494/" target="_blank" rel="noopener">Doug Olear</a></strong>
-          <span>Co-founder, host &amp; cinematic eye. Actor, <em>The Wire</em>.</span>
+          <div class="pic" style="background-image:url('doug-portrait.jpg')"></div>
+          <div class="who">
+            <strong><a href="https://www.imdb.com/name/nm0003494/" target="_blank" rel="noopener">Doug Olear</a></strong>
+            <span>Co-founder, host &amp; cinematic eye. Actor, <em>The Wire</em>.</span>
+          </div>
         </div>
         <div class="maker">
-          <strong>Si Si Penaloza</strong>
-          <span>Co-founder &amp; editorial voice. Writer for <em>Jetset</em> and <em>Maxim</em>.</span>
+          <div class="pic" style="background-image:url('sisi-portrait.jpg')"></div>
+          <div class="who">
+            <strong>Si Si Penaloza</strong>
+            <span>Co-founder &amp; editorial voice. Writer for <em>Jetset</em> and <em>Maxim</em>.</span>
+          </div>
         </div>
         <p class="location">Based at Benloch Ranch — in the mountains above Heber City &amp; Park City, Utah.</p>
       </aside>
