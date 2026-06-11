@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vol. 2 — More Deer Valley · Alpine Analytics</title>
+<meta name="description" content="Volume Two of Alpine Analytics. More Deer Valley, an @sisitravels exclusive on Velvære, ZeroFit base layers, Alpine Distilling, and alpine fine dining." />
+
+<!-- ============================================================
+     ALPINE ANALYTICS — ISSUE READER · VOL. 2 (MORE DEER VALLEY / VELVÆRE)
+     Single self-contained file. Keep at the repo root (same folder
+     as index.html) so nav/footer links resolve.
+
+     COPY: transcribed from the Vol. 2 carousel, with a few obvious
+     typos quietly corrected for the website (Velvære, rendezvous,
+     @sisitravels, Jetset, ZeroFit). The Velvære feature is Si Si's
+     published spread "The Elevation of Everything."
+
+     PHOTOS: every image block is a brand-gradient PLACEHOLDER with a
+     suggested filename. To use a real photo, upload it to the repo
+     root and set  style="background-image:url('FILE.jpg')"  on the
+     .frame (delete the inner .ph-label so text doesn't sit on top).
+     Nothing breaks while placeholders are in place.
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --linen:#f7f3ec; --cream:#fbf8f2; --ink:#45433c; --ink-soft:#777269;
+    --sky:#8fb1bc; --sage:#a4b19a; --sage-wash:#edf0e7;
+    --clay:#c98a63; --clay-deep:#b1734d;
+    --rule:rgba(69,67,60,.14);
+    --shadow:0 18px 50px -28px rgba(69,67,60,.45);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--linen);color:var(--ink);
+    font-family:'Mulish',system-ui,sans-serif;font-weight:300;
+    font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+
+  .eyebrow{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:400;
+    color:var(--clay);font-size:1rem;letter-spacing:.02em;margin:0 0 14px;
+  }
+
+  /* progress */
+  .progress{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--clay);z-index:120;transition:width .1s linear;}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:100;background:rgba(247,243,236,.86);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--rule);}
+  .nav-inner{max-width:1180px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;}
+  .brand{font-family:'Fraunces',serif;font-weight:400;font-size:1.18rem;letter-spacing:.04em;text-decoration:none;color:var(--ink);white-space:nowrap;}
+  .brand b{font-weight:500;}
+  .nav-links{display:flex;align-items:center;gap:26px;}
+  .nav-links a{text-decoration:none;color:var(--ink-soft);font-size:.93rem;font-weight:400;transition:color .2s;}
+  .nav-links a:hover{color:var(--clay-deep);}
+  .nav-cta{border:1px solid var(--clay);color:var(--clay-deep)!important;padding:7px 16px;border-radius:999px;}
+  .nav-cta:hover{background:var(--clay);color:#fff!important;}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:6px;}
+  .menu-btn span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.25s;}
+
+  /* cover / masthead (rendered in the OPEN-AIR brand style, not the dark cover) */
+  .cover{
+    position:relative;min-height:90vh;display:flex;align-items:flex-end;
+    background:
+      linear-gradient(180deg,rgba(69,67,60,.12) 0%,rgba(69,67,60,0) 34%,rgba(69,67,60,.58) 100%),
+      linear-gradient(135deg,var(--sky) 0%,var(--sage) 52%,var(--clay) 122%);
+    background-size:cover;background-position:center;
+    /* REAL COVER PHOTO (a clean Deer Valley / ski-mountaineering shot):
+       background-image:
+         linear-gradient(180deg,rgba(69,67,60,.12),rgba(69,67,60,0) 34%,rgba(69,67,60,.58)),
+         url('deer-valley-cover.jpg'); */
+  }
+  .cover-inner{padding-bottom:7vh;}
+  .cover .kicker{color:var(--cream);font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;letter-spacing:.08em;margin:0 0 16px;text-shadow:0 1px 16px rgba(69,67,60,.5);}
+  .cover h1{font-family:'Fraunces',serif;font-weight:300;color:var(--cream);font-size:clamp(2.6rem,7.2vw,5.6rem);line-height:1.0;margin:0;letter-spacing:-.01em;max-width:15ch;text-shadow:0 2px 30px rgba(69,67,60,.4);}
+  .cover .lines{margin:24px 0 0;color:var(--cream);max-width:48ch;}
+  .cover .lines p{margin:0 0 6px;font-size:1.1rem;font-weight:300;text-shadow:0 1px 18px rgba(69,67,60,.55);}
+  .cover .lines em{font-family:'Fraunces',serif;font-style:italic;}
+  .cover .lines .ex{color:var(--cream);opacity:.95;}
+  .scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:var(--cream);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85;display:flex;flex-direction:column;align-items:center;gap:7px;}
+  .scroll-hint .dot{width:1px;height:34px;background:linear-gradient(var(--cream),transparent);animation:fall 2.2s ease-in-out infinite;}
+  @keyframes fall{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+
+  /* generic section */
+  .section{padding:88px 0;}
+  .section + .section{border-top:1px solid var(--rule);}
+  .band{background:var(--sage-wash);}
+  .band-cream{background:var(--cream);}
+  .col{max-width:680px;margin:0 auto;}
+  .col p{margin:0 0 1.35em;}
+  .lead-h{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2rem,4.4vw,3.1rem);line-height:1.06;letter-spacing:-.01em;margin:0 0 .5em;color:var(--ink);}
+  .dek{font-family:'Fraunces',serif;font-style:italic;color:var(--ink-soft);font-size:1.2rem;margin:0 0 1.6em;}
+  .byline{color:var(--ink-soft);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;}
+  .byline span{color:var(--clay-deep);}
+  .subhead{font-family:'Fraunces',serif;font-weight:400;font-size:1.5rem;line-height:1.2;color:var(--ink);margin:1.7em 0 .5em;}
+  .drop::first-letter{font-family:'Fraunces',serif;font-weight:400;float:left;font-size:4.4rem;line-height:.78;padding:8px 12px 0 0;color:var(--clay-deep);}
+  .credit{font-family:'Fraunces',serif;font-style:italic;font-size:.92rem;color:var(--ink-soft);margin-top:14px;}
+
+  /* figures */
+  .figure{margin:46px 0 0;}
+  .frame{aspect-ratio:16/9;background-size:cover;background-position:center;background-repeat:no-repeat;border-radius:6px;overflow:hidden;box-shadow:var(--shadow);}
+  .ph-1{background:linear-gradient(135deg,var(--sky),var(--sage));}
+  .ph-2{background:linear-gradient(135deg,var(--sage),var(--clay));}
+  .ph-3{background:linear-gradient(160deg,var(--clay),var(--sky));}
+  .ph-4{background:linear-gradient(135deg,#cdb89c,var(--sky));}
+  .ph-5{background:linear-gradient(150deg,var(--sage-wash),var(--sage));}
+  .ph-label{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:rgba(251,248,242,.92);font-family:'Fraunces',serif;font-style:italic;font-size:.98rem;letter-spacing:.03em;text-align:center;padding:18px;}
+  .caption{font-family:'Fraunces',serif;font-style:italic;font-size:.95rem;color:var(--ink-soft);margin-top:12px;line-height:1.5;}
+  .caption b{font-style:normal;font-weight:500;color:var(--ink);}
+
+  /* pull quote */
+  .pull{margin:56px auto;max-width:780px;text-align:center;}
+  .pull blockquote{margin:0;font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(1.6rem,3.4vw,2.3rem);line-height:1.3;color:var(--clay-deep);}
+  .pull cite{display:block;margin-top:18px;font-style:normal;font-family:'Mulish',sans-serif;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);}
+
+  /* two-up gallery */
+  .gallery-second{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;}
+  .gallery-second .frame{aspect-ratio:3/2;}
+
+  /* gear / product card */
+  .gear{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center;}
+  .gear .frame{aspect-ratio:4/5;}
+  .gear .kick{font-family:'Fraunces',serif;font-style:italic;color:var(--clay);font-size:1.05rem;margin:0 0 6px;}
+  .gear h3{font-family:'Fraunces',serif;font-weight:400;font-size:1.9rem;line-height:1.12;margin:0 0 .6em;color:var(--ink);}
+  .gear ul{list-style:none;margin:1.4em 0;padding:0;}
+  .gear li{position:relative;padding:8px 0 8px 26px;border-top:1px solid var(--rule);font-size:.98rem;}
+  .gear li:last-child{border-bottom:1px solid var(--rule);}
+  .gear li::before{content:"▸";position:absolute;left:2px;color:var(--clay);}
+  .gear .est{font-size:.95rem;color:var(--ink-soft);font-style:italic;font-family:'Fraunces',serif;}
+
+  /* contributors */
+  .people{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .person{display:flex;gap:20px;align-items:flex-start;}
+  .person .pic{flex:0 0 96px;width:96px;height:96px;border-radius:50%;background-size:cover;background-position:center;box-shadow:var(--shadow);}
+  .person h4{font-family:'Fraunces',serif;font-weight:500;font-size:1.2rem;margin:2px 0 4px;}
+  .person .role{font-family:'Fraunces',serif;font-style:italic;color:var(--clay-deep);font-size:.92rem;margin:0 0 10px;}
+  .person p{margin:0;font-size:.96rem;line-height:1.6;color:var(--ink);}
+
+  .endmark{text-align:center;margin:54px 0 0;color:var(--clay);font-family:'Fraunces',serif;font-size:1.4rem;}
+
+  .issue-nav{margin-top:8px;padding-top:34px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+  .issue-nav a{text-decoration:none;color:var(--ink-soft);font-size:.95rem;display:flex;flex-direction:column;gap:4px;transition:color .2s;}
+  .issue-nav a:hover{color:var(--clay-deep);}
+  .issue-nav .k{font-family:'Fraunces',serif;font-style:italic;color:var(--clay);font-size:.85rem;}
+  .issue-nav .t{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--ink);}
+  .issue-nav a:last-child{text-align:right;align-items:flex-end;}
+
+  /* footer */
+  .footer{background:var(--cream);border-top:1px solid var(--rule);margin-top:0;padding:54px 0 40px;}
+  .footer-inner{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;}
+  .footer .brand{font-size:1.3rem;}
+  .footer p{margin:10px 0 0;color:var(--ink-soft);font-size:.92rem;max-width:34ch;}
+  .footer-links{display:flex;flex-direction:column;gap:9px;}
+  .footer-links a{color:var(--ink-soft);text-decoration:none;font-size:.92rem;}
+  .footer-links a:hover{color:var(--clay-deep);}
+  .footer-foot{max-width:1180px;margin:38px auto 0;padding:18px 28px 0;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:.82rem;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (max-width:860px){
+    .gear{grid-template-columns:1fr;gap:26px;}
+    .people{grid-template-columns:1fr;}
+  }
+  @media (max-width:820px){
+    .nav-links{position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;align-items:flex-start;gap:0;padding:8px 28px 18px;border-bottom:1px solid var(--rule);box-shadow:var(--shadow);display:none;}
+    .nav-links.open{display:flex;}
+    .nav-links a{padding:11px 0;width:100%;border-bottom:1px solid var(--rule);}
+    .nav-links a:last-child{border-bottom:0;}
+    .nav-cta{width:auto;}
+    .menu-btn{display:block;}
+    .cover{min-height:80vh;}
+    .section{padding:64px 0;}
+  }
+  @media (max-width:520px){
+    body{font-size:17px;}
+    .wrap{padding:0 20px;}
+    .nav-inner{padding:14px 20px;}
+    .gallery-second{grid-template-columns:1fr;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .scroll-hint .dot{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Alpine <b>Analytics</b></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#issues">Issues</a>
+      <a href="writing.html">Writing</a>
+      <a href="index.html#inside">Inside</a>
+      <a class="nav-cta" href="https://instagram.com/sisitravels" target="_blank" rel="noopener">Follow</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- COVER -->
+<header class="cover" id="cover">
+  <div class="wrap cover-inner">
+    <p class="kicker reveal">Micro&nbsp;Mag &nbsp;·&nbsp; Volume Two</p>
+    <h1 class="reveal">More Deer Valley</h1>
+    <div class="lines reveal">
+      <p><em>"More runs. More rendezvous. More Deer Valley."</em></p>
+      <p class="ex">An <span style="font-style:italic">@sisitravels</span> exclusive: Velvære</p>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><div class="dot"></div>Read</div>
+</header>
+
+<!-- WELCOME / OPENER -->
+<section class="section">
+  <div class="wrap col">
+    <p class="eyebrow reveal">Welcome</p>
+    <h2 class="lead-h reveal">More runs, more rendezvous, more Deer Valley.</h2>
+    <p class="reveal">Volume Two heads back to the slopes of Utah — to a resort writing its boldest chapter yet, and to a 60-acre kingdom where wellness is the foundation, not the amenity. Inside: the new village rising at Deer Valley East, an exclusive first look at Velvære, the base layers that keep us warm by the fire, a Park City whiskey worth its 98 points, and a quiet table at the Waldorf Astoria.</p>
+    <figure class="figure reveal">
+      <div class="frame ph-4"><div class="ph-label">Cover frame — ski-mountaineering portrait<br>(drop in: deer-valley-cover.jpg)</div></div>
+      <figcaption class="credit">Alpine Analytics — Deer Valley, Utah</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- DEER VALLEY EAST -->
+<section class="section band">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">The feature</p>
+      <h2 class="lead-h reveal">Deer Valley East</h2>
+    </div>
+    <div class="pull reveal">
+      <blockquote>"A bold next chapter for one of America's most celebrated ski-only resorts."</blockquote>
+    </div>
+    <figure class="figure wrap reveal" style="padding:0;">
+      <div class="frame ph-1"><div class="ph-label">Deer Valley East — carving the new terrain<br>(drop in: deer-valley-east.jpg)</div></div>
+    </figure>
+    <div class="col" style="margin-top:46px;">
+      <p class="drop reveal">Deer Valley East Village ushers in a new alpine era with expansive new terrain, luxury lodging, and a sleek base village. Featuring 16 lifts, 135 runs, and cutting-edge snowmaking, it redefines Utah skiing with effortless access and slope-side sophistication.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VELVÆRE · THE ELEVATION OF EVERYTHING -->
+<section class="section">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">@sisitravels exclusive · Velvære</p>
+      <h2 class="lead-h reveal">The elevation of everything</h2>
+      <p class="dek reveal">Trophy real estate ascends to new heights.</p>
+      <p class="byline reveal">By <span>Si Si Penaloza</span></p>
+    </div>
+    <figure class="figure wrap reveal" style="padding:0;">
+      <div class="frame ph-2"><div class="ph-label">Velvære — the stone-fireplace great room<br>(drop in: velvaere-fireside.jpg)</div></div>
+    </figure>
+    <div class="col" style="margin-top:46px;">
+      <p class="drop reveal">Thanks to recent innovations in luxury residential real estate, members of the one percent are not only living better, they're learning how to live longer. We'll introduce you to three unique retreats in Utah, Idaho, and California that are taking trophy real estate to the next level.</p>
+
+      <h3 class="subhead reveal">Velvære — turnkey biohacking in style</h3>
+
+      <p class="reveal">Park City has never been short on luxury, but Velvære isn't just another high-altitude hideaway for the deep-pocketed and well-moisturized. This is something else entirely — imagine an Amangiri you never have to check out of. Meet 60 acres of recreational real estate where wellness isn't a spa-menu afterthought but the very foundation. Here, home is a retreat, your body a finely tuned machine, and your neighborhood a private ski-in, ski-out kingdom. If the world had a wellness Valhalla, this would be it.</p>
+
+      <p class="reveal">Velvære offers longevity science on demand in the form of real estate. With a nod to Scandinavian minimalism, this is where high-tech biohacking meets high-touch luxury. Think air purification systems so pristine they rival a surgical suite, water filtered to near-mystical purity, and circadian-rhythm lighting designed to sync your body to nature. The goal? To extend prime years well into your seventies, ensuring you can still shred powder and sip biodynamic Pinot without breaking a sweat — or a hip.</p>
+    </div>
+
+    <div class="pull reveal">
+      <blockquote>"If the world had a wellness Valhalla, this would be it."</blockquote>
+    </div>
+
+    <div class="col">
+      <p class="reveal">Drawing inspiration from biophilic design principles, Velvære offers 115 meticulously crafted residences: 12 cabins starting in the mid-$4 millions, 68 paired residences beginning at $5 million, and 35 estate lots priced from $3 million. Each abode is a sanctuary, thoughtfully designed to foster a deep connection with the surrounding landscape.</p>
+
+      <p class="reveal">Velvære has partnered with Aescape, an AI-powered massage system that maps your body with over a million 3D data points, tailoring every touch to your personal tension points. Imagine it as the self-driving technology of massage therapy — sleek, intuitive, and slightly unnerving in its precision. Experience this futuristic bliss in the community's 10,000-square-foot Wellness Center, or opt for one in your own residence.</p>
+
+      <p class="reveal">Calling Velvære's in-home fitness room a gym is like calling a Bugatti "transportation." It's a human-performance lab calibrated to optimize. Private trainers analyze your VO2 max, AI tweaks recovery protocols, and biometric feedback ensures you're training at peak efficiency — because simply "working out" is so last century.</p>
+    </div>
+
+    <figure class="figure wrap reveal" style="padding:0;">
+      <div class="frame ph-4"><div class="ph-label">Velvære — the great room &amp; mountain view<br>(drop in: velvaere-living.jpg)</div></div>
+    </figure>
+
+    <div class="col" style="margin-top:46px;">
+      <p class="reveal">"For us, technology isn't something we layered onto the home — it's embedded quietly, designed to disappear so daily life takes center stage," Dayson Johnson, chief revenue officer and partner at Bonfire Collective, shares with us exclusively on our first look. "Every innovation at Velvære serves a singular purpose: to help people feel more connected, more present. That's what we mean when we talk human-first innovation. Technology enhances the experience without overpowering it. Precision health screenings through our partnership with Fountain Life are all integrated seamlessly into the home."</p>
+      <p class="credit reveal">An <em>@sisitravels</em> exclusive by Si Si Penaloza · first published in <em>Jetset</em>. <a href="https://jetsetmag.com/real-estate/the-elevation-of-everything/" target="_blank" rel="noopener" style="color:var(--clay-deep);text-decoration:underline;text-underline-offset:3px;">Read the full feature on jetsetmag.com →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- GEAR WE LOVE · ZEROFIT -->
+<section class="section band">
+  <div class="wrap">
+    <div class="col" style="margin-bottom:34px;">
+      <p class="eyebrow reveal">Gear we trust</p>
+      <h2 class="lead-h reveal" style="font-size:clamp(1.8rem,3.6vw,2.5rem);">You can't bank stoke — gear we love</h2>
+    </div>
+    <div class="gear reveal">
+      <div class="frame ph-5"><div class="ph-label" style="color:var(--ink-soft);">By the fire in ZeroFit<br>(drop in: zerofit-baselayer.jpg)</div></div>
+      <div>
+        <p class="kick">ZeroFit Base Layers</p>
+        <h3>"Heat Threads," engineered in Japan</h3>
+        <p>ZeroFit base layers are engineered for high-performance warmth and comfort. Developed in Japan, their innovative "Heat Threads" technology provides up to five times more heat than traditional base layers.</p>
+        <ul>
+          <li>Up to 5× the warmth of a traditional base layer</li>
+          <li>Japanese "Heat Threads" construction</li>
+          <li>Breathable, stretchy, and soft against the skin</li>
+        </ul>
+        <p class="est">Despite their thermal power, they stay breathable, stretchy, and soft against the skin — we likey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALPINE DISTILLING -->
+<section class="section">
+  <div class="wrap">
+    <div class="col" style="margin-bottom:34px;">
+      <p class="eyebrow reveal">The pour · Park City</p>
+      <h2 class="lead-h reveal" style="font-size:clamp(1.8rem,3.6vw,2.5rem);">Alpine Distilling</h2>
+    </div>
+    <div class="gear reveal">
+      <div class="frame ph-2"><div class="ph-label">Triple Oak Whiskey<br>(drop in: alpine-distilling.jpg)</div></div>
+      <div>
+        <p class="kick">Triple Oak Whiskey</p>
+        <h3>Spirit of the Year</h3>
+        <p>Helmed by husband-and-wife team Rob Sergent and Sara Sergent, Alpine Distilling is based in Park City, Utah. Their ultra-premium triple-oak bourbon, Triple Oak Whiskey, earned a 98-point "Platinum" rating and was named "Spirit of the Year."</p>
+        <ul>
+          <li>98-point "Platinum" rating</li>
+          <li>Named "Spirit of the Year"</li>
+          <li>Distilled from corn, wheat &amp; barley</li>
+          <li>Aged in #3-char American oak; finished in American &amp; French casks</li>
+        </ul>
+        <p class="est">Distilled and bottled in Park City, Utah.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALPINE FINE DINING -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">Glacial gastronomy</p>
+      <h2 class="lead-h reveal">Alpine fine dining</h2>
+      <p class="reveal">The Waldorf Astoria in Park City, Utah offers an elevated fine-dining experience, with artfully crafted cuisine served in an elegant alpine setting.</p>
+    </div>
+    <figure class="figure wrap reveal" style="padding:0;">
+      <div class="frame ph-5"><div class="ph-label" style="color:var(--ink-soft);">Candlelit table — the opening course<br>(drop in: waldorf-dish.jpg)</div></div>
+      <figcaption class="caption" style="text-align:center;"><b>The Waldorf Astoria, Park City.</b> An elevated table in an elegant alpine setting.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- CONTRIBUTORS -->
+<section class="section">
+  <div class="wrap">
+    <div class="col" style="margin-bottom:34px;">
+      <p class="eyebrow reveal">Contributors</p>
+      <h2 class="lead-h reveal" style="font-size:clamp(1.8rem,3.6vw,2.5rem);">The people behind the issue</h2>
+    </div>
+    <div class="people reveal">
+      <div class="person">
+        <div class="pic ph-1" title="doug-portrait.jpg"></div>
+        <div>
+          <h4>Doug Olear</h4>
+          <p class="role">Co-founder · host &amp; cinematic eye</p>
+          <p>A veteran of the Screen Actors Guild and Actors' Equity Association, Doug has built a three-decade career across <em>The Wire</em> — ranked the greatest TV series of the 21st century in a BBC poll — HBO's Emmy Award-winning <em>Something the Lord Made</em>, hundreds of Kennedy Center performances, and national campaigns for Toyota, Ford, and Walmart. He now channels that into Alpine Analytics, born of his and Si Si's shared passion: the high-alpine and travel lifestyle.</p>
+        </div>
+      </div>
+      <div class="person">
+        <div class="pic ph-3" title="sisi-portrait.jpg"></div>
+        <div>
+          <h4>Si Si Penaloza</h4>
+          <p class="role">Co-founder · editorial voice</p>
+          <p>A cultural polymath, Si Si reports on prestige travel, design, and lifestyle worldwide. Executive Travel Editor of <em>Jetset</em> since 2010 and a <em>Maxim</em> contributor since 2019, she has reported on the <em>Great Gatsby</em> cast from Cannes, played tennis with Roger Federer in Paris, and interviewed Bode Miller at the Yellowstone Club.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="endmark">✦</div>
+      <nav class="issue-nav">
+        <a href="index.html#issues"><span class="k">↩ Back to</span><span class="t">All issues</span></a>
+        <a href="issue-3.html"><span class="k">Next issue →</span><span class="t">Vol. 3 — The Girls of Spring</span></a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <a class="brand" href="index.html">Alpine <b>Analytics</b></a>
+      <p>Smart escapism with character. Field notes from the unhurried mountains.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html#issues">Latest issues</a>
+      <a href="writing.html">Writing by Si Si</a>
+      <a href="index.html#inside">Inside the magazine</a>
+      <a href="https://instagram.com/sisitravels" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:hello@alpineanalytics.com">hello@alpineanalytics.com</a>
+    </div>
+  </div>
+  <div class="footer-foot">
+    <span>© 2026 Alpine Analytics · Benloch Ranch, Park City, Utah</span>
+    <span>Volume Two · More Deer Valley &amp; Velvære</span>
+  </div>
+</footer>
+
+<script>
+  var btn=document.getElementById('menuBtn');
+  var links=document.getElementById('navLinks');
+  btn.addEventListener('click',function(){var open=links.classList.toggle('open');btn.setAttribute('aria-expanded',open);});
+  links.addEventListener('click',function(e){if(e.target.tagName==='A') links.classList.remove('open');});
+
+  var bar=document.getElementById('progress');
+  function prog(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max*100):0)+'%';}
+  document.addEventListener('scroll',prog,{passive:true});prog();
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+  }
+</script>
+</body>
+</html>
