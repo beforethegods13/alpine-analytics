@@ -229,7 +229,7 @@
   .covers{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.5vw,2rem)}
   .cover{
     position:relative;display:flex;flex-direction:column;justify-content:flex-end;
-    aspect-ratio:3/4;border-radius:3px;overflow:hidden;
+    aspect-ratio:4/5;border-radius:3px;overflow:hidden;
     padding:1.6rem;color:var(--cream);
     background-size:cover;background-position:center;
     transition:transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s ease;
@@ -443,10 +443,10 @@
         <p class="note">Cover stories posted to <a href="https://instagram.com/alpineanalytics" target="_blank" rel="noopener">Instagram</a>. Tap any cover to read the issue.</p>
       </div>
       <div class="covers reveal">
-        <!-- Cover photos: each card looks for a 3:4 portrait named
-             card-vol3.jpg / card-vol2.jpg / card-vol1.jpg. Upload those
-             to the repo root and they appear. A gradient wash shows
-             behind until the file exists. -->
+        <!-- Cover photos: each card looks for a 4:5 portrait named
+             card-vol3.jpg / card-vol2.jpg / card-vol1.jpg. Crop photos
+             to 4:5 (matches the card exactly — no trimming). A gradient
+             wash shows behind until the file exists. -->
         <!-- WIRING: all three volumes now open on-site readers
              (issue-1.html / issue-2.html / issue-3.html), same tab. -->
         <a class="cover cover--3" href="issue-3.html" aria-label="Volume 3 — The Girls of Spring · read the issue" style="background-image:url('card-vol3.jpg'),linear-gradient(155deg,#b9c4ad,#8fb1bc 70%,#6f93a0);background-position:center">
