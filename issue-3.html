@@ -21,18 +21,21 @@
      Contributors page intentionally DROPPED.
 
      PHOTOS — two states:
-       1) ALREADY IN THE REPO (clean verticals), wired live with a
-          gradient fallback layered behind:
-            girls-of-spring-cover.jpg · snowpine-lodge.jpg ·
-            snowpine-igloo.jpg · corn-snow.jpg ·
-            women-of-the-mountain.jpg
-       2) NOT YET UPLOADED — brand-gradient placeholders with the
-          suggested filename printed inside. To use a real photo:
-          upload it to the repo root, then on that slot replace
-            <div class="frame ph-X"><div class="ph-label">…</div></div>
-          with
-            <div class="frame" style="background-image:url('FILE.jpg')"></div>
-          (delete the inner ph-label so text doesn't sit on the photo).
+     EVERY image slot is now PRE-WIRED to its exact filename, with a
+     brand gradient layered behind as a fallback. So to add a photo:
+     just upload a correctly-named .jpg to the repo root and refresh —
+     it appears automatically, NO HTML editing. Any slot whose file
+     isn't uploaded yet simply shows a tasteful gradient.
+
+     EXACT FILENAMES the page is looking for (name your uploads these):
+       girls-of-spring-cover.jpg · snowpine-lodge.jpg · snowpine-igloo.jpg
+       corn-snow.jpg · women-of-the-mountain.jpg · guest-house.jpg
+       black-tie-fitting.jpg · wisler-moguls.jpg · wisler-braves.jpg
+       apex-lounge.jpg · apex-entrance.jpg · apex-lockers.jpg
+       guest-house-morning.jpg · guest-house-breakfast.jpg · guest-house-chef.jpg
+       sundance-inn.jpg · sundance-bighorn.jpg · sundance-skin.jpg
+       tree-room.jpg · tree-room-dish.jpg · sundance-archive.jpg
+     (The 5 in the first row are already in the repo and showing.)
      ============================================================ -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -337,7 +340,7 @@
   <div class="wrap">
     <div class="vfeat">
       <div class="vmedia reveal">
-        <div class="vhero ph-3"><div class="ph-label">The Guest House in the pines<br>(drop in: guest-house.jpg)</div></div>
+        <div class="vhero" style="background-image:url('guest-house.jpg'),linear-gradient(160deg,var(--clay),var(--sky));"></div>
         <p class="vcap"><b>The Guest House, Truckee.</b> A fully serviced private stay in the pines.</p>
       </div>
       <div class="vtext reveal">
@@ -361,7 +364,7 @@
       <cite>Black Tie Ski Concierge</cite>
     </div>
     <figure class="figure reveal" style="margin-top:46px;">
-      <div class="frame ph-1" style="aspect-ratio:16/9;"><div class="ph-label">Boot &amp; ski fitting at the house — Black Tie concierge<br>(drop in: black-tie-fitting.jpg)</div></div>
+      <div class="frame" style="aspect-ratio:16/9;background-image:url('black-tie-fitting.jpg'),linear-gradient(135deg,var(--sky),var(--sage));"></div>
     </figure>
   </div>
 </section>
@@ -377,7 +380,7 @@
     <div class="split reveal">
       <div>
         <figure class="figure" style="margin:0 0 28px;">
-          <div class="frame ph-2" style="aspect-ratio:3/4;"><div class="ph-label">Matt on the mountain<br>(drop in: wisler-moguls.jpg)</div></div>
+          <div class="frame" style="aspect-ratio:3/4;background-image:url('wisler-moguls.jpg'),linear-gradient(135deg,var(--sage),var(--clay));"></div>
         </figure>
         <p>There's a moment on day one where everything feels slightly unnatural — edges, balance, the idea of trusting gravity.</p>
         <p>The National Ski Areas Association (NSAA) has historically reported that over 80% of first-timers do not try a snow sport again. That's why the right teacher is paramount.</p>
@@ -391,7 +394,7 @@
         </div>
       </div>
       <div class="side">
-        <div class="pic ph-4"><div class="ph-label" style="font-size:.85rem;">Wisler, Braves days<br>(wisler-braves.jpg)</div></div>
+        <div class="pic" style="background-image:url('wisler-braves.jpg'),linear-gradient(135deg,#cdb89c,var(--sky));"></div>
         <h3>Mastering the moguls</h3>
         <p>At Palisades Tahoe, Tim Reeve has built a reputation on making the moment disappear. No theatrics, no overcorrection — just clarity, patience, and timing.</p>
         <p>Matt is forged for a new season, already geared up with Dalbello boots.</p>
@@ -409,15 +412,15 @@
     </div>
     <div class="three-up reveal">
       <figure>
-        <div class="frame ph-1"><div class="ph-label">Private lounge<br>(apex-lounge.jpg)</div></div>
+        <div class="frame" style="background-image:url('apex-lounge.jpg'),linear-gradient(135deg,var(--sky),var(--sage));"></div>
         <figcaption class="caption">Private lounges and on-mountain dining — warmth, space, and a place to land between runs.</figcaption>
       </figure>
       <figure>
-        <div class="frame ph-3"><div class="ph-label">Members' entrance<br>(apex-entrance.jpg)</div></div>
+        <div class="frame" style="background-image:url('apex-entrance.jpg'),linear-gradient(160deg,var(--clay),var(--sky));"></div>
         <figcaption class="caption">No lift lines, no waiting — a private entrance reserved for members.</figcaption>
       </figure>
       <figure>
-        <div class="frame ph-2"><div class="ph-label">Ski lockers<br>(apex-lockers.jpg)</div></div>
+        <div class="frame" style="background-image:url('apex-lockers.jpg'),linear-gradient(135deg,var(--sage),var(--clay));"></div>
         <figcaption class="caption">Dedicated ski lockers, steps from the snow.</figcaption>
       </figure>
     </div>
@@ -434,13 +437,13 @@
     </div>
     <div class="three-up reveal" style="margin-top:46px;">
       <figure>
-        <div class="frame ph-4"><div class="ph-label">Sunrise coffee<br>(guest-house-morning.jpg)</div></div>
+        <div class="frame" style="background-image:url('guest-house-morning.jpg'),linear-gradient(135deg,#cdb89c,var(--sky));"></div>
       </figure>
       <figure>
-        <div class="frame ph-2"><div class="ph-label">Breakfast<br>(guest-house-breakfast.jpg)</div></div>
+        <div class="frame" style="background-image:url('guest-house-breakfast.jpg'),linear-gradient(135deg,var(--sage),var(--clay));"></div>
       </figure>
       <figure>
-        <div class="frame ph-5"><div class="ph-label">The private chef<br>(guest-house-chef.jpg)</div></div>
+        <div class="frame" style="background-image:url('guest-house-chef.jpg'),linear-gradient(150deg,var(--sage-wash),var(--sage));"></div>
       </figure>
     </div>
   </div>
@@ -452,8 +455,8 @@
     <div class="vfeat flip">
       <div class="vmedia reveal">
         <div class="feature-inset">
-          <div class="frame main ph-3"><div class="ph-label">Sundance Inn at dusk<br>(sundance-inn.jpg)</div></div>
-          <div class="frame inset ph-5"><div class="ph-label">"Bob's Bighorn Sheep"<br>above the hearth<br>(sundance-bighorn.jpg)</div></div>
+          <div class="frame main" style="background-image:url('sundance-inn.jpg'),linear-gradient(160deg,var(--clay),var(--sky));"></div>
+          <div class="frame inset" style="background-image:url('sundance-bighorn.jpg'),linear-gradient(150deg,var(--sage-wash),var(--sage));"></div>
         </div>
       </div>
       <div class="vtext reveal">
@@ -476,7 +479,7 @@
       <cite>Sundance Mountain Resort, Utah</cite>
     </div>
     <figure class="portrait reveal" style="max-width:520px;margin:46px auto 0;">
-      <div class="vhero ph-1" style="aspect-ratio:4/5;"><div class="ph-label">Skinning above Sundance — Doug &amp; Si Si<br>(drop in: sundance-skin.jpg)</div></div>
+      <div class="vhero" style="aspect-ratio:4/5;background-image:url('sundance-skin.jpg'),linear-gradient(135deg,var(--sky),var(--sage));"></div>
     </figure>
   </div>
 </section>
@@ -492,13 +495,13 @@
     </div>
     <div class="three-up reveal">
       <figure>
-        <div class="frame ph-5"><div class="ph-label">Tree Room interior<br>(tree-room.jpg)</div></div>
+        <div class="frame" style="background-image:url('tree-room.jpg'),linear-gradient(150deg,var(--sage-wash),var(--sage));"></div>
       </figure>
       <figure>
-        <div class="frame ph-2"><div class="ph-label">The plate<br>(tree-room-dish.jpg)</div></div>
+        <div class="frame" style="background-image:url('tree-room-dish.jpg'),linear-gradient(135deg,var(--sage),var(--clay));"></div>
       </figure>
       <figure>
-        <div class="frame ph-4"><div class="ph-label">Archive portrait<br>(sundance-archive.jpg)</div></div>
+        <div class="frame" style="background-image:url('sundance-archive.jpg'),linear-gradient(135deg,#cdb89c,var(--sky));"></div>
       </figure>
     </div>
     <div class="endmark reveal">✦</div>
