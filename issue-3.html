@@ -58,7 +58,7 @@
   .cover{position:relative;min-height:90vh;display:flex;align-items:flex-end;
     background:linear-gradient(180deg,rgba(69,67,60,.12) 0%,rgba(69,67,60,0) 34%,rgba(69,67,60,.58) 100%),linear-gradient(135deg,var(--sky) 0%,var(--sage) 52%,var(--clay) 122%);
     background-size:cover;background-position:center;
-    /* REAL COVER: background-image:linear-gradient(180deg,rgba(69,67,60,.12),rgba(69,67,60,0) 34%,rgba(69,67,60,.58)),url('girls-of-spring-cover.jpg'); */}
+    background-image:linear-gradient(180deg,rgba(69,67,60,.12) 0%,rgba(69,67,60,0) 34%,rgba(69,67,60,.58) 100%),url('girls-of-spring-cover.jpg');}
   .cover-inner{padding-bottom:7vh;}
   .cover .kicker{color:var(--cream);font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;letter-spacing:.08em;margin:0 0 16px;text-shadow:0 1px 16px rgba(69,67,60,.5);}
   .cover h1{font-family:'Fraunces',serif;font-weight:300;color:var(--cream);font-size:clamp(2.6rem,7.2vw,5.6rem);line-height:1.0;margin:0;letter-spacing:-.01em;max-width:14ch;text-shadow:0 2px 30px rgba(69,67,60,.4);}
@@ -227,8 +227,8 @@
       <h2 class="lead-h reveal">Snowpine Lodge</h2>
     </div>
     <div class="feature-inset reveal">
-      <div class="frame main ph-2"><div class="ph-label">Snowpine Lodge, slopeside<br>(drop in: snowpine-lodge.jpg)</div></div>
-      <div class="frame inset ph-1"><div class="ph-label">The après igloo<br>(snowpine-igloo.jpg)</div></div>
+      <div class="frame main" style="background-image:url('snowpine-lodge.jpg')"></div>
+      <div class="frame inset" style="background-image:url('snowpine-igloo.jpg')"></div>
     </div>
     <div class="col" style="margin-top:46px;">
       <p class="drop reveal">Alta may have missed its usual avalanche of headlines this winter, but spring showed up with better manners — long light, forgiving, and days that stretched just enough to feel indulgent.</p>
@@ -245,7 +245,7 @@
     <h2 class="lead-h reveal" style="font-size:clamp(2.4rem,6vw,4rem);">Corn snow, quiet mornings.</h2>
   </div>
   <figure class="figure wrap reveal" style="padding:0;">
-    <div class="frame plate ph-1"><div class="ph-label">Skier on a bright spring morning<br>(drop in: corn-snow.jpg)</div></div>
+    <div class="frame plate" style="background-image:url('corn-snow.jpg')"></div>
     <figcaption class="credit" style="text-align:center;">Shot on the Insta360 X5 — invisible ski-pole mount.</figcaption>
   </figure>
 </section>
@@ -259,7 +259,7 @@
       <p class="reveal">Meet Utah's formidable marketing geniuses — dominating the boardroom by day, defining mountain mastery on the weekends.</p>
     </div>
     <figure class="figure wrap reveal" style="padding:0;">
-      <div class="frame plate ph-4"><div class="ph-label">The crew at Alta — group portrait on the hill<br>(drop in: women-of-the-mountain.jpg)</div></div>
+      <div class="frame plate" style="background-image:url('women-of-the-mountain.jpg')"></div>
     </figure>
     <div class="cast reveal">
       <div class="row"><span class="nm">Paula Coleman</span><span class="rl">Creative Collaborator, Ski Utah</span><span class="hd">@harpo_utah</span></div>
@@ -433,7 +433,7 @@
     </div>
     <div class="people reveal">
       <div class="person">
-        <div class="pic ph-1" title="doug-portrait.jpg"></div>
+        <div class="pic" style="background-image:url('doug-portrait.jpg')" title="doug-portrait.jpg"></div>
         <div>
           <h4>Doug Olear</h4>
           <p class="role">Co-founder · host &amp; cinematic eye</p>
@@ -441,7 +441,7 @@
         </div>
       </div>
       <div class="person">
-        <div class="pic ph-3" title="sisi-portrait.jpg"></div>
+        <div class="pic" style="background-image:url('sisi-portrait.jpg')" title="sisi-portrait.jpg"></div>
         <div>
           <h4>Si Si Penaloza</h4>
           <p class="role">Co-founder · editorial voice</p>
