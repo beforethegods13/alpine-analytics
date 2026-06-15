@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The soldiers who came home to the snow · Cultural Arts · Alpine Analytics</title>
+<meta name="description" content="At The Hythe in Vail, a luxury resort built on the mountain a 10th Mountain Division veteran founded, the past is poured by the fire. A cultural-arts dispatch on the soldier-skiers who came home and built American winter." />
+
+<!-- ============================================================
+     ALPINE ANALYTICS — CULTURAL ARTS
+     "The soldiers who came home to the snow."
+     The Hythe, a Luxury Collection Resort, Vail — its homage to
+     the 10th Mountain Division. Single self-contained file.
+     Keep at the repo root as culture-hythe-vail.html.
+
+     IMAGE RULE: every slot is pre-wired to its exact filename
+     with a brand gradient behind as a fallback. Upload a
+     correctly-named .jpg to the repo root and refresh — it
+     appears, NO HTML editing. Filenames are CASE-SENSITIVE,
+     lowercase, no spaces, no "(1)".
+
+     EXACT FILENAMES the page looks for:
+       hythe-cover.jpg          (cover — the lobby / a fire-lit bar)
+       camp-hale.jpg            (the Division — archival / training, 3:4)
+       tenth-mountain-bar.jpg   (the 10th Mountain lobby bar, 3:4)
+       margies-haas.jpg         (Margie's Haas breakfast, 3:4)
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --linen:#f7f3ec; --cream:#fbf8f2; --ink:#45433c; --ink-soft:#777269;
+    --sky:#8fb1bc; --sage:#a4b19a; --sage-wash:#edf0e7;
+    --clay:#c98a63; --clay-deep:#b1734d;
+    --rule:rgba(69,67,60,.14); --shadow:0 26px 64px -30px rgba(69,67,60,.55);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--linen);color:var(--ink);font-family:'Mulish',system-ui,sans-serif;font-weight:300;font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  .eyebrow{font-family:'Fraunces',serif;font-style:italic;font-weight:400;color:var(--clay);font-size:1rem;letter-spacing:.02em;margin:0 0 14px;}
+
+  .progress{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--clay);z-index:120;transition:width .1s linear;}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:100;background:rgba(247,243,236,.86);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--rule);}
+  .nav-inner{max-width:1180px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;}
+  .brand{font-family:'Fraunces',serif;font-weight:400;font-size:1.18rem;letter-spacing:.04em;text-decoration:none;color:var(--ink);white-space:nowrap;}
+  .brand b{font-weight:500;}
+  .nav-links{display:flex;align-items:center;gap:26px;}
+  .nav-links a{text-decoration:none;color:var(--ink-soft);font-size:.93rem;font-weight:400;transition:color .2s;}
+  .nav-links a:hover{color:var(--clay-deep);}
+  .nav-cta{border:1px solid var(--clay);color:var(--clay-deep)!important;padding:7px 16px;border-radius:999px;}
+  .nav-cta:hover{background:var(--clay);color:#fff!important;}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:6px;}
+  .menu-btn span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.25s;}
+
+  /* cover / masthead */
+  .cover{position:relative;min-height:94vh;display:flex;align-items:flex-end;
+    background-image:linear-gradient(135deg,var(--sky) 0%,var(--sage) 52%,var(--clay) 122%);
+    background-size:cover;background-position:center;}
+  .cover-inner{padding-bottom:8vh;}
+  .cover .kicker{color:var(--cream);font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;letter-spacing:.08em;margin:0 0 16px;text-shadow:0 1px 16px rgba(69,67,60,.6);}
+  .cover h1{font-family:'Fraunces',serif;font-weight:300;color:var(--cream);font-size:clamp(2.6rem,7.4vw,5.8rem);line-height:1.0;margin:0;letter-spacing:-.01em;max-width:15ch;text-shadow:0 2px 30px rgba(69,67,60,.5);}
+  .cover .lines{margin:22px 0 0;color:var(--cream);max-width:54ch;}
+  .cover .lines p{margin:0 0 8px;font-size:1.12rem;font-weight:300;text-shadow:0 1px 18px rgba(69,67,60,.6);}
+  .cover .toc{margin-top:18px;font-family:'Fraunces',serif;font-style:italic;font-size:.98rem;color:var(--cream);opacity:.94;text-shadow:0 1px 18px rgba(69,67,60,.6);}
+  .scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:var(--cream);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85;display:flex;flex-direction:column;align-items:center;gap:7px;}
+  .scroll-hint .dot{width:1px;height:34px;background:linear-gradient(var(--cream),transparent);animation:fall 2.2s ease-in-out infinite;}
+  @keyframes fall{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+
+  /* section frame + bands */
+  .section{padding:96px 0;}
+  .section + .section{border-top:1px solid var(--rule);}
+  .band{background:var(--sage-wash);}
+  .band-cream{background:var(--cream);}
+  .col{max-width:680px;margin:0 auto;}
+  .col p{margin:0 0 1.35em;}
+  .lead-h{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.05;letter-spacing:-.01em;margin:0 0 .42em;color:var(--ink);}
+  .dek{font-family:'Fraunces',serif;font-style:italic;color:var(--ink-soft);font-size:1.26rem;line-height:1.4;margin:0 0 1.5em;}
+  .drop::first-letter{font-family:'Fraunces',serif;font-weight:400;float:left;font-size:4.2rem;line-height:.76;padding:8px 12px 0 0;color:var(--clay-deep);}
+  .credit{font-family:'Fraunces',serif;font-style:italic;font-size:.92rem;color:var(--ink-soft);margin-top:14px;}
+
+  /* vertical-first feature */
+  .vfeat{display:grid;grid-template-columns:minmax(0,.9fr) 1fr;gap:58px;align-items:center;}
+  .vfeat.flip .vmedia{order:2;}
+  .vfeat.flip .vtext{order:1;}
+  .vhero{aspect-ratio:3/4;border-radius:9px;overflow:hidden;box-shadow:var(--shadow);background-size:cover;background-position:center;background-repeat:no-repeat;}
+  .vcap{font-family:'Fraunces',serif;font-style:italic;font-size:.92rem;color:var(--ink-soft);margin-top:14px;line-height:1.5;max-width:42ch;}
+  .vcap b{font-style:normal;font-weight:500;color:var(--ink);}
+  .vtext .kicker-rule{width:54px;height:2px;background:var(--clay);margin:0 0 22px;}
+  .vtext h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.04;letter-spacing:-.01em;margin:0 0 .32em;color:var(--ink);}
+  .vtext .dek{margin-bottom:1.1em;}
+  .vtext p{margin:0 0 1.2em;max-width:46ch;}
+  .vtext .drop::first-letter{font-size:3.9rem;padding:6px 11px 0 0;}
+  .vlist{list-style:none;padding:0;margin:1.7em 0 0;max-width:46ch;}
+  .vlist li{position:relative;padding:.7em 0 .7em 28px;border-top:1px solid var(--rule);font-size:.97rem;line-height:1.55;color:var(--ink);}
+  .vlist li:last-child{border-bottom:1px solid var(--rule);}
+  .vlist li::before{content:"";position:absolute;left:2px;top:1.18em;width:8px;height:8px;border:1.5px solid var(--clay);transform:rotate(45deg);}
+  .vlist b{font-weight:500;}
+
+  /* wide landscape feature (for a horizontal photo) */
+  .wfeat{max-width:980px;margin:0 auto;}
+  .wframe{aspect-ratio:1400/760;border-radius:9px;overflow:hidden;box-shadow:var(--shadow);background-size:cover;background-position:center;background-repeat:no-repeat;}
+  .wfeat .vcap{margin:14px auto 0;text-align:center;max-width:56ch;}
+  .wfeat .col{margin-top:48px;}
+
+  /* secondary tall vertical kept small beside its caption */
+  .vsub{display:grid;grid-template-columns:230px 1fr;gap:34px;align-items:center;margin-top:74px;padding-top:54px;border-top:1px solid var(--rule);}
+  .vspot{aspect-ratio:2/3;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);background-size:cover;background-position:center;}
+  .vsub h3{font-family:'Fraunces',serif;font-weight:400;font-size:1.5rem;line-height:1.12;margin:0 0 .5em;color:var(--ink);}
+  .vsub p{margin:0;color:var(--ink-soft);font-size:1rem;line-height:1.65;max-width:50ch;}
+
+  /* centered opener */
+  .opener{text-align:center;}
+  .opener h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.4rem,6vw,4rem);line-height:1.04;margin:0 auto;max-width:20ch;color:var(--ink);}
+
+  /* pull-quote interstitial */
+  .pull{margin:0 auto;max-width:900px;text-align:center;}
+  .pull blockquote{margin:0;font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.28;color:var(--clay-deep);}
+  .pull cite{display:block;margin-top:18px;font-style:normal;font-family:'Mulish',sans-serif;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);}
+
+  /* dark stat / fact card */
+  .stat{margin-top:30px;background:var(--ink);color:var(--cream);border-radius:10px;padding:24px 26px;max-width:680px;}
+  .stat .st-head{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;opacity:.8;margin-bottom:16px;}
+  .stat .st-grid{display:flex;gap:30px;flex-wrap:wrap;}
+  .stat .st b{display:block;font-family:'Fraunces',serif;font-weight:400;font-size:1.9rem;color:#e7b48f;line-height:1;}
+  .stat .st span{font-size:.82rem;opacity:.85;}
+  .stat .st-foot{margin-top:16px;font-size:.74rem;opacity:.7;letter-spacing:.04em;}
+
+  .endmark{text-align:center;margin:64px 0 0;color:var(--clay);font-family:'Fraunces',serif;font-size:1.4rem;}
+  .issue-nav{max-width:1180px;margin:8px auto 0;padding-top:34px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+  .issue-nav a{text-decoration:none;color:var(--ink-soft);font-size:.95rem;display:flex;flex-direction:column;gap:4px;transition:color .2s;}
+  .issue-nav a:hover{color:var(--clay-deep);}
+  .issue-nav .k{font-family:'Fraunces',serif;font-style:italic;color:var(--clay);font-size:.85rem;}
+  .issue-nav .t{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--ink);}
+  .issue-nav a:last-child{text-align:right;align-items:flex-end;}
+
+  /* footer */
+  .footer{background:var(--cream);border-top:1px solid var(--rule);padding:54px 0 40px;}
+  .footer-inner{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;}
+  .footer .brand{font-size:1.3rem;}
+  .footer p{margin:10px 0 0;color:var(--ink-soft);font-size:.92rem;max-width:34ch;}
+  .footer-links{display:flex;flex-direction:column;gap:9px;}
+  .footer-links a{color:var(--ink-soft);text-decoration:none;font-size:.92rem;}
+  .footer-links a:hover{color:var(--clay-deep);}
+  .footer-foot{max-width:1180px;margin:38px auto 0;padding:18px 28px 0;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:.82rem;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* responsive */
+  @media (max-width:880px){
+    .vfeat{grid-template-columns:1fr;gap:34px;}
+    .vfeat.flip .vmedia{order:0;}
+    .vfeat.flip .vtext{order:0;}
+    .vhero{max-width:460px;}
+    .vtext p,.vtext .dek,.vlist{max-width:none;}
+    .vsub{grid-template-columns:1fr;gap:22px;}
+    .vspot{max-width:230px;}
+  }
+  @media (max-width:820px){
+    .nav-links{position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;align-items:flex-start;gap:0;padding:8px 28px 18px;border-bottom:1px solid var(--rule);box-shadow:var(--shadow);display:none;}
+    .nav-links.open{display:flex;}
+    .nav-links a{padding:11px 0;width:100%;border-bottom:1px solid var(--rule);}
+    .nav-links a:last-child{border-bottom:0;}
+    .menu-btn{display:block;}
+    .cover{min-height:82vh;}
+    .section{padding:66px 0;}
+  }
+  @media (max-width:520px){
+    body{font-size:17px;}
+    .wrap,.nav-inner,.footer-inner,.footer-foot{padding-left:20px;padding-right:20px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .scroll-hint .dot{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Alpine <b>Analytics</b></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#issues">Issues</a>
+      <a href="writing.html">Writing</a>
+      <a href="index.html#inside">Inside</a>
+      <a class="nav-cta" href="https://instagram.com/sisitravels" target="_blank" rel="noopener">Follow</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- 1 · COVER -->
+<header class="cover" id="cover" style="background-image:linear-gradient(180deg,rgba(69,67,60,.20) 0%,rgba(69,67,60,0) 28%,rgba(69,67,60,.66) 100%),url('hythe-cover.jpg'),linear-gradient(150deg,#3c4348 0%,var(--sage) 58%,var(--clay) 128%);">
+  <div class="wrap cover-inner">
+    <p class="kicker reveal">Cultural&nbsp;Arts &nbsp;·&nbsp; Vail,&nbsp;Colorado</p>
+    <h1 class="reveal">The soldiers who came home to the snow.</h1>
+    <div class="lines reveal">
+      <p>At The Hythe, a Luxury Collection Resort, the past is poured by the fire. A dispatch on the 10th Mountain Division — the men who learned to fight on mountains, and then taught a country to love them.</p>
+      <p class="toc">Camp Hale · Riva Ridge · the bar called 10th Mountain · Margie's Haas</p>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><div class="dot"></div>Read</div>
+</header>
+
+<!-- 2 · OPENER — the Hopper scene at the bar (text-only · band: sage-wash) -->
+<section class="section band">
+  <div class="wrap">
+    <div class="opener">
+      <p class="eyebrow reveal">An evening at the bar called 10th Mountain</p>
+      <h2 class="reveal">There is a particular hour, just after the lifts go quiet.</h2>
+    </div>
+    <div class="col" style="margin-top:42px;">
+      <p class="drop reveal">Picture it the way a painter would. The last skiers have come down off the hill, snow still on their shoulders, and the light outside The Hythe has gone the color of a struck match — that low, level gold that lasts about twenty minutes in the mountains and then is gone. Inside the lobby, the candles are lit. A glass catches the light. Someone sets down a pour of whiskey and doesn't say anything for a while.</p>
+      <p class="reveal">It is a very American kind of stillness — the kind Edward Hopper spent a lifetime painting: a warm room at the blue end of the day, a few figures held quiet by something larger than the room. You feel it the moment you walk in. And there is a reason this particular room feels haunted in the gentlest way. The bar is called <em>10th Mountain</em>, and it is named for men who are not here, on a mountain that exists because one of them survived.</p>
+      <p class="reveal">To understand The Hythe's homage — the whiskey, the breakfast, the coffee counter named for a combat ration — you have to go back to a high, cold valley in Colorado, and to a winter in Italy that most of America has forgotten.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · THE DIVISION — Camp Hale (vfeat · IMAGE · band: linen) -->
+<section class="section">
+  <div class="wrap">
+    <div class="vfeat">
+      <div class="vmedia reveal">
+        <div class="vhero" style="background-image:url('camp-hale.jpg'),linear-gradient(150deg,#5a6168,var(--sky));"></div>
+        <p class="vcap"><b>Camp Hale, Colorado · 9,200 feet.</b> The Army went looking for men who could already ski, climb, and survive the cold — then trained them harder.</p>
+      </div>
+      <div class="vtext reveal">
+        <div class="kicker-rule"></div>
+        <p class="eyebrow">Camp Hale, 1942</p>
+        <h2>They went looking for men who could ski into a war.</h2>
+        <p class="drop">It is one of the strangest recruiting stories in American military history. As the country mobilized, a ski-patrolman named Charles Minot "Minnie" Dole convinced the War Department that the next war might be fought in the mountains — and that you couldn't simply hand a flatlander a pair of skis and a rifle and send him up a glacier.</p>
+        <p>So the National Ski Patrol became the only civilian outfit ever authorized to recruit for the U.S. Army. The call went out to ski racers, mountain guides, lumberjacks, muleskinners, and college climbers. Each man needed three letters vouching that he could handle himself in the high country.</p>
+        <p>They were sent to Camp Hale, built fast in a treeless Colorado valley above nine thousand feet, where the thin air and the coal-smoke and the brutal cold earned it the nickname "Camp Hell." There they trained as the 10th Mountain Division — on skis, on rope, on rock, hauling rifles up faces no army had ever thought to climb.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · ITALY / SACRIFICE (text-forward · band: cream) -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">Italy, the winter of 1945</p>
+      <h2 class="lead-h reveal">A cliff the enemy swore could not be climbed.</h2>
+      <p class="drop reveal">In the northern Apennines, the German line held a ridge called Riva Ridge — a sheer rock wall the defenders considered so impassable they barely bothered to guard the top of it. On the night of February 18, 1945, in the dark and the cold, the men of the 10th went up it anyway. Hand over hand, rope by rope, hundreds of soldiers scaled the face and came over the top at first light into an enemy that could not believe what it was seeing.</p>
+      <p class="reveal">That climb cracked the line. In the days that followed, the Division took Mount Belvedere and then drove north through the Po Valley to the shores of Lake Garda. They had trained for years to fight on mountains, and when the moment came, they fought the way the mountains demand — patiently, brutally, and uphill.</p>
+      <p class="reveal">The cost was severe. In roughly four months of combat the 10th Mountain Division suffered close to a thousand killed and some four thousand wounded — one of the steepest casualty rates of any U.S. division in the war. Among the wounded was a young lieutenant named Pete Seibert, his legs shattered by a mortar at Belvedere, told by doctors he might not walk well again, let alone ski. Remember that name. It comes back at the bottom of a chairlift.</p>
+      <div class="stat reveal">
+        <div class="st-head">The 10th Mountain Division · by the cold numbers</div>
+        <div class="st-grid">
+          <div class="st"><b>9,200&nbsp;ft</b><span>Camp Hale's elevation</span></div>
+          <div class="st"><b>~114</b><span>days in combat</span></div>
+          <div class="st"><b>~990</b><span>killed in action</span></div>
+          <div class="st"><b>~4,000</b><span>wounded</span></div>
+        </div>
+        <div class="st-foot">Figures vary by source; these are the most commonly cited.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · PULL-QUOTE INTERSTITIAL (band: sage-wash) -->
+<section class="section band">
+  <div class="wrap">
+    <div class="pull reveal">
+      <blockquote>They learned to fight on mountains. Then they spent the rest of their lives teaching the rest of us how to love them.</blockquote>
+      <cite>Alpine Analytics</cite>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · COMING HOME — the cultural contribution (text-forward · band: linen) -->
+<section class="section">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">What they did next</p>
+      <h2 class="lead-h reveal">The men who came home and built American winter.</h2>
+      <p class="drop reveal">Here is the part that belongs in a culture section, not just a history book. The soldiers of the 10th came home from Italy in love with the high country that had nearly killed them — and they spent the next half-century turning a niche European pastime into a defining American one. Skiing, in this country, is largely their invention. By many counts more than sixty ski areas were founded, designed, or run by 10th Mountain veterans.</p>
+      <p class="reveal">They built the resorts and then they built the culture around them: the ski schools, the ski patrols, the very profession of the ski instructor. Friedl Pfeifer shaped Aspen. Larry Jump carved out Arapahoe Basin. Bill Bowerman, who served with the Division, went home to Oregon, started tinkering with running shoes, and co-founded Nike. Bob Dole, gravely wounded with the 10th in Italy, carried the Division into the United States Senate. The reach of these men runs far wider than any single mountain.</p>
+      <p class="reveal">But one mountain is the reason we are sitting by this fire at all. Pete Seibert — the lieutenant whose legs were broken at Belvedere — did walk again, and did ski again, and never stopped imagining a resort of his own. In the 1950s he and a uranium prospector named Earl Eaton climbed an unnamed Colorado peak and looked out over the back bowls, and Seibert decided that was the place. In December 1962, Vail opened. The town, the mountain, the whole improbable idea of it, traces back to a soldier the Army's doctors had nearly written off.</p>
+      <p class="reveal">Which is what makes The Hythe's tribute feel less like marketing and more like a homecoming. A luxury resort, on Pete Seibert's mountain, choosing to name its warmest rooms after the Division he served in. The history isn't borrowed here. It is the bedrock the whole valley sits on.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · THE LOBBY BAR (wide landscape feature · IMAGE · band: cream) -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="wfeat">
+      <figure class="reveal" style="margin:0;">
+        <div class="wframe" style="background-image:url('tenth-mountain-bar.jpg'),linear-gradient(150deg,var(--clay),#3c4348);"></div>
+        <figcaption class="vcap"><b>10th Mountain · the lobby bar.</b> Smoke-dark wood, a working copper still, oak casks, and shelves of local whiskey — gathered around low candlelight. <span style="display:block;margin-top:4px;font-style:normal;">Photograph · Michael Kleinberg</span></figcaption>
+      </figure>
+
+      <div class="col">
+        <p class="eyebrow reveal">The lobby bar</p>
+        <h2 class="lead-h reveal">A whiskey, low candlelight, and a history worth lingering over.</h2>
+        <p class="drop reveal">The Hythe's lobby bar is named, simply, <em>10th Mountain</em>, and it does the most generous thing a themed room can do — it earns the name. It is dark and close and lined in smoke-stained wood, a copper still gleaming against the back wall and shelves of bottles catching the light. Oak casks are stacked where another bar would put its trophies. You come in off the hill windburned and a little wrung out, and the room takes you in.</p>
+        <p class="reveal">And it pours with intention. The bar partners with the local <a href="https://www.10thwhiskey.com/" target="_blank" rel="noopener">10th Mountain Whiskey &amp; Spirit Company</a> — a Vail-area distillery founded in tribute to the very same Division — so the glass in your hand is itself part of the homage, not separate from it. The barrels behind the bar aren't decoration; they're the source.</p>
+        <p class="reveal">Settle into one of the leather stools, or sink into the shearling by the candlelight, and you're invited to linger over the story: the 10th Mountain men, and alongside them the long, particular history of whiskey in these mountains. It is the rare hotel bar where the theme isn't hung on the wall. It's in the pour, and in the quiet that follows the first sip.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · MARGIE'S HAAS (vfeat · IMAGE · band: sage-wash) -->
+<section class="section band">
+  <div class="wrap">
+    <div class="vfeat">
+      <div class="vmedia reveal">
+        <div class="vhero" style="background-image:url('margies-haas.jpg'),linear-gradient(150deg,var(--sage),#cdb89c);"></div>
+        <p class="vcap"><b>Margie's Haas.</b> Breakfast named for a wartime home cook who opened her door to the soldiers of the 10th.</p>
+      </div>
+      <div class="vtext reveal">
+        <div class="kicker-rule"></div>
+        <p class="eyebrow">A tribute you can taste</p>
+        <h2>Breakfast for a home cook.</h2>
+        <p class="drop">The homage doesn't stop at the bar. <a href="https://www.thehythevail.com/dining/margies-haas/" target="_blank" rel="noopener">Margie's Haas</a>, where the resort serves breakfast, carries one of the warmest stories on the property. It is named for a local World War II home cook — Margie — who welcomed soldiers of the 10th Mountain Division into her home and fed them.</p>
+        <p>There is a particular nostalgia to that gesture, and to honoring it now: not a general or a battle, but a woman with a kitchen and an open door, the kind of quiet hospitality that sustained young men a long way from their own mothers. A breakfast room is exactly the right place to remember her.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · CLOSER — back to the fire (text-forward · band: cream) -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">Last light</p>
+      <h2 class="lead-h reveal">The mountain keeps its dead close.</h2>
+      <p class="drop reveal">Go back, at the end, to the bar. The candles have burned low. The gold outside is gone to blue, and then to nothing, and the windows hold the room's reflection instead of the peaks. This is the Hopper hour — warmth and a faint ache sharing the same light, the sense of being held briefly inside something far older than the evening.</p>
+      <p class="reveal">It is easy, in a luxury resort, to drink the whiskey and never wonder about the name. But The Hythe has made the wondering effortless. The Division is in the pour and the breakfast and the coffee counter, woven through the day so gently you could miss it — or catch it, and feel the whole century behind it.</p>
+      <p class="reveal">Eighty years ago, men went up a frozen cliff in the dark because they had trained on mountains and learned to trust them. They came home and built the very winters we now travel for. Camp Hale is a national monument today; the back bowls Pete Seibert dreamed about are full of skiers who have no idea whose dream they're skiing. And here, in a candlelit bar in Vail, the past is poured one glass at a time, and the room goes quiet, and the snow keeps falling on the glass. ✦</p>
+      <div class="endmark reveal">✦</div>
+      <nav class="issue-nav reveal">
+        <a href="culture.html"><span class="k">↩ Back to</span><span class="t">Cultural Arts</span></a>
+        <a href="index.html#inside"><span class="k">More from →</span><span class="t">Inside Alpine Analytics</span></a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <a class="brand" href="index.html">Alpine <b>Analytics</b></a>
+      <p>Smart escapism with character. Field notes from the unhurried mountains.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html#issues">Latest issues</a>
+      <a href="writing.html">Writing by Si Si</a>
+      <a href="index.html#inside">Inside the magazine</a>
+      <a href="https://instagram.com/sisitravels" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:hello@alpineanalytics.com">hello@alpineanalytics.com</a>
+    </div>
+  </div>
+  <div class="footer-foot">
+    <span>© 2026 Alpine Analytics · Benloch Ranch, Park City, Utah</span>
+    <span>Cultural Arts · The Hythe, Vail</span>
+  </div>
+</footer>
+
+<script>
+  var btn=document.getElementById('menuBtn');
+  var links=document.getElementById('navLinks');
+  btn.addEventListener('click',function(){var open=links.classList.toggle('open');btn.setAttribute('aria-expanded',open);});
+  links.addEventListener('click',function(e){if(e.target.tagName==='A') links.classList.remove('open');});
+  var bar=document.getElementById('progress');
+  function prog(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max*100):0)+'%';}
+  document.addEventListener('scroll',prog,{passive:true});prog();
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
+</script>
+</body>
+</html>
