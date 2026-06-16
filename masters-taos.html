@@ -198,6 +198,14 @@
   .squareframe{aspect-ratio:2730/2605;border-radius:9px;overflow:hidden;box-shadow:var(--shadow);
     background-size:cover;background-position:center;background-repeat:no-repeat;}
   .squarefeat .col{margin-top:48px;}
+  /* cover text panel — keeps headline readable over a busy background photo */
+  .cover-panel{display:inline-block;max-width:760px;
+    background:linear-gradient(180deg,rgba(39,38,34,.56),rgba(39,38,34,.72));
+    backdrop-filter:saturate(115%) blur(5px);-webkit-backdrop-filter:saturate(115%) blur(5px);
+    border:1px solid rgba(247,243,236,.16);border-radius:14px;
+    padding:34px 40px 38px;box-shadow:0 34px 80px -36px rgba(0,0,0,.72);}
+  .cover-panel .lines{margin-top:18px;}
+  @media (max-width:520px){.cover-panel{padding:24px 22px 26px;}}
 </style>
 </head>
 <body>
@@ -222,11 +230,13 @@
 <!-- 1 · COVER (gradient masthead; optional photo pre-wired) -->
 <header class="cover" id="cover" style="background-image:linear-gradient(180deg,rgba(69,67,60,.20) 0%,rgba(69,67,60,0) 28%,rgba(69,67,60,.66) 100%),url('masters-taos-cover.jpg'),linear-gradient(150deg,#3c4348 0%,var(--sky) 56%,var(--clay) 128%);">
   <div class="wrap cover-inner">
-    <p class="kicker reveal">Masters of the Universe &nbsp;·&nbsp; Taos Ski Valley, New Mexico</p>
-    <h1 class="reveal">The handoff at the top of Taos.</h1>
-    <div class="lines reveal">
+    <div class="cover-panel reveal">
+    <p class="kicker">Masters of the Universe &nbsp;·&nbsp; Taos Ski Valley, New Mexico</p>
+    <h1>The handoff at the top of Taos.</h1>
+    <div class="lines">
       <p>John Kelly takes the helm as chief executive of Taos Ski Valley; David Norden, who steered the mountain through its modern reinvention, moves to board chair. A profile of a leadership change at the most quietly radical resort in America — the first ski mountain in the world to certify as a force for good.</p>
       <p class="toc">Ernie Blake's mountain · the B&nbsp;Corp bet · Kachina Peak · Si Si in Jetset &amp; Wrangler Living</p>
+    </div>
     </div>
   </div>
   <div class="scroll-hint" aria-hidden="true"><div class="dot"></div>Read</div>
