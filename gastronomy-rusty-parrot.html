@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What the fire couldn't take · Glacial Gastronomy · Alpine Analytics</title>
+<meta name="description" content="The Rusty Parrot Lodge burned on a winter night and went dark for years. Now it's back in Jackson Hole, and at its restaurant Wild Sage, chef Hugo Goodwin is cooking the place back to life. A Glacial Gastronomy dispatch." />
+
+<!-- ============================================================
+     ALPINE ANALYTICS — GLACIAL GASTRONOMY
+     "What the fire couldn't take." — The Rusty Parrot Lodge &
+     its restaurant Wild Sage, Jackson Hole, WY; chef Hugo Goodwin.
+     Single self-contained file. Keep at repo root as
+     gastronomy-rusty-parrot.html. CSS cloned from
+     culture-hythe-vail.html / masters-taos.html for exact match.
+
+     IMAGE RULE: every slot is pre-wired to its exact filename with
+     a brand gradient behind as fallback. Upload a correctly-named
+     .jpg to the repo root and refresh — it appears, NO HTML edit.
+     Filenames are CASE-SENSITIVE, lowercase, no spaces, no "(1)".
+
+     EXACT FILENAMES the page looks for:
+       rusty-parrot-cover.jpg     (cover — the Wild Sage bar, square)
+       hugo-goodwin.jpg           (chef portrait, 3:4)
+       wild-sage-salmon.jpg       (hero dish, wide landscape)
+       wild-sage-salad.jpg        (duck/chicory salad, landscape)
+       rusty-parrot-breakfast.jpg (breakfast spread, square)
+       journalists-dinner.jpg     (the press table + Hugo, landscape)
+       sisi-excursion.jpg         (Si Si in the dome, 2:3 portrait)
+
+     *** DOUG — VERIFY BEFORE PUBLISH (Claude can't browse):
+       - exact fire date (written as "the first days of 2020")
+       - reopening year, room count, founding year, ownership
+       - Hugo Goodwin's kitchen background (left as a placeholder)
+       - photo credits (PR/property vs. Si Si's own phone shots)
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --linen:#f7f3ec; --cream:#fbf8f2; --ink:#45433c; --ink-soft:#777269;
+    --sky:#8fb1bc; --sage:#a4b19a; --sage-wash:#edf0e7;
+    --clay:#c98a63; --clay-deep:#b1734d;
+    --rule:rgba(69,67,60,.14); --shadow:0 26px 64px -30px rgba(69,67,60,.55);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--linen);color:var(--ink);font-family:'Mulish',system-ui,sans-serif;font-weight:300;font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  .eyebrow{font-family:'Fraunces',serif;font-style:italic;font-weight:400;color:var(--clay);font-size:1rem;letter-spacing:.02em;margin:0 0 14px;}
+
+  .progress{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--clay);z-index:120;transition:width .1s linear;}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:100;background:rgba(247,243,236,.86);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--rule);}
+  .nav-inner{max-width:1180px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;}
+  .brand{font-family:'Fraunces',serif;font-weight:400;font-size:1.18rem;letter-spacing:.04em;text-decoration:none;color:var(--ink);white-space:nowrap;}
+  .brand b{font-weight:500;}
+  .nav-links{display:flex;align-items:center;gap:26px;}
+  .nav-links a{text-decoration:none;color:var(--ink-soft);font-size:.93rem;font-weight:400;transition:color .2s;}
+  .nav-links a:hover{color:var(--clay-deep);}
+  .nav-cta{border:1px solid var(--clay);color:var(--clay-deep)!important;padding:7px 16px;border-radius:999px;}
+  .nav-cta:hover{background:var(--clay);color:#fff!important;}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:6px;}
+  .menu-btn span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.25s;}
+
+  /* cover / masthead */
+  .cover{position:relative;min-height:94vh;display:flex;align-items:flex-end;
+    background-image:linear-gradient(135deg,var(--sky) 0%,var(--sage) 52%,var(--clay) 122%);
+    background-size:cover;background-position:center;}
+  .cover-inner{padding-bottom:8vh;}
+  .cover-credit{position:absolute;right:28px;bottom:16px;color:var(--cream);font-family:'Fraunces',serif;font-style:italic;font-size:.76rem;letter-spacing:.02em;opacity:.82;text-shadow:0 1px 14px rgba(69,67,60,.7);max-width:60vw;text-align:right;}
+  .cover .kicker{color:var(--cream);font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;letter-spacing:.08em;margin:0 0 16px;text-shadow:0 1px 16px rgba(69,67,60,.6);}
+  .cover h1{font-family:'Fraunces',serif;font-weight:300;color:var(--cream);font-size:clamp(2.6rem,7.4vw,5.8rem);line-height:1.0;margin:0;letter-spacing:-.01em;max-width:15ch;text-shadow:0 2px 30px rgba(69,67,60,.5);}
+  .cover .lines{margin:22px 0 0;color:var(--cream);max-width:56ch;}
+  .cover .lines p{margin:0 0 8px;font-size:1.12rem;font-weight:300;text-shadow:0 1px 18px rgba(69,67,60,.6);}
+  .cover .toc{margin-top:18px;font-family:'Fraunces',serif;font-style:italic;font-size:.98rem;color:var(--cream);opacity:.94;text-shadow:0 1px 18px rgba(69,67,60,.6);}
+  /* cover text panel — keeps headline readable over a busy photo */
+  .cover-panel{display:inline-block;max-width:780px;
+    background:linear-gradient(180deg,rgba(39,38,34,.50),rgba(39,38,34,.68));
+    backdrop-filter:saturate(115%) blur(5px);-webkit-backdrop-filter:saturate(115%) blur(5px);
+    border:1px solid rgba(247,243,236,.16);border-radius:14px;
+    padding:34px 40px 38px;box-shadow:0 34px 80px -36px rgba(0,0,0,.72);}
+  .cover-panel .lines{margin-top:18px;}
+  @media (max-width:520px){.cover-panel{padding:24px 22px 26px;}}
+  .scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:var(--cream);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85;display:flex;flex-direction:column;align-items:center;gap:7px;}
+  .scroll-hint .dot{width:1px;height:34px;background:linear-gradient(var(--cream),transparent);animation:fall 2.2s ease-in-out infinite;}
+  @keyframes fall{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+
+  /* section frame + bands */
+  .section{padding:96px 0;}
+  .section + .section{border-top:1px solid var(--rule);}
+  .band{background:var(--sage-wash);}
+  .band-cream{background:var(--cream);}
+  .col{max-width:680px;margin:0 auto;}
+  .col p{margin:0 0 1.35em;}
+  .lead-h{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.05;letter-spacing:-.01em;margin:0 0 .42em;color:var(--ink);}
+  .dek{font-family:'Fraunces',serif;font-style:italic;color:var(--ink-soft);font-size:1.26rem;line-height:1.4;margin:0 0 1.5em;}
+  .drop::first-letter{font-family:'Fraunces',serif;font-weight:400;float:left;font-size:4.2rem;line-height:.76;padding:8px 12px 0 0;color:var(--clay-deep);}
+  .credit{font-family:'Fraunces',serif;font-style:italic;font-size:.92rem;color:var(--ink-soft);margin-top:14px;}
+
+  /* vertical-first feature */
+  .vfeat{display:grid;grid-template-columns:minmax(0,.9fr) 1fr;gap:58px;align-items:center;}
+  .vfeat.flip .vmedia{order:2;}
+  .vfeat.flip .vtext{order:1;}
+  .vhero{aspect-ratio:3/4;border-radius:9px;overflow:hidden;box-shadow:var(--shadow);background-size:cover;background-position:center;background-repeat:no-repeat;}
+  .vcap{font-family:'Fraunces',serif;font-style:italic;font-size:.92rem;color:var(--ink-soft);margin-top:14px;line-height:1.5;max-width:42ch;}
+  .vcap b{font-style:normal;font-weight:500;color:var(--ink);}
+  .vtext .kicker-rule{width:54px;height:2px;background:var(--clay);margin:0 0 22px;}
+  .vtext h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.04;letter-spacing:-.01em;margin:0 0 .32em;color:var(--ink);}
+  .vtext .dek{margin-bottom:1.1em;}
+  .vtext p{margin:0 0 1.2em;max-width:46ch;}
+  .vtext .drop::first-letter{font-size:3.9rem;padding:6px 11px 0 0;}
+
+  /* wide landscape feature (for a horizontal photo) */
+  .wfeat{max-width:980px;margin:0 auto;}
+  .wframe{aspect-ratio:1400/760;border-radius:9px;overflow:hidden;box-shadow:var(--shadow);background-size:cover;background-position:center;background-repeat:no-repeat;}
+  .wfeat .vcap{margin:14px auto 0;text-align:center;max-width:60ch;}
+  .wfeat .col{margin-top:48px;}
+
+  /* two-up gallery (two landscape/square shots side by side) */
+  .twoshot{max-width:980px;margin:0 auto;}
+  .twoshot .ts-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+  .ts{margin:0;}
+  .tsframe{aspect-ratio:4/3;border-radius:9px;overflow:hidden;box-shadow:var(--shadow);background-size:cover;background-position:center;background-repeat:no-repeat;}
+  .twoshot .col{margin-bottom:42px;text-align:center;}
+
+  /* secondary tall vertical kept small beside its caption */
+  .vsub{display:grid;grid-template-columns:230px 1fr;gap:34px;align-items:center;margin-top:74px;padding-top:54px;border-top:1px solid var(--rule);}
+  .vspot{aspect-ratio:2/3;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);background-size:cover;background-position:center;}
+  .vsub h3{font-family:'Fraunces',serif;font-weight:400;font-size:1.5rem;line-height:1.12;margin:0 0 .5em;color:var(--ink);}
+  .vsub p{margin:0;color:var(--ink-soft);font-size:1rem;line-height:1.65;max-width:50ch;}
+  .vsub .credit{margin-top:10px;}
+
+  /* centered opener */
+  .opener{text-align:center;}
+  .opener h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.4rem,6vw,4rem);line-height:1.04;margin:0 auto;max-width:20ch;color:var(--ink);}
+
+  /* pull-quote interstitial */
+  .pull{margin:0 auto;max-width:900px;text-align:center;}
+  .pull blockquote{margin:0;font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.28;color:var(--clay-deep);}
+  .pull cite{display:block;margin-top:18px;font-style:normal;font-family:'Mulish',sans-serif;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);}
+
+  /* dark stat / fact card */
+  .stat{margin-top:30px;background:var(--ink);color:var(--cream);border-radius:10px;padding:24px 26px;max-width:680px;}
+  .stat .st-head{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;opacity:.8;margin-bottom:16px;}
+  .stat .st-grid{display:flex;gap:30px;flex-wrap:wrap;}
+  .stat .st b{display:block;font-family:'Fraunces',serif;font-weight:400;font-size:1.9rem;color:#e7b48f;line-height:1;}
+  .stat .st span{font-size:.82rem;opacity:.85;}
+  .stat .st-foot{margin-top:16px;font-size:.74rem;opacity:.7;letter-spacing:.04em;}
+
+  .endmark{text-align:center;margin:64px 0 0;color:var(--clay);font-family:'Fraunces',serif;font-size:1.4rem;}
+  .issue-nav{max-width:1180px;margin:8px auto 0;padding-top:34px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+  .issue-nav a{text-decoration:none;color:var(--ink-soft);font-size:.95rem;display:flex;flex-direction:column;gap:4px;transition:color .2s;}
+  .issue-nav a:hover{color:var(--clay-deep);}
+  .issue-nav .k{font-family:'Fraunces',serif;font-style:italic;color:var(--clay);font-size:.85rem;}
+  .issue-nav .t{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--ink);}
+  .issue-nav a:last-child{text-align:right;align-items:flex-end;}
+
+  /* footer */
+  .footer{background:var(--cream);border-top:1px solid var(--rule);padding:54px 0 40px;}
+  .footer-inner{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;}
+  .footer .brand{font-size:1.3rem;}
+  .footer p{margin:10px 0 0;color:var(--ink-soft);font-size:.92rem;max-width:34ch;}
+  .footer-links{display:flex;flex-direction:column;gap:9px;}
+  .footer-links a{color:var(--ink-soft);text-decoration:none;font-size:.92rem;}
+  .footer-links a:hover{color:var(--clay-deep);}
+  .footer-foot{max-width:1180px;margin:38px auto 0;padding:18px 28px 0;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:.82rem;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* responsive */
+  @media (max-width:880px){
+    .vfeat{grid-template-columns:1fr;gap:34px;}
+    .vfeat.flip .vmedia{order:0;}
+    .vfeat.flip .vtext{order:0;}
+    .vhero{max-width:460px;}
+    .vtext p,.vtext .dek{max-width:none;}
+    .vsub{grid-template-columns:1fr;gap:22px;}
+    .vspot{max-width:230px;}
+  }
+  @media (max-width:720px){
+    .twoshot .ts-grid{grid-template-columns:1fr;gap:24px;}
+  }
+  @media (max-width:820px){
+    .nav-links{position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;align-items:flex-start;gap:0;padding:8px 28px 18px;border-bottom:1px solid var(--rule);box-shadow:var(--shadow);display:none;}
+    .nav-links.open{display:flex;}
+    .nav-links a{padding:11px 0;width:100%;border-bottom:1px solid var(--rule);}
+    .nav-links a:last-child{border-bottom:0;}
+    .menu-btn{display:block;}
+    .cover{min-height:82vh;}
+    .section{padding:66px 0;}
+  }
+  @media (max-width:520px){
+    body{font-size:17px;}
+    .wrap,.nav-inner,.footer-inner,.footer-foot{padding-left:20px;padding-right:20px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .scroll-hint .dot{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Alpine <b>Analytics</b></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#issues">Issues</a>
+      <a href="writing.html">Writing</a>
+      <a href="index.html#inside">Inside</a>
+      <a class="nav-cta" href="https://instagram.com/sisitravels" target="_blank" rel="noopener">Follow</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- 1 · COVER (the Wild Sage bar; frosted panel for readability) -->
+<header class="cover" id="cover" style="background-image:linear-gradient(180deg,rgba(69,67,60,.28) 0%,rgba(69,67,60,0) 30%,rgba(69,67,60,.60) 100%),url('rusty-parrot-cover.jpg'),linear-gradient(150deg,#3c4348 0%,var(--sky) 56%,var(--clay) 128%);">
+  <div class="wrap cover-inner">
+    <div class="cover-panel reveal">
+    <p class="kicker">Glacial Gastronomy &nbsp;·&nbsp; Jackson Hole, Wyoming</p>
+    <h1>What the fire couldn't take.</h1>
+    <div class="lines">
+      <p>The Rusty Parrot Lodge burned on a winter night and went dark for years. Now it's back on its old corner of Jackson — and at its restaurant, Wild Sage, a chef named Hugo Goodwin is cooking the place back to life. A dispatch from the table.</p>
+      <p class="toc">The fire · Wild Sage reborn · Chef Hugo Goodwin · the skiing · a journalists' table</p>
+    </div>
+    </div>
+  </div>
+  <div class="cover-credit">Cover photograph · courtesy The Rusty Parrot Lodge &amp; Spa</div>
+  <div class="scroll-hint" aria-hidden="true"><div class="dot"></div>Read</div>
+</header>
+
+<!-- 2 · OPENER (text-only · band: sage-wash) -->
+<section class="section band">
+  <div class="wrap">
+    <div class="opener">
+      <p class="eyebrow reveal">A homecoming in Jackson</p>
+      <h2 class="reveal">Some places you have to lose before a town understands them.</h2>
+    </div>
+    <div class="col" style="margin-top:42px;">
+      <p class="drop reveal">For the better part of three decades, the Rusty Parrot Lodge sat at the north edge of the town of Jackson, Wyoming — a low, warm, family-run inn a short walk from the square, with a bright wooden parrot over the door and a small restaurant that quietly outcooked rooms ten times its size. It was the kind of place locals sent their visiting parents and out-of-town couples booked for an anniversary. Not the flashiest address in the valley. One of the most loved.</p>
+      <p class="reveal">Then, in the first days of 2020, it burned. A fire tore through the lodge and took most of it — and just like that, one of Jackson's last independent inns went dark. The corner stayed boarded and quiet through season after season, long enough that people began to talk about it in the past tense.</p>
+      <p class="reveal">It has come back. The lodge has been rebuilt on the same ground, the parrot is back over the door, and the restaurant — now called Wild Sage — is lit and serving again. Which raises the only question that really matters about a comeback like this one: not whether the walls returned, but whether the cooking did. So we went to dinner.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · THE LODGE / HISTORY (text + stat · band: linen) -->
+<section class="section">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">The lodge with the parrot</p>
+      <h2 class="lead-h reveal">An independent, in a town of big names.</h2>
+      <p class="drop reveal">Jackson Hole has no shortage of grand hospitality — it is a valley of marquee resorts and brand-name lodges, where international groups have steadily planted their flags. The Rusty Parrot was always the counter-argument: small, owner-run, and personal, a boutique lodge of a few dozen rooms rather than a few hundred, with a spa, a fire to sit by, and a restaurant that punched far above its room count.</p>
+      <p class="reveal">That restaurant was the heart of it. Intimate, candlelit, ambitious in a way that never tipped into stuffy, it built a reputation across the years as one of the better tables in a town that takes its tables seriously. People came for the lodge; they remembered the dinner.</p>
+      <p class="reveal">So when the fire came, the loss wasn't just a building. It was a particular kind of place — the independent in a field of conglomerates — and in a town where land is precious and patience is expensive, there was no guarantee it would ever come back as itself.</p>
+      <!-- DOUG: confirm these figures before publish; written round/approximate on purpose -->
+      <div class="stat reveal">
+        <div class="st-head">The Rusty Parrot · in brief</div>
+        <div class="st-grid">
+          <div class="st"><b>~3 decades</b><span>an independent in Jackson</span></div>
+          <div class="st"><b>2020</b><span>the fire</span></div>
+          <div class="st"><b>Years</b><span>dark, then rebuilt</span></div>
+          <div class="st"><b>Wild&nbsp;Sage</b><span>the restaurant, reborn</span></div>
+        </div>
+        <div class="st-foot">Dates approximate — confirm against the lodge's own record.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · THE FIRE / REBUILD (text-forward · band: cream) -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">After the fire</p>
+      <h2 class="lead-h reveal">It would have been easy to walk away.</h2>
+      <p class="drop reveal">This is the part worth pausing on. In a resort town, a cleared lot is sometimes worth more than the beloved business that stood on it. The simplest path after a fire like this is the quiet one: take the settlement, sell the corner, let something larger and glossier rise in its place. It happens all the time, and almost nobody blames the owners when it does.</p>
+      <p class="reveal">The Rusty Parrot chose the harder thing. Rather than cash out, it rebuilt — on the same footprint, in the same spirit, room by room and beam by beam, with the patience that a from-scratch reconstruction demands. The point was never to put up a new hotel. It was to bring back <em>this</em> one.</p>
+      <p class="reveal">The restaurant came back with it, reimagined as Wild Sage. A new kitchen, a new room, a new chef at the pass — but the same intent that made the old dining room matter: cook seriously, welcome warmly, and let the food, not the price tag, do the talking. A rebuilt lodge can be judged by its lobby. A rebuilt restaurant can only be judged one way.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · PULL-QUOTE INTERSTITIAL (band: sage-wash) -->
+<section class="section band">
+  <div class="wrap">
+    <div class="pull reveal">
+      <blockquote>You can rebuild the walls in a couple of winters. Earning back a town's appetite takes the very first dinner.</blockquote>
+      <cite>Alpine Analytics</cite>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · CHEF HUGO GOODWIN (vfeat · IMAGE left · band: linen) -->
+<section class="section">
+  <div class="wrap">
+    <div class="vfeat">
+      <div class="vmedia reveal">
+        <div class="vhero" style="background-image:url('hugo-goodwin.jpg'),linear-gradient(150deg,#5a6168,var(--sky));"></div>
+        <p class="vcap"><b>Chef Hugo Goodwin at the Wild Sage pass.</b> Quiet, exacting, produce-led — the kind of cooking that earns a white tablecloth without ever lecturing you about it. <span style="display:block;margin-top:4px;font-style:normal;">Photograph · courtesy The Rusty Parrot Lodge</span></p>
+      </div>
+      <div class="vtext reveal">
+        <div class="kicker-rule"></div>
+        <p class="eyebrow">At the pass</p>
+        <h2>The chef cooking the Parrot back to life.</h2>
+        <p class="drop">Executive chef Hugo Goodwin leads the kitchen at the reborn Wild Sage, and on the evidence of the plates, the lodge chose well. His cooking is precise without being precious: clean lines, real technique, a respect for what's in season, and a confidence that lets a single beautiful ingredient sit at the center of a dish and carry it.</p>
+        <!-- DOUG: drop in Hugo's background here — where he trained / cooked before Jackson. Left out rather than invented. -->
+        <p>You can read the whole approach in a plate of fish: cured, glazed, set just so, surrounded by things that flatter it rather than crowd it. It is fine dining in the contemporary mountain mode — serious food in an unserious posture, the sort you can arrive to in good boots and leave from grinning.</p>
+        <p>That instinct matters here more than anywhere. A relaunch invites a chef to overreach, to prove a point with tweezers and foam. Goodwin does the braver thing: he cooks like the restaurant has always existed, and lets the room relax into it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · THE FOOD / hero dish (wide landscape · IMAGE · band: cream) -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="wfeat">
+      <figure class="reveal" style="margin:0;">
+        <div class="wframe" style="background-image:url('wild-sage-salmon.jpg'),linear-gradient(150deg,var(--clay),#3c4348);"></div>
+        <figcaption class="vcap"><b>The plate that makes the case.</b> A glazed, lacquered fillet over silk-smooth cauliflower, scattered with trout roe and shards of seeded crisp — restraint doing the heavy lifting. <span style="display:block;margin-top:4px;font-style:normal;">Photograph · courtesy The Rusty Parrot Lodge</span></figcaption>
+      </figure>
+
+      <div class="col">
+        <p class="eyebrow reveal">On the plate</p>
+        <h2 class="lead-h reveal">Luxury you don't have to translate.</h2>
+        <p class="drop reveal">The best dishes at Wild Sage share a quality that's harder to pull off than it looks: they're immediately legible. You don't need the menu's permission to enjoy them. A piece of fish lacquered to a deep shine, a base of cauliflower whipped to cream, the salt-pop of roe and a brittle, blistered cracker for texture — every element is doing a job you can taste, and nothing is on the plate to be clever.</p>
+        <p class="reveal">It's a confident way to cook for a relaunch. There's no scramble to dazzle, no kitchen-sink tasting menu trying to justify the rebuild. Just a handful of very good things, composed with a steady hand, plated like the room has been doing this for thirty years — which, in a sense, it has.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · TWO-UP (salad + breakfast · IMAGES · band: sage-wash) -->
+<section class="section band">
+  <div class="wrap">
+    <div class="twoshot">
+      <div class="col reveal">
+        <p class="eyebrow">From a long dinner to an easy morning</p>
+        <h2 class="lead-h" style="margin:0;">The Parrot keeps its range.</h2>
+      </div>
+      <div class="ts-grid">
+        <figure class="ts reveal">
+          <div class="tsframe" style="background-image:url('wild-sage-salad.jpg'),linear-gradient(150deg,var(--sage),#cdb89c);"></div>
+          <figcaption class="vcap" style="max-width:none;"><b>Wild Sage, after dark.</b> A crisp-topped chicory and confit salad, a savory tart waiting behind it, a glass of something pink and cold. <span style="display:block;margin-top:4px;font-style:normal;">Photograph · courtesy The Rusty Parrot Lodge</span></figcaption>
+        </figure>
+        <figure class="ts reveal">
+          <div class="tsframe" style="background-image:url('rusty-parrot-breakfast.jpg'),linear-gradient(150deg,var(--sky),#e3d4be);"></div>
+          <figcaption class="vcap" style="max-width:none;"><b>And in the morning.</b> Eggs and chilaquiles, a stack of pancakes, fresh fruit, and a cinnamon roll built for a powder day — the lodge's generous other half. <span style="display:block;margin-top:4px;font-style:normal;">Photograph · courtesy The Rusty Parrot Lodge</span></figcaption>
+        </figure>
+      </div>
+      <div class="col" style="margin-top:42px;text-align:left;">
+        <p class="reveal">A lodge restaurant lives two lives, and Wild Sage commits to both. At night it's candlelight and considered plates; in the morning it's the warm, unhurried breakfast that a ski town actually runs on — the kind of table you linger at in base layers before the lifts, coffee going cold while someone decides whether the cinnamon roll counts as sharing. The ambition and the comfort aren't in tension here. They're the same hospitality, served at different hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · THE SKIING — Jackson Hole Mountain Resort (vfeat + wide IMAGE · band: cream) -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="vfeat">
+      <div class="vmedia reveal">
+        <div class="vhero" style="background-image:url('jackson-hole-gondola.jpg'),linear-gradient(150deg,var(--sky),#cdd6dc);"></div>
+        <p class="vcap"><b>The bronco on the glass.</b> Riding up at Jackson Hole Mountain Resort — the Wyoming bucking horse on the gondola window, Teton Village shrinking into the valley below. <span style="display:block;margin-top:4px;font-style:normal;">Photograph by Doug Olear</span></p>
+      </div>
+      <div class="vtext reveal">
+        <div class="kicker-rule"></div>
+        <p class="eyebrow">The reason you came</p>
+        <h2>And then, of course, there's the skiing.</h2>
+        <p class="drop">A great meal is the anchor of a Jackson stay, but nobody comes to this valley only to eat. A short drive up the road from the Rusty Parrot sits Jackson Hole Mountain Resort — one of the most serious mountains in North America, with a vertical drop near 4,140 feet, the famous big red aerial tram, and the kind of steep, no-apology terrain (Corbet's Couloir chief among it) that skiers plan whole winters around.</p>
+        <p>It's the rare resort that rewards experts and still sends everyone home grinning, and it's the engine the whole valley runs on. Ski hard all day in Teton Village, then come down off the hill windburned and hungry — which is exactly when a candlelit table at Wild Sage starts to sound like the best idea you've had all trip.</p>
+      </div>
+    </div>
+
+    <figure class="wfeat reveal" style="margin:56px auto 0;">
+      <div class="wframe" style="background-image:url('jackson-hole-skiing.jpg'),linear-gradient(150deg,var(--sky),var(--clay));"></div>
+      <figcaption class="vcap"><b>Doug Olear and Si Si Penaloza of Alpine Analytics at Jackson Hole.</b> On the slopes above Teton Village, the valley laid out behind them. <span style="display:block;margin-top:4px;font-style:normal;">Photograph by Doug Olear</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 10 · THE PRESS TABLE (text + wide IMAGE + small portrait · band: linen) -->
+<section class="section">
+  <div class="wrap">
+    <div class="wfeat">
+      <figure class="reveal" style="margin:0;">
+        <div class="wframe" style="background-image:url('journalists-dinner.jpg'),linear-gradient(150deg,#5a6168,var(--clay));"></div>
+        <figcaption class="vcap"><b>The verdict, around one table.</b> Chef Hugo Goodwin (center, in white) joins the visiting press for dinner at Wild Sage — Alpine Analytics's Si&nbsp;Si Penaloza at front left. <span style="display:block;margin-top:4px;font-style:normal;">Photograph · courtesy Si Si Penaloza</span></figcaption>
+      </figure>
+
+      <div class="col">
+        <p class="eyebrow reveal">A table of visitors</p>
+        <h2 class="lead-h reveal">The day the writers came to see what came back.</h2>
+        <p class="drop reveal">This season the lodge did the thing a confident relaunch does: it opened the doors and invited people to judge. A group of American travel journalists — Alpine Analytics's own Si Si Penaloza among them — came to Jackson to spend time inside the rebuilt Rusty Parrot, eat Hugo Goodwin's cooking, and see whether the new Wild Sage lived up to the name on the old one.</p>
+        <p class="reveal">It is a particular kind of dinner, the press table — equal parts hospitality and exam. The chef cooks, the room fills, and the verdict gets written on faces before it's ever written down. On this night the faces were easy. Goodwin came out and sat down with the table, and the conversation ran long the way it only does when the food has already made the argument.</p>
+      </div>
+
+      <div class="vsub">
+        <div class="vspot reveal" style="background-image:url('sisi-excursion.jpg'),linear-gradient(150deg,var(--sky),var(--sage));"></div>
+        <div class="reveal">
+          <h3>Off the property, into the snow.</h3>
+          <p>Dinner is only half of a Jackson stay. Between meals the Rusty Parrot points guests out into the valley — here, Si Si in a sun-warmed geodesic dome among the snow, one of the many off-site excursions the lodge folds into a visit. The food is the anchor; the mountains are the reason you came.</p>
+          <p class="credit">Photograph · courtesy Si Si Penaloza</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · CLOSER (text-forward · band: cream) -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">Last course</p>
+      <h2 class="lead-h reveal">The parrot is back over the door.</h2>
+      <p class="drop reveal">There's a temptation, with a story like this, to make the fire the whole point — to let the loss do the emotional work and call the rebuild brave and leave it there. But a restaurant doesn't get graded on its backstory. It gets graded on the plate in front of you, and then the next one.</p>
+      <p class="reveal">What's quietly moving about Wild Sage is how little it asks you to remember any of this while you eat. The cooking stands on its own. The room is warm. The cinnamon rolls are absurd in the best way. You could sit down knowing nothing about the years the corner spent dark and simply have a very good dinner — which is, in the end, the highest thing a comeback can hope to be.</p>
+      <p class="reveal">Jackson has its independent back. The valley of big names is one beloved small lodge richer than it was a few winters ago, and the proof isn't in the new beams or the fresh paint. It's in a glazed fillet, a long table of satisfied writers, and a chef who pulled up a chair. The fire took the building. It didn't get the thing that mattered. ✦</p>
+      <div class="endmark reveal">✦</div>
+      <nav class="issue-nav reveal">
+        <a href="gastronomy.html"><span class="k">↩ Back to</span><span class="t">Glacial Gastronomy</span></a>
+        <a href="index.html#inside"><span class="k">More from →</span><span class="t">Inside Alpine Analytics</span></a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <a class="brand" href="index.html">Alpine <b>Analytics</b></a>
+      <p>Smart escapism with character. Field notes from the unhurried mountains.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html#issues">Latest issues</a>
+      <a href="writing.html">Writing by Si Si</a>
+      <a href="index.html#inside">Inside the magazine</a>
+      <a href="https://instagram.com/sisitravels" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:1alpineanalytics@gmail.com">1alpineanalytics@gmail.com</a>
+    </div>
+  </div>
+  <div class="footer-foot">
+    <span>© 2026 Alpine Analytics · Benloch Ranch, Park City, Utah</span>
+    <span>Glacial Gastronomy · The Rusty Parrot, Jackson Hole</span>
+  </div>
+</footer>
+
+<script>
+  var btn=document.getElementById('menuBtn');
+  var links=document.getElementById('navLinks');
+  btn.addEventListener('click',function(){var open=links.classList.toggle('open');btn.setAttribute('aria-expanded',open);});
+  links.addEventListener('click',function(e){if(e.target.tagName==='A') links.classList.remove('open');});
+  var bar=document.getElementById('progress');
+  function prog(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max*100):0)+'%';}
+  document.addEventListener('scroll',prog,{passive:true});prog();
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
+</script>
+</body>
+</html>
