@@ -16,17 +16,20 @@
      gone. First-person and played, not reviewed.
 
      IMAGE RULE: like Wrist Shot, this column runs LEAN on photos.
-     FIVE image slots (the fifth optional), each pre-wired to its filename with a brand
+     EIGHT image slots (the last optional), each pre-wired to its filename with a brand
      gradient behind as a fallback. To add a photo: upload a
      correctly-named .jpg to the repo root and refresh — it appears,
      NO HTML editing.
 
      EXACT FILENAMES the page looks for (case-sensitive, no spaces):
-       off-piste-play-cover.jpg   (cover — a court, a paddle, or the group)
-       rmv-wednesday-group.jpg    (the Wednesday-night men's group at RMV)
-       rmv-womens-group.jpg       (the women's group at RMV)
-       joola-paddles.jpg          (the JOOLA paddles — shoot on court, not on white)
-       joola-kit.jpg              (OPTIONAL — bag and/or sneakers, one frame)
+       off-piste-play-cover.jpg      (cover — a court, a paddle, or the group)
+       rancho-la-puerta-group.jpg    (Rancho La Puerta pickleball courts, full-width)
+       rancho-la-puerta-win.jpg      (Rancho La Puerta tournament-win celebration)
+       rancho-la-puerta-statue.jpg   (the Victor Hugo Castañeda bronze by the pool)
+       rmv-wednesday-group.jpg       (the Wednesday-night men's group at RMV)
+       rmv-womens-group.jpg          (the women's group at RMV)
+       joola-paddles.jpg             (the JOOLA paddles — shoot on court, not on white)
+       joola-kit.jpg                 (OPTIONAL — bag and/or sneakers, one frame)
 
      TO DO BEFORE PUBLISHING:
        1. Fill the two photo captions with full names, left to right.
@@ -148,6 +151,17 @@
   .caption{font-family:'Fraunces',serif;font-style:italic;font-size:.93rem;color:var(--ink-soft);margin-top:12px;line-height:1.5;}
   .caption b{font-style:normal;font-weight:500;color:var(--ink);}
 
+  /* panorama — single full-width wide photo (candid, not composed like the cover) */
+  .panorama{margin:48px 0;}
+  .panorama .pframe{aspect-ratio:2/1;border-radius:9px;overflow:hidden;box-shadow:var(--shadow);background-size:cover;background-position:center;background-repeat:no-repeat;}
+  .panorama .pcap{font-family:'Fraunces',serif;font-style:italic;font-size:.92rem;color:var(--ink-soft);margin-top:14px;line-height:1.5;text-align:center;}
+  .panorama .pcap b{font-style:normal;font-weight:500;color:var(--ink);}
+
+  /* duo — two portrait photos side by side (used where 3:4 suits the subject better than 4:3) */
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:44px 0 0;}
+  .duo figure{margin:0;}
+  .duo .frame{aspect-ratio:3/4;}
+
   /* image frame + placeholders */
   .figure{margin:0;}
   .frame{background-size:cover;background-position:center;background-repeat:no-repeat;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}
@@ -190,6 +204,8 @@
     .vtext p,.vtext .dek,.vlist{max-width:none;}
     .split{grid-template-columns:1fr;gap:32px;}
     .two-up{grid-template-columns:1fr;}
+    .duo{grid-template-columns:1fr;}
+    .panorama .pframe{aspect-ratio:4/3;}
     .vsub{grid-template-columns:1fr;gap:22px;}
     .vspot{max-width:230px;}
   }
@@ -231,7 +247,7 @@
   </div>
 </nav>
 
-<!-- 1 · COVER (Pattern H — masthead over cover photo · IMAGE 1 of 5) -->
+<!-- 1 · COVER (Pattern H — masthead over cover photo · IMAGE 1 of 8) -->
 <header class="cover" id="cover" style="background-image:linear-gradient(180deg,rgba(69,67,60,.18) 0%,rgba(69,67,60,0) 30%,rgba(69,67,60,.62) 100%),url('off-piste-play-cover.jpg'),linear-gradient(135deg,var(--sky) 0%,var(--sage) 52%,var(--clay) 122%);">
   <div class="wrap cover-inner">
     <p class="kicker reveal">Off-Piste&nbsp;Play &nbsp;·&nbsp; No.&nbsp;01</p>
@@ -334,6 +350,27 @@
       <p class="eyebrow reveal">Where it travels</p>
       <h2 class="lead-h reveal">A season, invented out of almost nothing.</h2>
       <p class="drop reveal">I've seen the appeal firsthand in some unexpected places. At Rancho La Puerta, the legendary wellness resort in Baja, the pickleball classes were, without exception, full — fuller than the hikes, fuller than the yoga. A small detail, but it told me everything: this is a sport that functions as serious exercise and genuine social connection at the same time, which is a rare combination.</p>
+    </div>
+
+    <!-- IMAGE 2 of 8 · rancho-la-puerta-group.jpg — wide, candid, full-width -->
+    <div class="panorama reveal">
+      <div class="pframe" style="background-image:url('rancho-la-puerta-group.jpg'),linear-gradient(135deg,var(--sky),var(--sage));"></div>
+      <p class="pcap">Rancho La Puerta, Baja California. The pickleball classes were never not full.</p>
+    </div>
+
+    <!-- IMAGES 3 and 4 of 8 · rancho-la-puerta-win.jpg + rancho-la-puerta-statue.jpg -->
+    <div class="duo reveal">
+      <figure>
+        <div class="frame" style="background-image:url('rancho-la-puerta-win.jpg'),linear-gradient(135deg,var(--sage),var(--clay));"></div>
+        <figcaption class="caption">A tournament win, celebrated properly.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame" style="background-image:url('rancho-la-puerta-statue.jpg'),linear-gradient(160deg,var(--clay),var(--sky));"></div>
+        <figcaption class="caption">Rancho La Puerta's grounds are scattered with bronze women by sculptor Victor Hugo Castañeda — one greets yoga class each morning, another bows toward Mt. Kuchumaa. Given how packed the pickleball courts get here, we have to wonder: is a female pickleballer next?</figcaption>
+      </figure>
+    </div>
+
+    <div class="col" style="margin-top:56px;">
       <p class="reveal">It also turns out to travel uphill remarkably well. Consider what's happened in ski towns over the last few summers. Vail now has a dedicated pickleball center at the base of Vail Mountain — six cushioned outdoor courts, open roughly from summer into early fall, laid down on ground that spends half the year under a snowcat. Aspen Meadows, a property better known for Bauhaus architecture and an ideas festival, put in courts of its own with the Rockies as the backdrop. The Vail Racquet Club runs its courts alongside a year-round pool, hot tubs, a sauna and a steam room — precisely the sequence I keep seeing everywhere: play, recover, eat, repeat. Down-valley in Avon, at the foot of Beaver Creek, six public courts sit next to the lawn where the summer concerts happen.</p>
       <p class="reveal">What's actually being built in those places is a season. Mountain towns have spent decades trying to solve summer — the stretch when the lifts are quiet, the rooms are cheap and the restaurants run half-staffed — and one of the answers has turned out to be a small rectangle, a low net, and a game a family of four can learn in an afternoon at eight thousand feet. Golf wants four hours and a tee time. Mountain biking wants nerve and a shuttle. Pickleball wants twenty minutes and a paddle you can borrow at the front desk. For a resort trying to fill a Tuesday in June, that math is very hard to argue with.</p>
       <p class="reveal">This column will end up spending a lot of time in exactly those places. But most of what's actually hooked me didn't happen at a resort. It happened on a Wednesday.</p>
@@ -341,7 +378,7 @@
   </div>
 </section>
 
-<!-- 8 · WEDNESDAY NIGHTS (text + two-up gallery · IMAGES 2 and 3 of 5 · band: sage-wash) -->
+<!-- 8 · WEDNESDAY NIGHTS (text + two-up gallery · IMAGES 5 and 6 of 8 · band: sage-wash) -->
 <section class="section band">
   <div class="wrap">
     <div class="col" style="margin-bottom:56px;">
@@ -355,13 +392,13 @@
 
     <div class="two-up reveal">
       <figure>
-        <!-- IMAGE 2 of 5 · rmv-wednesday-group.jpg -->
+        <!-- IMAGE 5 of 8 · rmv-wednesday-group.jpg -->
         <div class="frame ph-1" style="background-image:url('rmv-wednesday-group.jpg'),linear-gradient(135deg,var(--sky),var(--sage));"></div>
         <!-- FULL NAMES TK — replace the bracket below, left to right -->
         <figcaption class="caption"><b>Wednesday night, two courts.</b> From left: [FULL NAMES TK].</figcaption>
       </figure>
       <figure>
-        <!-- IMAGE 3 of 5 · rmv-womens-group.jpg -->
+        <!-- IMAGE 6 of 8 · rmv-womens-group.jpg -->
         <div class="frame ph-2" style="background-image:url('rmv-womens-group.jpg'),linear-gradient(135deg,var(--sage),var(--clay));"></div>
         <!-- FULL NAMES TK — replace the bracket below, left to right -->
         <figcaption class="caption"><b>Three years and counting.</b> From left: [FULL NAMES TK].</figcaption>
@@ -370,12 +407,12 @@
   </div>
 </section>
 
-<!-- 9 · JOOLA (vfeat flip · IMAGES 4 and 5 · band: linen) -->
+<!-- 9 · JOOLA (vfeat flip · IMAGES 7 and 8 · band: linen) -->
 <section class="section">
   <div class="wrap">
     <div class="vfeat flip">
       <div class="vmedia reveal">
-        <!-- IMAGE 4 of 5 · joola-paddles.jpg -->
+        <!-- IMAGE 7 of 8 · joola-paddles.jpg -->
         <div class="vhero ph-3" style="background-image:url('joola-paddles.jpg'),linear-gradient(160deg,var(--clay),var(--sky));"></div>
         <p class="vcap"><b>YOH-lah.</b> Not Jool-uh. The paddles that started the argument.</p>
       </div>
@@ -395,7 +432,7 @@
       </div>
     </div>
 
-    <!-- IMAGE 5 of 5 · joola-kit.jpg — the bag and/or sneakers. Optional:
+    <!-- IMAGE 8 of 8 · joola-kit.jpg — the bag and/or sneakers. Optional:
          if this file is never uploaded, the gradient below reads as a
          deliberate colour block, or delete this whole .vsub div. -->
     <div class="vsub reveal">
@@ -407,7 +444,7 @@
     </div>
 
     <div class="col" style="margin-top:70px;">
-      <p class="reveal">One more thing about JOOLA, because I can't resist: almost everyone says it wrong the first time. The instinct is a hard J — "Jool-uh," or "Jewel-uh." But it's a German name, and the German J makes a Y sound, so the real pronunciation lands closer to <em>YOH-lah</em>. JOOLA hears this often enough that they've made videos about it. Consider this fair warning before your next trip to the pro shop — get it right and you're magna cum laude.</p>
+      <p class="reveal">One more thing about JOOLA, because I can't resist: by my count, seven in ten people mangle it on the first try. The instinct is a hard J — "Jool-uh," or "Jewel-uh" (guilty). But it's a German name, and the German J makes a Y sound, so the real pronunciation lands closer to <em>YOH-lah</em>. JOOLA hears this often enough that they've made videos about it. Consider this fair warning before your next trip to the pro shop — get it right and you're magna cum laude.</p>
     </div>
 
     <!-- DISCLOSURE — confirm the wording matches what JOOLA actually sends before publishing -->
