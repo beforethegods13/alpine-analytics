@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Off-Piste Play · No. 01 — The Great Equalizer · Alpine Analytics</title>
+<meta name="description" content="Off-Piste Play — the warm-season column. No. 01: getting humbled by seventy-year-old women, why pickleball is building a second season for ski towns, and four months of Wednesday nights." />
+
+<!-- ============================================================
+     ALPINE ANALYTICS — OFF-PISTE PLAY · No. 01
+     "The Great Equalizer." Single self-contained file.
+     Keep at the repo root as off-piste-play-01.html.
+
+     Off-Piste Play = the magazine's warm-season column. Pickleball
+     first, then whatever else fills the mountains once the snow is
+     gone. First-person and played, not reviewed.
+
+     IMAGE RULE: like Wrist Shot, this column runs LEAN on photos.
+     EIGHT image slots (the last optional), each pre-wired to its filename with a brand
+     gradient behind as a fallback. To add a photo: upload a
+     correctly-named .jpg to the repo root and refresh — it appears,
+     NO HTML editing.
+
+     EXACT FILENAMES the page looks for (case-sensitive, no spaces):
+       off-piste-play-cover.jpg      (cover — a court, a paddle, or the group)
+       rancho-la-puerta-group.jpg    (Rancho La Puerta pickleball courts, full-width)
+       rancho-la-puerta-win.jpg      (Rancho La Puerta tournament-win celebration)
+       rancho-la-puerta-statue.jpg   (the Victor Hugo Castañeda bronze by the pool)
+       rmv-wednesday-group.jpg       (the Wednesday-night men's group at RMV)
+       rmv-womens-group.jpg          (the women's group at RMV)
+       joola-paddles.jpg             (the JOOLA paddles — shoot on court, not on white)
+       joola-kit.jpg                 (OPTIONAL — bag and/or sneakers, one frame)
+
+     TO DO BEFORE PUBLISHING:
+       1. Fill the two photo captions with full names, left to right.
+          Search this file for FULL NAMES TK.
+       2. Confirm the gear disclosure line matches what JOOLA sends.
+          Search for DISCLOSURE.
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --linen:#f7f3ec; --cream:#fbf8f2; --ink:#45433c; --ink-soft:#777269;
+    --sky:#8fb1bc; --sage:#a4b19a; --sage-wash:#edf0e7;
+    --clay:#c98a63; --clay-deep:#b1734d;
+    --rule:rgba(69,67,60,.14); --shadow:0 26px 64px -30px rgba(69,67,60,.55);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--linen);color:var(--ink);font-family:'Mulish',system-ui,sans-serif;font-weight:300;font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  .eyebrow{font-family:'Fraunces',serif;font-style:italic;font-weight:400;color:var(--clay);font-size:1rem;letter-spacing:.02em;margin:0 0 14px;}
+
+  .progress{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--clay);z-index:120;transition:width .1s linear;}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:100;background:rgba(247,243,236,.86);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--rule);}
+  .nav-inner{max-width:1180px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;}
+  .brand{font-family:'Fraunces',serif;font-weight:400;font-size:1.18rem;letter-spacing:.04em;text-decoration:none;color:var(--ink);white-space:nowrap;}
+  .brand b{font-weight:500;}
+  .nav-links{display:flex;align-items:center;gap:26px;}
+  .nav-links a{text-decoration:none;color:var(--ink-soft);font-size:.93rem;font-weight:400;transition:color .2s;}
+  .nav-links a:hover{color:var(--clay-deep);}
+  .nav-cta{border:1px solid var(--clay);color:var(--clay-deep)!important;padding:7px 16px;border-radius:999px;}
+  .nav-cta:hover{background:var(--clay);color:#fff!important;}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:6px;}
+  .menu-btn span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.25s;}
+
+  /* cover / masthead (Pattern H) */
+  .cover{position:relative;min-height:94vh;display:flex;align-items:flex-start;
+    background-image:linear-gradient(135deg,var(--sky) 0%,var(--sage) 52%,var(--clay) 122%);
+    background-size:cover;background-position:center;}
+  .cover-inner{width:100%;padding-top:9vh;padding-bottom:8vh;}
+  .cover .kicker{color:var(--cream);font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;letter-spacing:.08em;margin:0 0 16px;text-shadow:0 1px 16px rgba(69,67,60,.6);}
+  .cover h1{font-family:'Fraunces',serif;font-weight:300;color:var(--cream);font-size:clamp(2.6rem,7.4vw,5.8rem);line-height:1.0;margin:0;letter-spacing:-.01em;max-width:14ch;text-shadow:0 2px 30px rgba(69,67,60,.5);}
+  .cover .lines{margin:22px 0 0;color:var(--cream);max-width:52ch;}
+  .cover .lines p{margin:0 0 8px;font-size:1.12rem;font-weight:300;text-shadow:0 1px 18px rgba(69,67,60,.6);}
+  .cover .toc{margin-top:18px;font-family:'Fraunces',serif;font-style:italic;font-size:.98rem;color:var(--cream);opacity:.94;text-shadow:0 1px 18px rgba(69,67,60,.6);}
+  .scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:var(--cream);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85;display:flex;flex-direction:column;align-items:center;gap:7px;}
+  .scroll-hint .dot{width:1px;height:34px;background:linear-gradient(var(--cream),transparent);animation:fall 2.2s ease-in-out infinite;}
+  @keyframes fall{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+
+  /* section frame + bands */
+  .section{padding:96px 0;}
+  .section + .section{border-top:1px solid var(--rule);}
+  .band{background:var(--sage-wash);}
+  .band-cream{background:var(--cream);}
+  .col{max-width:680px;margin:0 auto;}
+  .col p{margin:0 0 1.35em;}
+  .lead-h{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.05;letter-spacing:-.01em;margin:0 0 .42em;color:var(--ink);}
+  .dek{font-family:'Fraunces',serif;font-style:italic;color:var(--ink-soft);font-size:1.26rem;line-height:1.4;margin:0 0 1.5em;}
+  .drop::first-letter{font-family:'Fraunces',serif;font-weight:400;float:left;font-size:4.2rem;line-height:.76;padding:8px 12px 0 0;color:var(--clay-deep);}
+  .credit{font-family:'Fraunces',serif;font-style:italic;font-size:.92rem;color:var(--ink-soft);margin-top:14px;}
+
+  /* VERTICAL-FIRST FEATURE */
+  .vfeat{display:grid;grid-template-columns:minmax(0,.9fr) 1fr;gap:58px;align-items:center;}
+  .vfeat.flip .vmedia{order:2;}
+  .vfeat.flip .vtext{order:1;}
+  .vhero{aspect-ratio:3/4;border-radius:9px;overflow:hidden;box-shadow:var(--shadow);background-size:cover;background-position:center;background-repeat:no-repeat;}
+  .vcap{font-family:'Fraunces',serif;font-style:italic;font-size:.92rem;color:var(--ink-soft);margin-top:14px;line-height:1.5;max-width:42ch;}
+  .vcap b{font-style:normal;font-weight:500;color:var(--ink);}
+  .vtext .kicker-rule{width:54px;height:2px;background:var(--clay);margin:0 0 22px;}
+  .vtext h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.04;letter-spacing:-.01em;margin:0 0 .32em;color:var(--ink);}
+  .vtext .dek{margin-bottom:1.1em;}
+  .vtext p{margin:0 0 1.2em;max-width:46ch;}
+  .vtext .drop::first-letter{font-size:3.9rem;padding:6px 11px 0 0;}
+  .vlist{list-style:none;padding:0;margin:1.7em 0 0;max-width:46ch;}
+  .vlist li{position:relative;padding:.7em 0 .7em 28px;border-top:1px solid var(--rule);font-size:.97rem;line-height:1.55;color:var(--ink);}
+  .vlist li:last-child{border-bottom:1px solid var(--rule);}
+  .vlist li::before{content:"";position:absolute;left:2px;top:1.18em;width:8px;height:8px;border:1.5px solid var(--clay);transform:rotate(45deg);}
+  .vlist b{font-weight:500;}
+
+  /* secondary tall vertical kept SMALL beside its caption */
+  .vsub{display:grid;grid-template-columns:230px 1fr;gap:34px;align-items:center;margin-top:74px;padding-top:54px;border-top:1px solid var(--rule);}
+  .vspot{aspect-ratio:2/3;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);background-size:cover;background-position:center;}
+  .vsub h3{font-family:'Fraunces',serif;font-weight:400;font-size:1.5rem;line-height:1.12;margin:0 0 .5em;color:var(--ink);}
+  .vsub p{margin:0;color:var(--ink-soft);font-size:1rem;line-height:1.65;max-width:50ch;}
+
+  /* centered opener */
+  .opener{text-align:center;}
+  .opener h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.4rem,6vw,4rem);line-height:1.04;margin:0 auto;max-width:18ch;color:var(--ink);}
+
+  /* pull-quote interstitial */
+  .pull{margin:0 auto;max-width:860px;text-align:center;}
+  .pull blockquote{margin:0;font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.28;color:var(--clay-deep);}
+  .pull cite{display:block;margin-top:18px;font-style:normal;font-family:'Mulish',sans-serif;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);}
+
+  /* sidebar split */
+  .split{display:grid;grid-template-columns:1.35fr 1fr;gap:46px;align-items:start;}
+  .split .side{background:var(--cream);border:1px solid var(--rule);border-radius:10px;padding:26px;}
+  .split .side h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.22rem;margin:0 0 .6em;}
+  .split .side p{font-size:.95rem;line-height:1.6;margin:0 0 1em;}
+  .split .side p:last-child{margin-bottom:0;}
+  .stat{margin-top:24px;background:var(--ink);color:var(--cream);border-radius:10px;padding:20px 22px;}
+  .stat .st-head{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;opacity:.8;margin-bottom:14px;}
+  .stat .st-grid{display:flex;gap:26px;flex-wrap:wrap;}
+  .stat .st b{display:block;font-family:'Fraunces',serif;font-weight:400;font-size:1.7rem;color:#e7b48f;line-height:1;}
+  .stat .st span{font-size:.82rem;opacity:.85;}
+  .stat .st-foot{margin-top:14px;font-size:.74rem;opacity:.7;letter-spacing:.04em;}
+
+  /* two-up caption gallery (landscape group shots) */
+  .two-up{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;}
+  .two-up figure{margin:0;}
+  .two-up .frame{aspect-ratio:4/3;}
+  .caption{font-family:'Fraunces',serif;font-style:italic;font-size:.93rem;color:var(--ink-soft);margin-top:12px;line-height:1.5;}
+  .caption b{font-style:normal;font-weight:500;color:var(--ink);}
+
+  /* panorama — single full-width wide photo (candid, not composed like the cover) */
+  .panorama{margin:48px 0;}
+  .panorama .pframe{aspect-ratio:2/1;border-radius:9px;overflow:hidden;box-shadow:var(--shadow);background-size:cover;background-position:center;background-repeat:no-repeat;}
+  .panorama .pcap{font-family:'Fraunces',serif;font-style:italic;font-size:.92rem;color:var(--ink-soft);margin-top:14px;line-height:1.5;text-align:center;}
+  .panorama .pcap b{font-style:normal;font-weight:500;color:var(--ink);}
+
+  /* duo — two portrait photos side by side (used where 3:4 suits the subject better than 4:3) */
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:44px 0 0;}
+  .duo figure{margin:0;}
+  .duo .frame{aspect-ratio:3/4;}
+
+  /* image frame + placeholders */
+  .figure{margin:0;}
+  .frame{background-size:cover;background-position:center;background-repeat:no-repeat;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}
+  .ph-1{background-image:linear-gradient(135deg,var(--sky),var(--sage));}
+  .ph-2{background-image:linear-gradient(135deg,var(--sage),var(--clay));}
+  .ph-3{background-image:linear-gradient(160deg,var(--clay),var(--sky));}
+  .ph-label{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:rgba(251,248,242,.95);font-family:'Fraunces',serif;font-style:italic;font-size:.95rem;letter-spacing:.03em;text-align:center;padding:18px;}
+
+  /* disclosure */
+  .disclose{max-width:680px;margin:34px auto 0;padding:14px 18px;border-left:2px solid var(--clay);
+    background:var(--sage-wash);border-radius:2px;font-size:.88rem;line-height:1.6;color:var(--ink-soft);font-style:italic;}
+
+  .endmark{text-align:center;margin:64px 0 0;color:var(--clay);font-family:'Fraunces',serif;font-size:1.4rem;}
+  .issue-nav{max-width:1180px;margin:8px auto 0;padding-top:34px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+  .issue-nav a{text-decoration:none;color:var(--ink-soft);font-size:.95rem;display:flex;flex-direction:column;gap:4px;transition:color .2s;}
+  .issue-nav a:hover{color:var(--clay-deep);}
+  .issue-nav .k{font-family:'Fraunces',serif;font-style:italic;color:var(--clay);font-size:.85rem;}
+  .issue-nav .t{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--ink);}
+  .issue-nav a:last-child{text-align:right;align-items:flex-end;}
+
+  /* footer */
+  .footer{background:var(--cream);border-top:1px solid var(--rule);padding:54px 0 40px;}
+  .footer-inner{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;}
+  .footer .brand{font-size:1.3rem;}
+  .footer p{margin:10px 0 0;color:var(--ink-soft);font-size:.92rem;max-width:34ch;}
+  .footer-links{display:flex;flex-direction:column;gap:9px;}
+  .footer-links a{color:var(--ink-soft);text-decoration:none;font-size:.92rem;}
+  .footer-links a:hover{color:var(--clay-deep);}
+  .footer-foot{max-width:1180px;margin:38px auto 0;padding:18px 28px 0;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:.82rem;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* responsive */
+  @media (max-width:880px){
+    .vfeat{grid-template-columns:1fr;gap:34px;}
+    .vfeat.flip .vmedia{order:0;}
+    .vfeat.flip .vtext{order:0;}
+    .vhero{max-width:460px;}
+    .vtext p,.vtext .dek,.vlist{max-width:none;}
+    .split{grid-template-columns:1fr;gap:32px;}
+    .two-up{grid-template-columns:1fr;}
+    .duo{grid-template-columns:1fr;}
+    .panorama .pframe{aspect-ratio:4/3;}
+    .vsub{grid-template-columns:1fr;gap:22px;}
+    .vspot{max-width:230px;}
+  }
+  @media (max-width:820px){
+    .nav-links{position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;align-items:flex-start;gap:0;padding:8px 28px 18px;border-bottom:1px solid var(--rule);box-shadow:var(--shadow);display:none;}
+    .nav-links.open{display:flex;}
+    .nav-links a{padding:11px 0;width:100%;border-bottom:1px solid var(--rule);}
+    .nav-links a:last-child{border-bottom:0;}
+    .menu-btn{display:block;}
+    .cover{min-height:82vh;}
+    .section{padding:66px 0;}
+  }
+  @media (max-width:520px){
+    body{font-size:17px;}
+    .wrap,.nav-inner,.footer-inner,.footer-foot{padding-left:20px;padding-right:20px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .scroll-hint .dot{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Alpine <b>Analytics</b></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#issues">Issues</a>
+      <a href="writing.html">Writing</a>
+      <a href="index.html#inside">Inside</a>
+      <a class="nav-cta" href="https://instagram.com/sisitravels" target="_blank" rel="noopener">Follow</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- 1 · COVER (Pattern H — masthead over cover photo · IMAGE 1 of 8) -->
+<header class="cover" id="cover" style="background-image:linear-gradient(100deg,rgba(20,19,16,.60) 0%,rgba(20,19,16,.50) 40%,rgba(20,19,16,.12) 72%,rgba(20,19,16,0) 100%),linear-gradient(180deg,rgba(20,19,16,.30) 0%,rgba(20,19,16,.10) 26%,rgba(20,19,16,.40) 58%,rgba(20,19,16,.58) 85%,rgba(20,19,16,.62) 100%),url('off-piste-play-cover.jpg'),linear-gradient(135deg,var(--sky) 0%,var(--sage) 52%,var(--clay) 122%);">
+  <div class="wrap cover-inner">
+    <p class="kicker reveal">Off-Piste&nbsp;Play &nbsp;·&nbsp; No.&nbsp;01</p>
+    <h1 class="reveal">The Great Equalizer.</h1>
+    <div class="lines reveal">
+      <p>Notes on getting humbled by seventy-year-old women, and what four months of Wednesday nights taught me about the fastest-growing sport in America.</p>
+      <p class="toc">In this one: a season invented from nothing · eight guys and two courts · how to say JOOLA</p>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><div class="dot"></div>Read</div>
+</header>
+
+<!-- 2 · OPENER (text-only · band: sage-wash) -->
+<section class="section band">
+  <div class="wrap">
+    <div class="opener">
+      <p class="eyebrow reveal">A miscalculation</p>
+      <h2 class="reveal">I assumed I had a head start. I did not have a head start.</h2>
+    </div>
+    <div class="col" style="margin-top:42px;">
+      <p class="drop reveal">I grew up in an athletic family, in an athletic town, and if it had a scoreboard, my friends and I played it — football, baseball, soccer, tennis, chess, whatever the season called for. I went on to box as a competitive amateur, training for a stretch under Emanuel Steward with the Kronk team in Detroit. My brother quarterbacked at Fordham. My older brother played hockey. Between the three of us, I thought I understood, pretty well, what real practice looks like.</p>
+      <p class="reveal">So when I picked up a pickleball paddle for the first time, I assumed the rest would follow.</p>
+      <p class="reveal">It did not. I got beaten, calmly and repeatedly, by women in their seventies who, as far as I know, have never thrown a punch in their lives. That was the moment pickleball actually started teaching me something.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · THE 75/25 THEORY (text-only · band: linen) -->
+<section class="section">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">The theory</p>
+      <h2 class="lead-h reveal">Seventy-five percent strategy. Twenty-five percent athlete.</h2>
+      <p class="dek reveal">The court is small, the paddles are light, and the ball punishes a bad decision far more than it rewards a hard swing.</p>
+      <p class="drop reveal">Here's what months on the court have convinced me of. Because of that arithmetic — small court, light paddle, slow holey wiffle-ball of a thing — almost anyone with even a modicum of athletic ability can pick the game up and play. But getting <em>good</em> has almost nothing to do with how athletic you are.</p>
+      <p class="reveal">It's about understanding the game: where to stand, when to slow down, when the boring shot is the correct shot. I had the athletic ability. For a long time, I didn't have the game. The women beating me clearly did.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · PULL-QUOTE INTERSTITIAL (band: sage-wash) -->
+<section class="section band">
+  <div class="wrap">
+    <div class="pull reveal">
+      <blockquote>You don't have to be a natural. You just have to understand the game.</blockquote>
+      <cite>Off-Piste Play</cite>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · PRACTICE / THE INVISIBLE WORK (text-forward · band: cream) -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">The part nobody sees</p>
+      <h2 class="lead-h reveal">The gap closes. It just closes quietly.</h2>
+      <p class="drop reveal">The good news is that gap closes, for anyone, if you put the time in. The tricky part is that people who haven't spent real time in competitive sports tend to underestimate how much invisible work sits behind what looks effortless.</p>
+      <p class="reveal">Kobe Bryant is the go-to example, and deservedly so — the stories about his training are the stuff of legend, teammates and trainers recalling him in the gym at four or five in the morning, putting up shot after shot after shot until the motion stopped being a decision and simply became what his body did. Gary Player's version of the same idea has been quoted for decades: <em>the harder I practice, the luckier I get.</em></p>
+      <p class="reveal">So, some advice if you're just starting out: don't be intimidated the first time you walk up to a court and see two people ripping the ball at each other like they're trying to end the point in one shot. There's an excellent chance those two have logged hundreds of hours you didn't see. That's not a reason to feel behind — it's evidence of practice, not some genetic gift you're missing. There's a level for everyone, and you get from your level to the next one exactly the same way they did.</p>
+      <p class="reveal">Part of what makes this deceptive is that pickleball looks almost insultingly simple from the sideline. There's a paddle. There's a net. Someone hits the ball over, you hit it back. That's the whole sport — except it isn't. Underneath that simplicity is real strategic depth: positioning, shot selection, patience, footwork, none of it visible from the parking lot. YouTube will hand you a thousand videos breaking all of it down, which is both a gift and a trap — don't try to absorb it in one weekend. Learn the fundamentals, play, and let the rest come in layers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · HEALTH + THE BOOM (split with sidebar + stat · band: linen) -->
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <div class="reveal">
+        <p class="eyebrow">The bigger win</p>
+        <h2 class="lead-h">A sport built to let your body keep up with your competitiveness.</h2>
+        <p style="margin:0 0 1.35em;">Racket sports have a well-documented connection to longevity, and pickleball may be the most approachable racket sport ever invented. I've played against people well into their eighties who move beautifully and think the game better than players a third their age. Most sports retire you. This one seems willing to wait.</p>
+        <p style="margin:0 0 1.35em;">It's also, at the moment, having a real cultural run — and that growth hasn't escaped notice in professional sports and entertainment circles. LeBron James bought into Major League Pickleball ownership alongside Draymond Green and Kevin Love. Drake and Michael B. Jordan are investors in the Brooklyn Aces, a team Kevin Durant partly owns. Tom Brady and Drew Brees are in, too.</p>
+        <p style="margin:0;">A backyard game invented by a few bored dads on an island near Seattle in 1965 now has some of the biggest names in sport and entertainment writing checks for it.</p>
+      </div>
+      <div class="reveal">
+        <div class="side">
+          <h3>Why this keeps happening</h3>
+          <p>Every barrier the other racket sports put up, pickleball took down. You don't need a coach to have a first rally. You don't need a court booking to find a game. You don't need to be young, and you don't need to be fast.</p>
+          <p>What you need is twenty minutes and someone to play with — which turns out to be the entire business model.</p>
+        </div>
+        <div class="stat">
+          <div class="st-head">By the numbers</div>
+          <div class="st-grid">
+            <div class="st"><b>24M</b><span>US players, 2025</span></div>
+            <div class="st"><b>4M</b><span>US players, 2020</span></div>
+            <div class="st"><b>1965</b><span>Invented, near Seattle</span></div>
+          </div>
+          <div class="st-foot">Fastest-growing sport in the country several years running.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · THE TRAVEL / ALPINE BEAT (text-forward · band: cream) -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">Where it travels</p>
+      <h2 class="lead-h reveal">A season, invented out of almost nothing.</h2>
+      <p class="drop reveal">I've seen the appeal firsthand in some unexpected places. At Rancho La Puerta, the legendary wellness resort in Baja, the pickleball classes were, without exception, full — fuller than the hikes, fuller than the yoga. A small detail, but it told me everything: this is a sport that functions as serious exercise and genuine social connection at the same time, which is a rare combination.</p>
+    </div>
+
+    <!-- IMAGE 2 of 8 · rancho-la-puerta-group.jpg — wide, candid, full-width -->
+    <div class="panorama reveal">
+      <div class="pframe" style="background-image:url('rancho-la-puerta-group.jpg'),linear-gradient(135deg,var(--sky),var(--sage));"></div>
+      <p class="pcap">Rancho La Puerta, Baja California. The pickleball classes were never not full.</p>
+    </div>
+
+    <!-- IMAGES 3 and 4 of 8 · rancho-la-puerta-win.jpg + rancho-la-puerta-statue.jpg -->
+    <div class="duo reveal">
+      <figure>
+        <div class="frame" style="background-image:url('rancho-la-puerta-win.jpg'),linear-gradient(135deg,var(--sage),var(--clay));"></div>
+        <figcaption class="caption">A tournament win, celebrated properly.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame" style="background-image:url('rancho-la-puerta-statue.jpg'),linear-gradient(160deg,var(--clay),var(--sky));"></div>
+        <figcaption class="caption">Rancho La Puerta's grounds are scattered with bronze women by sculptor Victor Hugo Castañeda — one greets yoga class each morning, another bows toward Mt. Kuchumaa. Given how packed the pickleball courts get here, we have to wonder: is a female pickleballer next?</figcaption>
+      </figure>
+    </div>
+
+    <div class="col" style="margin-top:56px;">
+      <p class="reveal">It also turns out to travel uphill remarkably well. Consider what's happened in ski towns over the last few summers. Vail now has a dedicated pickleball center at the base of Vail Mountain — six cushioned outdoor courts, open roughly from summer into early fall, laid down on ground that spends half the year under a snowcat. Aspen Meadows, a property better known for Bauhaus architecture and an ideas festival, put in courts of its own with the Rockies as the backdrop. The Vail Racquet Club runs its courts alongside a year-round pool, hot tubs, a sauna and a steam room — precisely the sequence I keep seeing everywhere: play, recover, eat, repeat. Down-valley in Avon, at the foot of Beaver Creek, six public courts sit next to the lawn where the summer concerts happen.</p>
+      <p class="reveal">What's actually being built in those places is a season. Mountain towns have spent decades trying to solve summer — the stretch when the lifts are quiet, the rooms are cheap and the restaurants run half-staffed — and one of the answers has turned out to be a small rectangle, a low net, and a game a family of four can learn in an afternoon at eight thousand feet. Golf wants four hours and a tee time. Mountain biking wants nerve and a shuttle. Pickleball wants twenty minutes and a paddle you can borrow at the front desk. For a resort trying to fill a Tuesday in June, that math is very hard to argue with.</p>
+      <p class="reveal">This column will end up spending a lot of time in exactly those places. But most of what's actually hooked me didn't happen at a resort. It happened on a Wednesday.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · WEDNESDAY NIGHTS (text + two-up gallery · IMAGES 5 and 6 of 8 · band: sage-wash) -->
+<section class="section band">
+  <div class="wrap">
+    <div class="col" style="margin-bottom:56px;">
+      <p class="eyebrow reveal">Rancho Mission Viejo · 7 p.m.</p>
+      <h2 class="lead-h reveal">Four months as one of Carlo's friends.</h2>
+      <p class="drop reveal">A few months ago, my friend Carlo called and asked if I was free to play at 7 p.m. with him and three of his friends. I said yes, showed up, and had one of the better nights of racket sports I can remember.</p>
+      <p class="reveal">What I didn't know walking in was that Carlo's group had been running that exact Wednesday-night game, at the same courts, for three straight years before I ever picked up a paddle with them. I've now been one of "Carlo's friends" for about four months. The group has grown to eight of us, and we usually reserve two courts.</p>
+      <p class="reveal">We're competitive enough to care about the score and relaxed enough to never take it too seriously. Mostly, we're just getting better together — you can watch it happen week to week, who's been practicing, who picked up a new shot, who's finally stopped losing to the seventy-year-olds.</p>
+      <p class="reveal">It runs in the family, too: Carlo's wife has had her own women's group going at the same courts for just as long.</p>
+    </div>
+
+    <div class="two-up reveal">
+      <figure>
+        <!-- IMAGE 5 of 8 · rmv-wednesday-group.jpg -->
+        <div class="frame ph-1" style="background-image:url('rmv-wednesday-group.jpg'),linear-gradient(135deg,var(--sky),var(--sage));"></div>
+        <!-- FULL NAMES TK — replace the bracket below, left to right -->
+        <figcaption class="caption"><b>Wednesday night, two courts.</b> From left: [FULL NAMES TK].</figcaption>
+      </figure>
+      <figure>
+        <!-- IMAGE 6 of 8 · rmv-womens-group.jpg -->
+        <div class="frame ph-2" style="background-image:url('rmv-womens-group.jpg'),linear-gradient(135deg,var(--sage),var(--clay));"></div>
+        <!-- FULL NAMES TK — replace the bracket below, left to right -->
+        <figcaption class="caption"><b>Three years and counting.</b> From left: [FULL NAMES TK].</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · JOOLA (vfeat flip · IMAGES 7 and 8 · band: linen) -->
+<section class="section">
+  <div class="wrap">
+    <div class="vfeat flip">
+      <div class="vmedia reveal">
+        <!-- IMAGE 7 of 8 · joola-paddles.jpg -->
+        <div class="vhero ph-3" style="background-image:url('joola-paddles.jpg'),linear-gradient(160deg,var(--clay),var(--sky));"></div>
+        <p class="vcap"><b>YOH-lah.</b> Not Jool-uh. The paddles that started the argument.</p>
+      </div>
+      <div class="vtext reveal">
+        <div class="kicker-rule"></div>
+        <p class="eyebrow">The gear side of the story</p>
+        <h2>A table tennis company that walked outside.</h2>
+        <p class="drop">You can't tell the gear side of this story without JOOLA. The company started in 1952 in a small German town, building table tennis tables — its name a mashup of "Jooss," the department store whose sporting-goods arm birthed it, and "Landau," the town where it happened.</p>
+        <p>JOOLA spent decades as one of the biggest names in table tennis, serving as the Olympics' official table sponsor across multiple Summer Games. Then, in 2022, during a pandemic that had shut the table tennis clubs, JOOLA's own staff started playing pickleball on courts near their office — and watched two brothers going at it on the next court at a speed that stopped them cold.</p>
+        <p>Those brothers were Ben Johns and Collin Johns. JOOLA has had Ben under contract since that spring, four-plus years now, and he has been the sport's world No. 1 men's player for essentially all of it. One of the cleanest right-place-right-time stories in modern sports marketing — not unlike Nike catching Michael Jordan before anyone else did.</p>
+        <ul class="vlist">
+          <li><b>Founded</b> — 1952, Landau, Germany. Table tennis first, paddle sport sixty years later.</li>
+          <li><b>Ben Johns</b> — signed spring 2022, world No. 1 for essentially the whole run.</li>
+          <li><b>Anna Bright</b> — former Division I tennis player at Cal, now one of the most consistent doubles players in the sport, with her own paddle line.</li>
+          <li><b>Pronounced</b> — YOH-lah. The German J makes a Y sound.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- IMAGE 8 of 8 · joola-kit.jpg — the bag and/or sneakers. Optional:
+         if this file is never uploaded, the gradient below reads as a
+         deliberate colour block, or delete this whole .vsub div. -->
+    <div class="vsub reveal">
+      <div class="vspot ph-2" style="background-image:url('joola-kit.jpg'),linear-gradient(135deg,var(--sage),var(--clay));"></div>
+      <div>
+        <h3>The rest of the kit</h3>
+        <p>The paddle gets the attention, but the bag and the shoes are the tell. Court shoes are built for lateral movement in a way running shoes are not &mdash; which most of us learn the hard way, usually about four months in, usually while lunging for something we had no business reaching.</p>
+      </div>
+    </div>
+
+    <div class="col" style="margin-top:70px;">
+      <p class="reveal">One more thing about JOOLA, because I can't resist: by my count, seven in ten people mangle it on the first try. The instinct is a hard J — "Jool-uh," or "Jewel-uh" (guilty). But it's a German name, and the German J makes a Y sound, so the real pronunciation lands closer to <em>YOH-lah</em>. JOOLA hears this often enough that they've made videos about it. Consider this fair warning before your next trip to the pro shop — get it right and you're magna cum laude.</p>
+    </div>
+
+    <!-- DISCLOSURE — confirm the wording matches what JOOLA actually sends before publishing -->
+    <p class="disclose reveal">JOOLA provided paddles and gear for this piece. What we say about them is our own.</p>
+  </div>
+</section>
+
+<!-- 10 · CLOSER / WHAT THIS COLUMN IS (band: cream) -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">About this column</p>
+      <h2 class="lead-h reveal">So, Off-Piste Play.</h2>
+      <p class="reveal">None of it — the strategy, the practice, the seventy-year-olds who keep beating me, the Wednesday nights — fully explains why I've fallen for this game. But it gets close. Pickleball turns out to be a small court with room for absolutely everyone on it, right at whatever level they're ready for.</p>
+      <p class="reveal">This is the warm-season column: what fills the mountains once the snow is gone. Pickleball first, because that's what's actually happening — in ski towns, in resort programming, in spa schedules from Baja to the Alps — and because it's what I'm playing. Expect courts at altitude, properties that built a June out of nothing, and more nights like Wednesday.</p>
+      <p class="reveal">I plan to keep writing about it here for as long as I keep playing, which, at this rate, is going to be a while. ✦</p>
+      <div class="endmark reveal">✦</div>
+      <nav class="issue-nav reveal">
+        <a href="index.html#inside"><span class="k">↩ Back to</span><span class="t">Inside Alpine Analytics</span></a>
+        <a href="offpisteplay.html"><span class="k">More from →</span><span class="t">Off-Piste Play</span></a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <a class="brand" href="index.html">Alpine <b>Analytics</b></a>
+      <p>Smart escapism with character. Field notes from the unhurried mountains.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html#issues">Latest issues</a>
+      <a href="writing.html">Writing by Si Si</a>
+      <a href="index.html#inside">Inside the magazine</a>
+      <a href="https://instagram.com/sisitravels" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:hello@alpineanalytics.com">hello@alpineanalytics.com</a>
+    </div>
+  </div>
+  <div class="footer-foot">
+    <span>© 2026 Alpine Analytics · Benloch Ranch, Park City, Utah</span>
+    <span>Off-Piste Play · No. 01</span>
+  </div>
+</footer>
+
+<script>
+  var btn=document.getElementById('menuBtn');
+  var links=document.getElementById('navLinks');
+  btn.addEventListener('click',function(){var open=links.classList.toggle('open');btn.setAttribute('aria-expanded',open);});
+  links.addEventListener('click',function(e){if(e.target.tagName==='A') links.classList.remove('open');});
+  var bar=document.getElementById('progress');
+  function prog(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max*100):0)+'%';}
+  document.addEventListener('scroll',prog,{passive:true});prog();
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
+</script>
+</body>
+</html>
