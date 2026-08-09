@@ -28,8 +28,10 @@
        rancho-la-puerta-statue.jpg   (the Victor Hugo Castañeda bronze by the pool)
        rmv-wednesday-group.jpg       (the Wednesday-night men's group at RMV)
        rmv-womens-group.jpg          (the women's group at RMV)
-       joola-paddles.jpg             (the JOOLA paddles — shoot on court, not on white)
-       joola-kit.jpg                 (OPTIONAL — bag and/or sneakers, one frame)
+       joola-paddles.jpg             (the Next Up paddle rack at the Pickl'r — 4:3 landscape)
+       joola-perseus.jpg             (the Perseus Pro V paddle — square, keyed onto linen)
+       joola-bag-01.jpg              (Tour Elite Pro hanging on the fence — 3:4 portrait)
+       joola-bag-02.jpg              (Tour Elite Pro on the table — 3:4 portrait)
 
      TO DO BEFORE PUBLISHING:
        1. Fill the two photo captions with full names, left to right.
@@ -103,6 +105,7 @@
   .vfeat.flip .vmedia{order:2;}
   .vfeat.flip .vtext{order:1;}
   .vhero{aspect-ratio:3/4;border-radius:9px;overflow:hidden;box-shadow:var(--shadow);background-size:cover;background-position:center;background-repeat:no-repeat;}
+  .vhero--wide{aspect-ratio:4/3;}
   .vcap{font-family:'Fraunces',serif;font-style:italic;font-size:.92rem;color:var(--ink-soft);margin-top:14px;line-height:1.5;max-width:42ch;}
   .vcap b{font-style:normal;font-weight:500;color:var(--ink);}
   .vtext .kicker-rule{width:54px;height:2px;background:var(--clay);margin:0 0 22px;}
@@ -119,6 +122,8 @@
   /* secondary tall vertical kept SMALL beside its caption */
   .vsub{display:grid;grid-template-columns:230px 1fr;gap:34px;align-items:center;margin-top:74px;padding-top:54px;border-top:1px solid var(--rule);}
   .vspot{aspect-ratio:2/3;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);background-size:cover;background-position:center;}
+  .vspot--sq{aspect-ratio:1/1;}
+  .sub-h{font-family:'Fraunces',serif;font-weight:400;font-size:1.5rem;line-height:1.12;margin:0 0 .5em;color:var(--ink);}
   .vsub h3{font-family:'Fraunces',serif;font-weight:400;font-size:1.5rem;line-height:1.12;margin:0 0 .5em;color:var(--ink);}
   .vsub p{margin:0;color:var(--ink-soft);font-size:1rem;line-height:1.65;max-width:50ch;}
 
@@ -407,14 +412,14 @@
   </div>
 </section>
 
-<!-- 9 · JOOLA (vfeat flip · IMAGES 7 and 8 · band: linen) -->
+<!-- 9 · JOOLA (vfeat flip · IMAGES 7–10 · band: linen) -->
 <section class="section">
   <div class="wrap">
     <div class="vfeat flip">
       <div class="vmedia reveal">
-        <!-- IMAGE 7 of 8 · joola-paddles.jpg -->
-        <div class="vhero ph-3" style="background-image:url('joola-paddles.jpg'),linear-gradient(160deg,var(--clay),var(--sky));"></div>
-        <p class="vcap"><b>YOH-lah.</b> Not Jool-uh. The paddles that started the argument.</p>
+        <!-- IMAGE 7 of 10 · joola-paddles.jpg — the Next Up rack, 4:3 -->
+        <div class="vhero vhero--wide ph-3" style="background-image:url('joola-paddles.jpg'),linear-gradient(160deg,var(--clay),var(--sky));"></div>
+        <p class="vcap"><b>YOH-lah.</b> Not Jool-uh. The paddles that started the argument. This is the Next Up rack at the Pickl'r in Rancho Santa Margarita, where members stack their paddles to hold a place in open play — first in, first on. The top two are Perseus Pros.</p>
       </div>
       <div class="vtext reveal">
         <div class="kicker-rule"></div>
@@ -432,15 +437,32 @@
       </div>
     </div>
 
-    <!-- IMAGE 8 of 8 · joola-kit.jpg — the bag and/or sneakers. Optional:
-         if this file is never uploaded, the gradient below reads as a
-         deliberate colour block, or delete this whole .vsub div. -->
+    <!-- IMAGE 8 of 10 · joola-perseus.jpg — the paddle itself, square -->
     <div class="vsub reveal">
-      <div class="vspot ph-2" style="background-image:url('joola-kit.jpg'),linear-gradient(135deg,var(--sage),var(--clay));"></div>
+      <div class="vspot vspot--sq ph-3" style="background-image:url('joola-perseus.jpg'),linear-gradient(160deg,var(--clay),var(--sky));"></div>
       <div>
-        <h3>The rest of the kit</h3>
-        <p>The paddle gets the attention, but the bag and the shoes are the tell. Court shoes are built for lateral movement in a way running shoes are not &mdash; which most of us learn the hard way, usually about four months in, usually while lunging for something we had no business reaching.</p>
+        <h3>The paddle itself</h3>
+        <p>The Perseus Pro V &mdash; red rim, carbon face, 16mm core. I was a skeptic going in: how different can a paddle really be? Eye-opening, it turns out. The 16mm core, up from the 14mm I had been swinging in another brand, you feel immediately &mdash; real punch, and noticeably less work to produce it. I did not expect that much power. Paddles can be very different, and very helpful, when the right technology sits behind them.</p>
       </div>
+    </div>
+
+    <!-- IMAGES 9 and 10 of 10 · joola-bag-01.jpg + joola-bag-02.jpg — the Tour Elite Pro -->
+    <div class="duo reveal">
+      <figure>
+        <div class="frame ph-1" style="background-image:url('joola-bag-01.jpg'),linear-gradient(135deg,var(--sky),var(--sage));"></div>
+        <figcaption class="caption"><b>The hook earns its keep.</b> Off the fence at court three, out of the dirt and inside arm's reach.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame ph-2" style="background-image:url('joola-bag-02.jpg'),linear-gradient(135deg,var(--sage),var(--clay));"></div>
+        <figcaption class="caption"><b>Backpack or duffle</b>, depending on how far you parked.</figcaption>
+      </figure>
+    </div>
+    <p class="credit reveal">Photographs by Doug Olear at the Pickl'r, Rancho Santa Margarita, California.</p>
+
+    <div class="col" style="margin-top:54px;">
+      <h3 class="sub-h reveal">The rest of the kit</h3>
+      <p class="reveal">The paddle gets the attention, but the bag is the tell. A few weeks in with the JOOLA Tour Elite Pro &mdash; navy and yellow &mdash; and the verdict is an easy one. It is spacious in the way that makes you stop rationing what you bring: paddles, shoes, a change of clothes, whatever the session turns out to require. The hook is sturdy enough to trust on chain-link, which matters more than it ought to, because a bag on the ground is a bag in the dirt. It carries as a backpack or as a duffle, and it looks good doing either.</p>
+      <p class="reveal">One complaint, and it is a real one: there is no dedicated water bottle holder, inside or out. Room for hydration, certainly &mdash; the main compartment swallows anything you hand it &mdash; but nowhere purpose-built to put a bottle, which means it rides loose against everything else you packed. For a bag this considered everywhere else, a strange thing to leave out.</p>
     </div>
 
     <div class="col" style="margin-top:70px;">
