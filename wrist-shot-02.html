@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FJNYY44M3G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FJNYY44M3G');
+</script>
+<link rel="canonical" href="https://alpineanalyticsmedia.com/wrist-shot-02.html" />
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wrist Shot · No. 02 — Amazfit T-Rex 3: Bought for the summit, worn on the court · Alpine Analytics</title>
+<meta name="description" content="Wrist Shot No. 02: a first-person review of the Amazfit T-Rex 3 — bought for ski mountaineering, worn for hiking and pickleball. The stats, the sleep tracking, the endless watch faces, and a look at the new T-Rex Dual Solar." />
+
+<!-- ============================================================
+     ALPINE ANALYTICS — WRIST SHOT · No. 02
+     "Bought for the summit. Worn on the court." Amazfit T-Rex 3 review.
+     Keep at the repo root as wrist-shot-02.html.
+
+     Same design system as No. 01. FIVE image slots, each pre-wired
+     with a gradient fallback. Upload these exact filenames to the
+     repo root (case-sensitive, no spaces):
+       t-rex-3-cover.jpg        (cover — the watch on Doug's wrist)
+       t-rex-3-sport-modes.jpg  (sport-mode menu diptych, 4:3)
+       t-rex-3-on-court.jpg     (Wednesday night on court)
+       t-rex-3-stats.jpg        (Zepp app stats collage, 9:16)
+       t-rex-3-faces.jpg        (six watch faces grid, 9:16)
+
+     DISCLOSURE: Doug bought this watch himself; no affiliation with
+     Amazfit. Keep that language exact.
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --linen:#f7f3ec; --cream:#fbf8f2; --ink:#45433c; --ink-soft:#777269;
+    --sky:#8fb1bc; --sage:#a4b19a; --sage-wash:#edf0e7;
+    --clay:#c98a63; --clay-deep:#b1734d;
+    --rule:rgba(69,67,60,.14); --shadow:0 26px 64px -30px rgba(69,67,60,.55);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--linen);color:var(--ink);font-family:'Mulish',system-ui,sans-serif;font-weight:300;font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  .eyebrow{font-family:'Fraunces',serif;font-style:italic;font-weight:400;color:var(--clay);font-size:1rem;letter-spacing:.02em;margin:0 0 14px;}
+
+  .progress{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--clay);z-index:120;transition:width .1s linear;}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:100;background:rgba(247,243,236,.86);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--rule);}
+  .nav-inner{max-width:1180px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;}
+  .brand{font-family:'Fraunces',serif;font-weight:400;font-size:1.18rem;letter-spacing:.04em;text-decoration:none;color:var(--ink);white-space:nowrap;}
+  .brand b{font-weight:500;}
+  .nav-links{display:flex;align-items:center;gap:26px;}
+  .nav-links a{text-decoration:none;color:var(--ink-soft);font-size:.93rem;font-weight:400;transition:color .2s;}
+  .nav-links a:hover{color:var(--clay-deep);}
+  .nav-cta{border:1px solid var(--clay);color:var(--clay-deep)!important;padding:7px 16px;border-radius:999px;}
+  .nav-cta:hover{background:var(--clay);color:#fff!important;}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:6px;}
+  .menu-btn span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.25s;}
+
+  /* cover / masthead (Pattern H) */
+  .cover{position:relative;min-height:94vh;display:flex;align-items:flex-end;
+    background-image:linear-gradient(135deg,var(--sky) 0%,var(--sage) 52%,var(--clay) 122%);
+    background-size:cover;background-position:center;}
+  .cover-inner{padding-bottom:8vh;}
+  .cover .kicker{color:var(--cream);font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;letter-spacing:.08em;margin:0 0 16px;text-shadow:0 1px 16px rgba(69,67,60,.6);}
+  .cover h1{font-family:'Fraunces',serif;font-weight:300;color:var(--cream);font-size:clamp(2.6rem,7.4vw,5.8rem);line-height:1.0;margin:0;letter-spacing:-.01em;max-width:14ch;text-shadow:0 2px 30px rgba(69,67,60,.5);}
+  .cover .lines{margin:22px 0 0;color:var(--cream);max-width:52ch;}
+  .cover .lines p{margin:0 0 8px;font-size:1.12rem;font-weight:300;text-shadow:0 1px 18px rgba(69,67,60,.6);}
+  .cover .toc{margin-top:18px;font-family:'Fraunces',serif;font-style:italic;font-size:.98rem;color:var(--cream);opacity:.94;text-shadow:0 1px 18px rgba(69,67,60,.6);}
+  .scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:var(--cream);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85;display:flex;flex-direction:column;align-items:center;gap:7px;}
+  .scroll-hint .dot{width:1px;height:34px;background:linear-gradient(var(--cream),transparent);animation:fall 2.2s ease-in-out infinite;}
+  @keyframes fall{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+
+  /* section frame + bands */
+  .section{padding:96px 0;}
+  .section + .section{border-top:1px solid var(--rule);}
+  .band{background:var(--sage-wash);}
+  .band-cream{background:var(--cream);}
+  .col{max-width:680px;margin:0 auto;}
+  .col p{margin:0 0 1.35em;}
+  .lead-h{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.05;letter-spacing:-.01em;margin:0 0 .42em;color:var(--ink);}
+  .dek{font-family:'Fraunces',serif;font-style:italic;color:var(--ink-soft);font-size:1.26rem;line-height:1.4;margin:0 0 1.5em;}
+  .drop::first-letter{font-family:'Fraunces',serif;font-weight:400;float:left;font-size:4.2rem;line-height:.76;padding:8px 12px 0 0;color:var(--clay-deep);}
+  .credit{font-family:'Fraunces',serif;font-style:italic;font-size:.92rem;color:var(--ink-soft);margin-top:14px;}
+
+  /* VERTICAL-FIRST FEATURE (gear-feature gold standard) */
+  .vfeat{display:grid;grid-template-columns:minmax(0,.9fr) 1fr;gap:58px;align-items:center;}
+  .vfeat.flip .vmedia{order:2;}
+  .vfeat.flip .vtext{order:1;}
+  .vhero{aspect-ratio:3/4;border-radius:9px;overflow:hidden;box-shadow:var(--shadow);background-size:cover;background-position:center;background-repeat:no-repeat;}
+  .vcap{font-family:'Fraunces',serif;font-style:italic;font-size:.92rem;color:var(--ink-soft);margin-top:14px;line-height:1.5;max-width:42ch;}
+  .vcap b{font-style:normal;font-weight:500;color:var(--ink);}
+  .vtext .kicker-rule{width:54px;height:2px;background:var(--clay);margin:0 0 22px;}
+  .vtext h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.04;letter-spacing:-.01em;margin:0 0 .32em;color:var(--ink);}
+  .vtext .dek{margin-bottom:1.1em;}
+  .vtext p{margin:0 0 1.2em;max-width:46ch;}
+  .vtext .drop::first-letter{font-size:3.9rem;padding:6px 11px 0 0;}
+  .vlist{list-style:none;padding:0;margin:1.7em 0 0;max-width:46ch;}
+  .vlist li{position:relative;padding:.7em 0 .7em 28px;border-top:1px solid var(--rule);font-size:.97rem;line-height:1.55;color:var(--ink);}
+  .vlist li:last-child{border-bottom:1px solid var(--rule);}
+  .vlist li::before{content:"";position:absolute;left:2px;top:1.18em;width:8px;height:8px;border:1.5px solid var(--clay);transform:rotate(45deg);}
+  .vlist b{font-weight:500;}
+
+  /* secondary tall vertical kept SMALL beside its caption */
+  .vsub{display:grid;grid-template-columns:230px 1fr;gap:34px;align-items:center;margin-top:74px;padding-top:54px;border-top:1px solid var(--rule);}
+  .vspot{aspect-ratio:2/3;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);background-size:cover;background-position:center;}
+  .vsub h3{font-family:'Fraunces',serif;font-weight:400;font-size:1.5rem;line-height:1.12;margin:0 0 .5em;color:var(--ink);}
+  .vsub p{margin:0;color:var(--ink-soft);font-size:1rem;line-height:1.65;max-width:50ch;}
+
+  /* centered opener + big portrait */
+  .opener{text-align:center;}
+  .opener h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.4rem,6vw,4rem);line-height:1.04;margin:0 auto;max-width:18ch;color:var(--ink);}
+  .opener .portrait{max-width:560px;margin:46px auto 0;}
+  .opener .portrait .vhero{aspect-ratio:4/5;}
+
+  /* credited cast */
+  .cast{max-width:560px;margin:30px 0 0;}
+  .cast .row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;padding:16px 0;border-top:1px solid var(--rule);}
+  .cast .row:last-child{border-bottom:1px solid var(--rule);}
+  .cast .nm{font-family:'Fraunces',serif;font-weight:500;font-size:1.12rem;color:var(--ink);}
+  .cast .rl{color:var(--ink-soft);font-size:.93rem;}
+  .cast .hd{color:var(--clay-deep);font-size:.9rem;margin-left:auto;}
+
+  /* pull-quote interstitial */
+  .pull{margin:0 auto;max-width:860px;text-align:center;}
+  .pull blockquote{margin:0;font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.28;color:var(--clay-deep);}
+  .pull cite{display:block;margin-top:18px;font-style:normal;font-family:'Mulish',sans-serif;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);}
+
+  /* sidebar split */
+  .split{display:grid;grid-template-columns:1.35fr 1fr;gap:46px;align-items:start;}
+  .split .side{background:var(--cream);border:1px solid var(--rule);border-radius:10px;padding:26px;}
+  .split .side h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.22rem;margin:0 0 .6em;}
+  .split .side p{font-size:.95rem;line-height:1.6;margin:0 0 1em;}
+  .split .side p:last-child{margin-bottom:0;}
+  .split .side .pic{aspect-ratio:1/1;border-radius:7px;margin-bottom:20px;background-size:cover;background-position:center;box-shadow:var(--shadow);}
+  .stat{margin-top:24px;background:var(--ink);color:var(--cream);border-radius:10px;padding:20px 22px;}
+  .stat .st-head{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;opacity:.8;margin-bottom:14px;}
+  .stat .st-grid{display:flex;gap:26px;flex-wrap:wrap;}
+  .stat .st b{display:block;font-family:'Fraunces',serif;font-weight:400;font-size:1.7rem;color:#e7b48f;line-height:1;}
+  .stat .st span{font-size:.82rem;opacity:.85;}
+  .stat .st-foot{margin-top:14px;font-size:.74rem;opacity:.7;letter-spacing:.04em;}
+
+  /* caption gallery */
+  .three-up{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .three-up figure{margin:0;}
+  .three-up .frame{aspect-ratio:4/5;}
+  .caption{font-family:'Fraunces',serif;font-style:italic;font-size:.93rem;color:var(--ink-soft);margin-top:12px;line-height:1.5;}
+  .caption b{font-style:normal;font-weight:500;color:var(--ink);}
+
+  /* feature with portrait inset (Sundance Inn) */
+  .feature-inset{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start;}
+  .feature-inset .main{aspect-ratio:3/4;}
+  .feature-inset .inset{aspect-ratio:3/4;margin-top:42px;}
+
+  /* image frame + placeholders */
+  .figure{margin:0;}
+  .frame{background-size:cover;background-position:center;background-repeat:no-repeat;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}
+  .ph-1{background:linear-gradient(135deg,var(--sky),var(--sage));}
+  .ph-2{background:linear-gradient(135deg,var(--sage),var(--clay));}
+  .ph-3{background:linear-gradient(160deg,var(--clay),var(--sky));}
+  .ph-4{background:linear-gradient(135deg,#cdb89c,var(--sky));}
+  .ph-5{background:linear-gradient(150deg,var(--sage-wash),var(--sage));}
+  .ph-label{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:rgba(251,248,242,.95);font-family:'Fraunces',serif;font-style:italic;font-size:.95rem;letter-spacing:.03em;text-align:center;padding:18px;}
+
+  /* contributors */
+  .people{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .person{display:flex;gap:20px;align-items:flex-start;}
+  .person .pic{flex:0 0 96px;width:96px;height:96px;border-radius:50%;background-size:cover;background-position:center;box-shadow:var(--shadow);}
+  .person h4{font-family:'Fraunces',serif;font-weight:500;font-size:1.2rem;margin:2px 0 4px;}
+  .person .role{font-family:'Fraunces',serif;font-style:italic;color:var(--clay-deep);font-size:.92rem;margin:0 0 10px;}
+  .person p{margin:0;font-size:.96rem;line-height:1.6;color:var(--ink);}
+
+  .endmark{text-align:center;margin:64px 0 0;color:var(--clay);font-family:'Fraunces',serif;font-size:1.4rem;}
+  .issue-nav{max-width:1180px;margin:8px auto 0;padding-top:34px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+  .issue-nav a{text-decoration:none;color:var(--ink-soft);font-size:.95rem;display:flex;flex-direction:column;gap:4px;transition:color .2s;}
+  .issue-nav a:hover{color:var(--clay-deep);}
+  .issue-nav .k{font-family:'Fraunces',serif;font-style:italic;color:var(--clay);font-size:.85rem;}
+  .issue-nav .t{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--ink);}
+  .issue-nav a:last-child{text-align:right;align-items:flex-end;}
+
+  /* footer */
+  .footer{background:var(--cream);border-top:1px solid var(--rule);padding:54px 0 40px;}
+  .footer-inner{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;}
+  .footer .brand{font-size:1.3rem;}
+  .footer p{margin:10px 0 0;color:var(--ink-soft);font-size:.92rem;max-width:34ch;}
+  .footer-links{display:flex;flex-direction:column;gap:9px;}
+  .footer-links a{color:var(--ink-soft);text-decoration:none;font-size:.92rem;}
+  .footer-links a:hover{color:var(--clay-deep);}
+  .footer-foot{max-width:1180px;margin:38px auto 0;padding:18px 28px 0;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:.82rem;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* responsive */
+  @media (max-width:880px){
+    .vfeat{grid-template-columns:1fr;gap:34px;}
+    .vfeat.flip .vmedia{order:0;}
+    .vfeat.flip .vtext{order:0;}
+    .vhero{max-width:460px;}
+    .vtext p,.vtext .dek,.vlist{max-width:none;}
+    .vsub{grid-template-columns:1fr;gap:22px;}
+    .vspot{max-width:230px;}
+    .split{grid-template-columns:1fr;gap:32px;}
+    .feature-inset{grid-template-columns:1fr;}
+    .feature-inset .inset{margin-top:0;max-width:60%;}
+    .three-up{grid-template-columns:1fr;}
+    .three-up .frame{aspect-ratio:4/3;}
+    .people{grid-template-columns:1fr;}
+  }
+  @media (max-width:820px){
+    .nav-links{position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;align-items:flex-start;gap:0;padding:8px 28px 18px;border-bottom:1px solid var(--rule);box-shadow:var(--shadow);display:none;}
+    .nav-links.open{display:flex;}
+    .nav-links a{padding:11px 0;width:100%;border-bottom:1px solid var(--rule);}
+    .nav-links a:last-child{border-bottom:0;}
+    .menu-btn{display:block;}
+    .cover{min-height:82vh;}
+    .section{padding:66px 0;}
+  }
+  @media (max-width:520px){
+    body{font-size:17px;}
+    .wrap,.nav-inner,.footer-inner,.footer-foot{padding-left:20px;padding-right:20px;}
+    .cast .hd{margin-left:0;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .scroll-hint .dot{animation:none;}
+  }
+
+  /* No. 02 additions — natural-aspect photo frames (no cropping of screenshots/collages) */
+  .vnat{border-radius:9px;overflow:hidden;box-shadow:var(--shadow);background-size:cover;background-position:center;background-repeat:no-repeat;}
+  .ar-43{aspect-ratio:4/3;}
+  .ar-916{aspect-ratio:9/16;}
+  .vmedia a{display:block;text-decoration:none;}
+  .tap{font-family:'Mulish',sans-serif;font-style:normal;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--clay-deep);display:block;margin-top:6px;}
+  /* spec comparison */
+  .spec{width:100%;border-collapse:collapse;font-size:.9rem;line-height:1.45;}
+  .spec th,.spec td{text-align:left;padding:9px 6px;border-top:1px solid var(--rule);vertical-align:top;}
+  .spec thead th{border-top:0;font-family:'Fraunces',serif;font-weight:500;font-size:.98rem;color:var(--ink);}
+  .spec tbody th{font-weight:600;color:var(--ink-soft);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;width:30%;}
+  .disclose{margin-top:34px;padding:20px 22px;border:1px solid var(--rule);border-radius:10px;background:var(--cream);font-size:.93rem;line-height:1.6;color:var(--ink-soft);}
+  .disclose b{color:var(--ink);font-weight:600;}
+  @media (max-width:880px){ .vmedia .vnat.ar-916{max-width:420px;} }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Alpine <b>Analytics</b></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#issues">Issues</a>
+      <a href="writing.html">Writing</a>
+      <a href="index.html#inside">Inside</a>
+      <a class="nav-cta" href="https://instagram.com/sisitravels" target="_blank" rel="noopener">Follow</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- 1 · COVER (masthead over cover photo · IMAGE 1 of 5) -->
+<header class="cover" id="cover" style="background-image:linear-gradient(90deg,rgba(40,38,34,.55) 0%,rgba(40,38,34,.18) 60%,rgba(40,38,34,0) 100%),linear-gradient(180deg,rgba(40,38,34,.25) 0%,rgba(40,38,34,.08) 30%,rgba(40,38,34,.35) 60%,rgba(40,38,34,.82) 100%),url('t-rex-3-cover.jpg'),linear-gradient(135deg,var(--sky) 0%,var(--sage) 52%,var(--clay) 122%);background-position:0 0,0 0,center 58%,0 0;">
+  <div class="wrap cover-inner">
+    <p class="kicker reveal">Wrist&nbsp;Shot &nbsp;·&nbsp; No.&nbsp;02</p>
+    <h1 class="reveal">Bought for the summit. Worn on the court.</h1>
+    <div class="lines reveal">
+      <p>The Amazfit T-Rex 3 — a sub-$300 rugged smartwatch, a move to Utah that hasn't happened yet, and a watch that found other work in the meantime.</p>
+      <p class="toc">In this one: the T-Rex 3 · the stats · the faces · the new Dual Solar</p>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><div class="dot"></div>Read</div>
+</header>
+
+<!-- 2 · OPENER (text-only · band: sage-wash) -->
+<section class="section band">
+  <div class="wrap">
+    <div class="opener">
+      <p class="eyebrow reveal">A different kind of watch</p>
+      <h2 class="reveal">Not every watch in this column has to tick.</h2>
+    </div>
+    <div class="col" style="margin-top:42px;">
+      <p class="drop reveal">Last time, it was an Oris — Swiss, mechanical, the kind of watch you hand down. This one is the opposite in almost every way. It's a computer. It has a battery, a GPS chip, a heart-rate sensor and an app. Nobody will inherit it. And I'm wearing it more than anything else I own.</p>
+      <p class="reveal">I bought it for one reason: ski mountaineering. Skinning uphill in the dark, then skiing down — I wanted something on my wrist that could track all of it. Vertical, heart rate, pace, time on the skin track. The serious watches that do that tend to cost serious money.</p>
+      <p class="reveal">Then I saw the Amazfit T-Rex 3, and the price. It lists at $279.99. I was amazed at the Amazfit, to say the least. I bought mine on sale on Amazon for $258, tax included.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · THE PLAN CHANGED (vfeat · IMAGE 2 + 3 of 5 · band: linen) -->
+<section class="section">
+  <div class="wrap">
+    <div class="vfeat">
+      <div class="vmedia reveal">
+        <div class="vnat ar-43" style="background-image:url('t-rex-3-sport-modes.jpg'),linear-gradient(135deg,var(--sky),var(--sage));"></div>
+        <p class="vcap"><b>Pickleball, Ski Mountaineering, Hiking.</b> My three, right at the top of the list. Skiing, strength training and HYROX are waiting a scroll below.</p>
+      </div>
+      <div class="vtext reveal">
+        <div class="kicker-rule"></div>
+        <p class="eyebrow">The plan, revised</p>
+        <h2>Built for the skin track. Drafted into pickleball.</h2>
+        <p class="drop">Our move to Utah has been delayed. So the ski mountaineering mode sits there in the menu, patient, and the watch has found other work: hiking the trails around Rancho Mission Viejo, and pickleball — a lot of pickleball.</p>
+        <p>It has more sport modes than you will ever use. Amazfit counts more than 170 of them. I use three. But it's oddly reassuring to know that if I ever take up cross-country ski orienteering, the watch is ready.</p>
+        <p>And here's the thing I didn't expect: I never notice it's on. The case weighs about 68 grams without the strap. It's a big, rugged-looking watch that wears like nothing. Three hours of pickleball, and I forget it's there.</p>
+        <p>The battery is really good, too. I usually charge it when it drops to 15 or 20 percent, and with the way I use it, that takes around ten days.</p>
+        <p>And if you get tired of the look, the band swaps out. You can change the color whenever you want.</p>
+      </div>
+    </div>
+
+    <div class="vsub reveal">
+      <div class="vspot" style="background-image:url('t-rex-3-on-court.jpg'),linear-gradient(135deg,var(--sage),var(--clay));background-position:center 30%;"></div>
+      <div>
+        <h3>Wednesday night, under the lights.</h3>
+        <p>On court with the RMV Mid-Week Pick'lers. The T-Rex rides along for every game — logging the swings, the heart rate and the calories while I worry about the kitchen line.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · THE STATS (vfeat flip · IMAGE 4 of 5 · band: cream) -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="vfeat flip">
+      <div class="vmedia reveal">
+        <a href="t-rex-3-stats.jpg" target="_blank" rel="noopener" aria-label="Open the full stats collage">
+          <div class="vnat ar-916" style="background-image:url('t-rex-3-stats.jpg'),linear-gradient(160deg,var(--clay),var(--sky));"></div>
+        </a>
+        <p class="vcap"><b>The Zepp app, after the fact.</b> A three-hour pickleball session, the heart-rate zones, and a 4.29-mile hike the day before. <span class="tap">Tap to enlarge</span></p>
+      </div>
+      <div class="vtext reveal">
+        <div class="kicker-rule"></div>
+        <p class="eyebrow">The part I actually love</p>
+        <h2>The session lives on after you leave the court.</h2>
+        <p class="drop">The watch does the counting. The fun comes later, on your phone, in the Zepp app — scrolling back through everything you did. Calories burned, total steps, heart rate minute by minute, how long you spent in each zone, training load.</p>
+        <p>One Tuesday night in September, the numbers looked like this:</p>
+        <div class="stat">
+          <div class="st-head">Pickleball · Sept 29, 2026</div>
+          <div class="st-grid">
+            <div class="st"><b>3:10</b><span>on court</span></div>
+            <div class="st"><b>1,660</b><span>kcal</span></div>
+            <div class="st"><b>115</b><span>avg bpm</span></div>
+            <div class="st"><b>154</b><span>max bpm</span></div>
+          </div>
+          <div class="st-foot">Logged on the T-Rex 3 · Zepp app</div>
+        </div>
+        <p style="margin-top:1.4em;">It sleeps, too — or rather, it watches you sleep. Wear it to bed and it records your night in remarkable detail: sleep stages, heart rate, your breathing. It's a little astonishing what this small thing does while you're out cold.</p>
+        <p>I'll be honest: I don't love sleeping in a watch every night. But it isn't uncomfortable, and when I'm curious, I wear it. The app will gently scold you when you skip a night — fair enough.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · PULL-QUOTE INTERSTITIAL (band: sage-wash) -->
+<section class="section band">
+  <div class="wrap">
+    <div class="pull reveal">
+      <blockquote>I bought it for the mountain. It turned out to be the most-worn watch I own.</blockquote>
+      <cite>Wrist Shot</cite>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · THE FACES (vfeat · IMAGE 5 of 5 · band: linen) -->
+<section class="section">
+  <div class="wrap">
+    <div class="vfeat">
+      <div class="vmedia reveal">
+        <a href="t-rex-3-faces.jpg" target="_blank" rel="noopener" aria-label="Open the full watch-face grid">
+          <div class="vnat ar-916" style="background-image:url('t-rex-3-faces.jpg'),linear-gradient(135deg,#cdb89c,var(--sky));"></div>
+        </a>
+        <p class="vcap"><b>Six faces, one watch.</b> Pickleball, skiing, Christmas, Thanksgiving, a data-heavy outdoor face and a classic analog. <span class="tap">Tap to enlarge</span></p>
+      </div>
+      <div class="vtext reveal">
+        <div class="kicker-rule"></div>
+        <p class="eyebrow">A new watch every morning</p>
+        <h2>The faces are literally endless.</h2>
+        <p class="drop">This is the feature I didn't know I wanted. The Zepp app has hundreds of watch faces, and most of them are free. Pickleball face on Wednesday. Skier on a powder day. Something clean and analog when I want it to look like, well, a watch.</p>
+        <p>You can also make your own — your own photo, your own design — and it takes literally seconds. Save the ones you like and swap them whenever you want: Christmas, Thanksgiving, New Year's, a birthday.</p>
+        <p>For a column about watches, that's a strange and wonderful thing. A mechanical watch has one face for life. This one has as many as you can dream up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · THE NEW ONE (split + spec sidebar · band: cream) -->
+<section class="section band-cream">
+  <div class="wrap">
+    <div class="split">
+      <div class="reveal">
+        <p class="eyebrow">Just announced</p>
+        <h2 class="lead-h">Meanwhile, a new T-Rex learned to drink sunlight.</h2>
+        <p class="drop">On September 22, 2026, Amazfit launched the T-Rex Dual Solar at $649.99. It's a big step up from mine, and the headline is in the name: solar charging on both sides. There's a panel in the display, and a larger glass-ceramic panel built into the caseback — Amazfit says it's the first AMOLED smartwatch to do this. Take the watch off, clip it to your pack with the included lanyard, and the back panel charges in the sun.</p>
+        <p>Then there's the stuff you usually find on watches that cost far more. A sapphire crystal over the screen, where mine has Gorilla Glass. A Grade 5 titanium bezel. A display rated to 3,000 nits. Offline topo maps, with ski-map layers. Battery claims stretch to 51 days of typical use with the rear solar, and up to 180 days in its most frugal outdoor mode.</p>
+        <p>That's Garmin territory. Sapphire-and-solar flagships like the Fenix 8 typically list north of a thousand dollars.</p>
+        <p>I'd love to put one through a real ski-mountaineering season and report back. If Amazfit's PR team is reading — the door is open.</p>
+      </div>
+      <aside class="side reveal">
+        <h3>Mine vs. the new one</h3>
+        <table class="spec">
+          <thead><tr><th></th><th>T-Rex 3</th><th>T-Rex Dual Solar</th></tr></thead>
+          <tbody>
+            <tr><th>Price</th><td>$279.99</td><td>$649.99</td></tr>
+            <tr><th>Launched</th><td>Sept 2024</td><td>Sept 2026</td></tr>
+            <tr><th>Lens</th><td>Gorilla Glass</td><td>Sapphire crystal</td></tr>
+            <tr><th>Bezel</th><td>Stainless steel</td><td>Grade 5 titanium</td></tr>
+            <tr><th>Charging</th><td>Cable</td><td>Cable + dual-sided solar</td></tr>
+            <tr><th>Battery</th><td>Up to 27 days typical</td><td>Up to 51 days typical with rear solar</td></tr>
+            <tr><th>Weight</th><td>About 68 g (no strap)</td><td>About 69 g (no strap)</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:16px;font-size:.82rem;color:var(--ink-soft);">Manufacturer figures. Battery life varies with use.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · VERDICT + DISCLOSURE (closer · band: sage-wash) -->
+<section class="section band">
+  <div class="wrap">
+    <div class="col">
+      <p class="eyebrow reveal">The verdict</p>
+      <h2 class="lead-h reveal">A watch that does its job — even when the job changes.</h2>
+      <p class="drop reveal">I bought the T-Rex 3 for a mountain I haven't gotten to yet. In the meantime, it has quietly become part of every hike and every Wednesday night — light enough to forget, smart enough to remember everything I did.</p>
+      <p class="reveal">It's not an heirloom. It won't make anyone's heart skip at a dinner party. But for under three hundred dollars, it does far more than I expected, and it has made the stats from every session something I genuinely look forward to. That's the spirit of this column: you don't have to spend a fortune to love what's on your wrist.</p>
+      <p class="reveal">When the move to Utah finally happens, the ski mountaineering mode gets its turn. I'll report back. ✦</p>
+      <div class="disclose reveal"><b>Disclosure.</b> I paid for this Amazfit T-Rex 3 myself. Alpine Analytics currently has no affiliation with Amazfit.</div>
+      <div class="endmark reveal">✦</div>
+      <nav class="issue-nav reveal">
+        <a href="wrist-shot-01.html"><span class="k">↩ Previously</span><span class="t">It started with a box from Lear</span></a>
+        <a href="wristshot.html"><span class="k">More from →</span><span class="t">Wrist Shot</span></a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <a class="brand" href="index.html">Alpine <b>Analytics</b></a>
+      <p>Smart escapism with character. Field notes from the unhurried mountains.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html#issues">Latest issues</a>
+      <a href="writing.html">Writing by Si Si</a>
+      <a href="index.html#inside">Inside the magazine</a>
+      <a href="https://instagram.com/sisitravels" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:hello@alpineanalytics.com">hello@alpineanalytics.com</a>
+    </div>
+  </div>
+  <div class="footer-foot">
+    <span>© 2026 Alpine Analytics · Benloch Ranch, Park City, Utah</span>
+    <span>Wrist Shot · No. 02</span>
+  </div>
+</footer>
+
+<script>
+  var btn=document.getElementById('menuBtn');
+  var links=document.getElementById('navLinks');
+  btn.addEventListener('click',function(){var open=links.classList.toggle('open');btn.setAttribute('aria-expanded',open);});
+  links.addEventListener('click',function(e){if(e.target.tagName==='A') links.classList.remove('open');});
+  var bar=document.getElementById('progress');
+  function prog(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max*100):0)+'%';}
+  document.addEventListener('scroll',prog,{passive:true});prog();
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
+</script>
+</body>
+</html>
